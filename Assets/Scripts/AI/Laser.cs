@@ -17,7 +17,7 @@ public class Laser : MonoBehaviour
     {
         if(other.CompareTag("FrontWall"))
         {
-            Destroy(this);
+            Destroy(transform.parent.gameObject);
         }
     }
 
