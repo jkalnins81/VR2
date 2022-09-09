@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class AIShoot : MonoBehaviour
 {
-    public int delayBetweenShots;
     public GameObject laserPrefab;
+    float timer;
+    public float firingRateInSeconds;
 
     private void Start()
     {
         Instantiate(laserPrefab, transform.position, Quaternion.identity);
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        if(timer >= firingRateInSeconds)
+        {
+            Instantiate(laserPrefab, transform.position, Quaternion.identity);
+            timer = 0;
+        }
     }
 
 

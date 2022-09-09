@@ -9,8 +9,8 @@ public class Laser : MonoBehaviour
 
     void Start()
     {
+        Destroy(this, 3);
         AIEnemy = GameObject.FindGameObjectWithTag("AIEnemy");
-
         this.GetComponent<Rigidbody>().velocity = AIEnemy.transform.forward * speed;
     }
 }
