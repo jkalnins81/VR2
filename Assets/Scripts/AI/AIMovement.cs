@@ -8,9 +8,14 @@ public class AIMovement : MonoBehaviour
 
     // AI moves slowly && smoothly towards the player over time
 
+    private void Start()
+    {
+        this.GetComponent<Rigidbody>().velocity = Vector3.left * speed;
+    }
+
     private void Update()
     {
-        this.GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        //this.GetComponent<Rigidbody>().velocity = transform.forward * speed;
     }
 
 
