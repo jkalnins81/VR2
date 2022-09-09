@@ -4458,7 +4458,7 @@ GameObject:
   - component: {fileID: 1311318821}
   m_Layer: 0
   m_Name: AIEnemy
-  m_TagString: Untagged
+  m_TagString: AIEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4471,7 +4471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311318820}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20.23, y: 0.93000007, z: -0.9941621}
+  m_LocalPosition: {x: 20.23, y: 2.56, z: -0.9941621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5915,6 +5915,7 @@ GameObject:
   - component: {fileID: 1857224487}
   - component: {fileID: 1857224486}
   - component: {fileID: 1857224490}
+  - component: {fileID: 1857224492}
   - component: {fileID: 1857224491}
   m_Layer: 0
   m_Name: Sphere
@@ -6030,6 +6031,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1857224492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857224485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBetweenShots: 0
+  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
 --- !u!1 &1898180950
 GameObject:
   m_ObjectHideFlags: 0
