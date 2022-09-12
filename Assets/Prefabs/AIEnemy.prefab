@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8390950676691777315}
   - component: {fileID: 8390950676691777327}
   - component: {fileID: 8390950676691777321}
+  - component: {fileID: 6064724418442076110}
   - component: {fileID: 8390950676691777326}
   m_Layer: 0
   m_Name: Sphere
@@ -127,7 +128,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8390950676691777312}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -159,6 +160,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
   firingRateInSeconds: 2
+--- !u!114 &6064724418442076110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676691777312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AIHealthPoints: 100
 --- !u!54 &8390950676691777326
 Rigidbody:
   m_ObjectHideFlags: 0
