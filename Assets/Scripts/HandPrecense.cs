@@ -15,16 +15,40 @@ public class HandPrecense : MonoBehaviour
 
     public Renderer nonPhysicalHand;
     public float showNonPhysicalHandDistance = 0.0005f;
+
+    private Collider[] handColliders;
     
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        handColliders = GetComponentsInChildren<Collider>();
+    }
+
+    public void EnableHandCollider()
+    {
+        foreach (var item in handColliders)
+        {
+            item.enabled = true; 
+        }
+    }
+
+    public void EnableHandColliderDelay(float delay)
+    {
+        Invoke("EnableHandCollider", delay);
+    }
+
+    public void DisableHandCollider()
+    {
+        foreach (var item in handColliders)
+        {
+            item.enabled = false; 
+        }
     }
 
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, target.position);
-
+        
         if (distance > showNonPhysicalHandDistance)
         {
             nonPhysicalHand.enabled = true;
@@ -33,8 +57,7 @@ public class HandPrecense : MonoBehaviour
         {
             nonPhysicalHand.enabled = false;
         }
-        
-        Debug.Log(distance);
+
     }
 
     void FixedUpdate()
