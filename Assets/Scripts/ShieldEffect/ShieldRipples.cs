@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class ShieldRipples : MonoBehaviour
 {
-    public GameObject ripplesVFX;
-
-    private Material mat;
+    public GameObject impactEffectForceField;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("AILaser"))
+        if (collision.gameObject.CompareTag("Disc"))
         {
-            var ripples = Instantiate(ripplesVFX, transform) as GameObject;
-            var psr = ripples.transform.GetChild(0).GetComponent<ParticleSystemRenderer>();
-            mat = psr.material;
+            ContactPoint contact = collision.contacts[0];
+            Quaternion rot = Quaternion.FromToRotation(Vector3.forward, contact.normal);
+            Vector3 pos = contact.point;
+            Instantiate(impactEffectForceField, pos, rot);
             
-            mat.SetVector("_SphereCenter", collision.contacts[0].point);
-
-            // this is the same as a bulletHole?
-
-            Destroy(ripples, 2);
         }
     }
 }
