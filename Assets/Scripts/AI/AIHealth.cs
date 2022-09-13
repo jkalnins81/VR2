@@ -8,6 +8,12 @@ public class AIHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Disc"))
+        {
+            // instantiate explosion effect
+            AIDie();
+        }
+
         if (other.CompareTag("FrontWall"))
         {
             AIDie();
