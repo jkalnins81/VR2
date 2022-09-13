@@ -5270,6 +5270,7 @@ GameObject:
   - component: {fileID: 1260325409}
   - component: {fileID: 1260325414}
   - component: {fileID: 1260325415}
+  - component: {fileID: 1260325416}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -5775,6 +5776,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1260325416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260325407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0405a5f6c248c4ebec01e78bc91199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandRB: {fileID: 0}
+  rightHandRB: {fileID: 0}
 --- !u!1001 &1262873207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8316,6 +8331,7 @@ GameObject:
   - component: {fileID: 1941403309}
   - component: {fileID: 1941403314}
   - component: {fileID: 1941403315}
+  - component: {fileID: 1941403316}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -8821,6 +8837,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1941403316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941403307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0405a5f6c248c4ebec01e78bc91199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandRB: {fileID: 0}
+  rightHandRB: {fileID: 0}
 --- !u!137 &1952736686 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5686134208567250702, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
@@ -9232,29 +9262,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059558419}
-  - component: {fileID: 2059558418}
+  - component: {fileID: 2059558420}
   m_Layer: 0
-  m_Name: HandPrecense
+  m_Name: 'HandVelocity '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2059558418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059558417}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13191e6fdee009948a9babe5a2bb2070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  nonPhysicalHand: {fileID: 0}
-  showNonPhysicalHandDistance: 0.05
 --- !u!4 &2059558419
 Transform:
   m_ObjectHideFlags: 0
@@ -9270,6 +9285,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059558420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059558417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0405a5f6c248c4ebec01e78bc91199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandRB: {fileID: 3276779193955256152}
+  rightHandRB: {fileID: 2192920358135823956}
 --- !u!1 &2077795943
 GameObject:
   m_ObjectHideFlags: 0
