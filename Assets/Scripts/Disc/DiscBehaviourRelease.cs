@@ -46,6 +46,12 @@ public class DiscBehaviourRelease : MonoBehaviour
     
     public void EnabaleDiscCollider()
     {
+        StartCoroutine(DiscColliderOn());
+    }
+
+    IEnumerator DiscColliderOn()
+    {
+        yield return new WaitForSeconds(0.5f);
         collider.enabled = true; 
     }
 

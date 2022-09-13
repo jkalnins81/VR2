@@ -1463,8 +1463,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &397870245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3203,8 +3201,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &767448834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,8 +3719,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &810473927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4552,8 +4546,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &978652287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5471,8 +5463,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &1183839008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6114,8 +6104,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &1214360322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,7 +7155,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7544,8 +7532,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &1273540885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10547,7 +10533,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -10914,8 +10900,6 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   collider: {fileID: 0}
-  discMaxSpeed: 4
-  forceMultiplier: 250
 --- !u!114 &2006021880
 MonoBehaviour:
   m_ObjectHideFlags: 0
