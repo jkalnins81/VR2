@@ -10,8 +10,7 @@ public class ControllerVelocity : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(LeftHandVelocity());
-        Debug.Log(RightHandVelocity());
+
     }
 
     Vector3 LeftHandVelocity()
