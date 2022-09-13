@@ -10,8 +10,8 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     public Collider collider;
 
-    private float discMaxSpeed = 2;
-    private float forceMultiplier = 2;
+    private float discMaxSpeed = 1;
+    private float forceMultiplier = 10;
     
     private void Start()
     {
