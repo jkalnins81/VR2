@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class VelocityInteractable : MonoBehaviour
+public class VelocityInteractable : XRGrabInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    private ControllerVelocity _controllerVelocity = null;
+    private MeshRenderer meshRenderer = null; 
+   
+    void Awake()
+    {
+        _controllerVelocity = FindObjectOfType<ControllerVelocity>();
+    }
+
+    void ColorVelocity()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

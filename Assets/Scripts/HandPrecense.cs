@@ -72,8 +72,5 @@ public class HandPrecense : MonoBehaviour
         Vector3 rotationDifferenceInDegree = angleInDegree * rotationAxis;
 
         _rb.angularVelocity = (rotationDifferenceInDegree * Mathf.Deg2Rad / Time.fixedDeltaTime);
-
-
-
     }
 }
