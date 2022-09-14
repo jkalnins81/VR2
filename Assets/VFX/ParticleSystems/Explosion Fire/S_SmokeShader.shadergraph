@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "876e137535334e4882f5cad8c9acd833",
     "m_Properties": [
@@ -8,6 +8,12 @@
         }
     ],
     "m_Keywords": [],
+    "m_Dropdowns": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "82a73b9f8f3c46f6ae7067ff9baa1f8f"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "ee37acc455eb48f5aad2e6f66f7c0dab"
@@ -156,10 +162,11 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        }
+        },
+        "preventRotation": false
     },
     "m_Path": "Shader Graphs",
-    "m_ConcretePrecision": 0,
+    "m_GraphPrecision": 0,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": ""
@@ -398,17 +405,23 @@
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "1b11415c7d364c5bbe3c4b471ee6322e",
     "m_ActiveSubTarget": {
         "m_Id": "7700bf4fcf26460a83e3457621214eb6"
     },
+    "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
+    "m_ZTestMode": 4,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_TwoSided": false,
+    "m_RenderFace": 2,
     "m_AlphaClip": false,
-    "m_CustomEditorGUI": ""
+    "m_CastShadows": true,
+    "m_ReceiveShadows": true,
+    "m_CustomEditorGUI": "",
+    "m_SupportVFX": false
 }
 
 {
@@ -837,6 +850,18 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "82a73b9f8f3c46f6ae7067ff9baa1f8f",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "c1fa038c5e6a4ae78234fa053ee15946"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "8aebdb6852ef4ed0ba56fb5c9331bc17",
     "m_Group": {
@@ -1010,9 +1035,13 @@
         "m_GuidSerialized": "af035220-9f9f-4b06-9926-c2b24240a23b"
     },
     "m_Name": "Color",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_c1fa038c5e6a4ae78234fa053ee15946",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1023,6 +1052,7 @@
         "b": 0.15094339847564698,
         "a": 0.0
     },
+    "isMainColor": false,
     "m_ColorMode": 1
 }
 
