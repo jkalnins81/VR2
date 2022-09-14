@@ -7,6 +7,7 @@ public class AIMovement : MonoBehaviour
 {
     public float speed;
     public float horizontalSpeed;
+    private int randomNumber;
 
     // AI moves slowly && smoothly towards the player over time
 
@@ -14,11 +15,31 @@ public class AIMovement : MonoBehaviour
     {
         this.GetComponent<Rigidbody>().velocity = Vector3.forward * speed;
 
+        randomNumber = Random.Range(1, 5); // random number between 1 & 4 (5 is exlusive!)
+
         // generate random number 1 to 4 - play AI pattern based on number
 
-        StartCoroutine(LeftRightUpDown());
+        if(randomNumber == 1)
+        {
+            StartCoroutine(LeftRightUpDown());
+        }
 
-        
+        if(randomNumber == 2)
+        {
+            StartCoroutine(LeftRightDownUp());
+        }
+
+        if (randomNumber == 3)
+        {
+            StartCoroutine(RightLeftUpDown());
+        }
+
+        if(randomNumber == 4)
+        {
+            StartCoroutine(RightLeftDownUp());
+        }
+
+
     }
 
     IEnumerator LeftRightUpDown()
@@ -86,8 +107,6 @@ public class AIMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
     }
-
-    // RightLeftDownUp
 
     IEnumerator RightLeftDownUp()
     {
