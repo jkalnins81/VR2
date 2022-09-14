@@ -9,25 +9,32 @@ public class DiscBehaviourRelease : MonoBehaviour
     public Rigidbody discRB;
     public ControllerVelocity controllerVelocity;
 
-    public Collider collider;
+    public Collider[] colliders;
 
     private float controllerMaxSpeed = 0.5f;
     private float forceMultiplier = 100;
 
     public XRGrabInteractable thisXRGrabInteractable;
-    
+
+    public DiscPillar DiscPillar;
+
     private void Start()
     {
         discRB = GetComponent<Rigidbody>();
         controllerVelocity = FindObjectOfType<ControllerVelocity>();
 
-        collider = GetComponent<Collider>();
+        colliders = GetComponentsInChildren<Collider>();
         thisXRGrabInteractable = GetComponent<XRGrabInteractable>();
+
+        DiscPillar = FindObjectOfType<DiscPillar>();
+
     }
 
     public void ReleaseVelocity()
     {
         float handSpeed = controllerVelocity.rightHandRB.velocity.magnitude;
+
+        DiscPillar.spawnNewDiscBool = true; 
         
         if(handSpeed >= controllerMaxSpeed)
         {
@@ -36,6 +43,8 @@ public class DiscBehaviourRelease : MonoBehaviour
             //Cap the max throw speed vel
             //Start coroutine and add force after the XR scripts adds it's own throw velocity 
             StartCoroutine(AddForceAfterThrow());
+            //Spawn new disc from pillar
+            DiscPillar.SpawnNewDiscDelay(1f);
         }
         else
         {
@@ -45,7 +54,8 @@ public class DiscBehaviourRelease : MonoBehaviour
             // Debug.Log(discPercentage);
             thisXRGrabInteractable.throwVelocityScale = 1.0f;
             discRB.AddForce(controllerVelocity.rightHandRB.velocity.normalized, ForceMode.Impulse);
-            
+            //Spawn new disc from pillar
+            DiscPillar.SpawnNewDiscDelay(1f); 
   
         }
 
@@ -54,7 +64,8 @@ public class DiscBehaviourRelease : MonoBehaviour
     public void DisableDiscCollider()
     {
         //Disable collider from controller script 
-        collider.enabled = false; 
+        colliders[0].enabled = false; 
+        colliders[1].enabled = false; 
     }
     
     public void EnabaleDiscCollider()
@@ -66,7 +77,8 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator DiscColliderOn()
     {
         yield return new WaitForSeconds(0.5f);
-        collider.enabled = true; 
+        colliders[0].enabled = true; 
+        colliders[1].enabled = true; 
     }
 
 
