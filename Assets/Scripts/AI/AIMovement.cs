@@ -10,16 +10,8 @@ public class AIMovement : MonoBehaviour
 
     private void Start()
     {
-        this.GetComponent<Rigidbody>().velocity = Vector3.left * speed;
+        this.GetComponent<Rigidbody>().velocity = Vector3.forward * speed;
     }
-
-    private void Update()
-    {
-        //this.GetComponent<Rigidbody>().velocity = transform.forward * speed;
-    }
-
-
-    
 
     // AI moves up/down && left/right towards the player over time
 }
