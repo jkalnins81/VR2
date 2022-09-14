@@ -28,9 +28,4 @@ public class AISpawner : MonoBehaviour
             timer = 0;
         }
     }
-
-
-    // spawn one every ___ seconds
-
-    // Spawn waves
 }
