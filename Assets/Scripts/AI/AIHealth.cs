@@ -5,12 +5,13 @@ using UnityEngine;
 public class AIHealth : MonoBehaviour
 {
     public int AIHealthPoints;
+    public GameObject AIExplosion;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Disc"))
         {
-            // instantiate explosion effect
+            Instantiate(AIExplosion, transform.position, Quaternion.identity);
             AIDie();
         }
 
