@@ -23,7 +23,6 @@ public class AIHealth : MonoBehaviour
 
     void AIDie()
     {
-        // explosion && visual effect
         Destroy(transform.parent.gameObject);
     }
 }
