@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 1475092120222707927}
   - component: {fileID: 1475092120222707924}
   - component: {fileID: 1475092120222707925}
+  - component: {fileID: -4582696778293817221}
   - component: {fileID: 1475092120222707922}
   - component: {fileID: 2123649928556561719}
   m_Layer: 0
@@ -461,6 +462,21 @@ MonoBehaviour:
   discThrown: 0
   throwAngle: {x: 0, y: 0, z: 0, w: 0}
   destroyTinmeAfterThrow: 5
+  particleSystemDestroy: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
+--- !u!114 &-4582696778293817221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475092120222707923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c33b328f407d649acd0d2ab9e38aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdingDisc: 0
+  discSelfDestructTimer: 3
   particleSystemDestroy: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
 --- !u!136 &1475092120222707922
 CapsuleCollider:

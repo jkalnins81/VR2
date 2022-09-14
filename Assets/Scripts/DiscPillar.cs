@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = System.Random;
 using Vector3 = UnityEngine.Vector3;
+
 
 public class DiscPillar : MonoBehaviour
 {
 
-    [SerializeField] private GameObject pillar;
+    [SerializeField] private GameObject[] pillars;
+    private int currentRandomPillar; 
     [SerializeField] private GameObject disc;
 
     public bool spawnNewDiscBool = false;
@@ -26,13 +29,18 @@ public class DiscPillar : MonoBehaviour
     }
     public void SpawnNewDisc()
     {
+        currentRandomPillar = (UnityEngine.Random.Range(0, pillars.Length));
         spawnNewDiscBool = false;
-        Vector3 yOffset = new Vector3(0, 0.6f, 0) + pillar.transform.position;
-        pillar.SetActive(true);
+        pillars[currentRandomPillar].SetActive(true);
+        Vector3 yOffset = new Vector3(0, 0.6f, 0) + pillars[currentRandomPillar].transform.position;
         Instantiate(disc, yOffset, quaternion.identity);
     }
 
-
+    public void DeActivatePillar()
+    {
+        pillars[currentRandomPillar].SetActive(false);
+    }
+    
     
     
 }
