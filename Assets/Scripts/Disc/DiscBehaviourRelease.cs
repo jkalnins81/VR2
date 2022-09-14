@@ -11,12 +11,17 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     public Collider[] colliders;
 
-    private float controllerMaxSpeed = 0.5f;
+    private float controllerMaxSpeed = 1.8f;
     private float forceMultiplier = 100;
 
     public XRGrabInteractable thisXRGrabInteractable;
 
     public DiscPillar DiscPillar;
+
+    public bool discThrown = false;
+
+    public Quaternion throwAngle;
+    private float time = 3.0f;
 
     private void Start()
     {
@@ -29,6 +34,17 @@ public class DiscBehaviourRelease : MonoBehaviour
         DiscPillar = FindObjectOfType<DiscPillar>();
 
     }
+
+    private void Update()
+    {
+        if (discThrown)
+        {
+            //discRB.MoveRotation(Quaternion.RotateTowards(discRB.rotation, Quaternion.Euler(-90, transform.rotation.y, -90), 20 * Time.deltaTime));
+            // float speed = 1.0f;
+            // transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.identity, Time.deltaTime * 2);
+        }
+    }
+
 
     public void ReleaseVelocity()
     {
@@ -52,8 +68,11 @@ public class DiscBehaviourRelease : MonoBehaviour
             // if arm movement is slow, output this 
             // float discPercentage = handSpeed / discMaxSpeed;
             // Debug.Log(discPercentage);
+            throwAngle = gameObject.transform.rotation;
             thisXRGrabInteractable.throwVelocityScale = 1.0f;
-            discRB.AddForce(controllerVelocity.rightHandRB.velocity.normalized, ForceMode.Impulse);
+            discRB.AddForce(discRB.velocity.normalized * 0.5f, ForceMode.Impulse);
+            discThrown = true;
+            
             //Spawn new disc from pillar
             DiscPillar.SpawnNewDiscDelay(1f); 
   
@@ -72,23 +91,31 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         //Enable collider from controller script 
         StartCoroutine(DiscColliderOn());
+        discThrown = true;
     }
 
     IEnumerator DiscColliderOn()
     {
         yield return new WaitForSeconds(0.5f);
         colliders[0].enabled = true; 
-        colliders[1].enabled = true; 
+        colliders[1].enabled = true;
+        discRB.constraints = RigidbodyConstraints.None;
     }
 
 
     IEnumerator AddForceAfterThrow()
     {
         //Ads force to the disc once it is released and has got the velocity from the controller 
+        
+        Debug.Log(throwAngle);
         yield return new WaitForSeconds(0.01f);
         thisXRGrabInteractable.throwVelocityScale = 50f;
         thisXRGrabInteractable.throwAngularVelocityScale = 10.0f;
-        discRB.AddForce(controllerVelocity.rightHandRB.velocity.normalized  * forceMultiplier, ForceMode.Impulse);
-        
+        discRB.AddForce(discRB.velocity.normalized  * forceMultiplier, ForceMode.Impulse);
+        yield return new WaitForSeconds(0.1f);
+        throwAngle = gameObject.transform.rotation;
+        discThrown = true;
+
     }
+    
 }
