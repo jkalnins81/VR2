@@ -27,7 +27,7 @@ public class DiscPillar : MonoBehaviour
     public void SpawnNewDisc()
     {
         spawnNewDiscBool = false;
-        Vector3 yOffset = new Vector3(0, 0.5f, 0) + pillar.transform.position;
+        Vector3 yOffset = new Vector3(0, 0.6f, 0) + pillar.transform.position;
         pillar.SetActive(true);
         Instantiate(disc, yOffset, quaternion.identity);
     }

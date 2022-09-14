@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -23,6 +24,10 @@ public class DiscBehaviourRelease : MonoBehaviour
     public Quaternion throwAngle;
     private float time = 3.0f;
 
+    public float destroyTinmeAfterThrow = 5f;
+
+    public GameObject particleSystemDestroy;
+
     private void Start()
     {
         discRB = GetComponent<Rigidbody>();
@@ -37,12 +42,12 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     private void Update()
     {
-        if (discThrown)
-        {
-            //discRB.MoveRotation(Quaternion.RotateTowards(discRB.rotation, Quaternion.Euler(-90, transform.rotation.y, -90), 20 * Time.deltaTime));
-            // float speed = 1.0f;
-            // transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.identity, Time.deltaTime * 2);
-        }
+        // if (discThrown)
+        // {
+        //     //discRB.MoveRotation(Quaternion.RotateTowards(discRB.rotation, Quaternion.Euler(-90, transform.rotation.y, -90), 20 * Time.deltaTime));
+        //     // float speed = 1.0f;
+        //     // transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.identity, Time.deltaTime * 2);
+        // }
     }
 
 
@@ -50,7 +55,9 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         float handSpeed = controllerVelocity.rightHandRB.velocity.magnitude;
 
-        DiscPillar.spawnNewDiscBool = true; 
+        DiscPillar.spawnNewDiscBool = true;
+
+        StartCoroutine(DestroyDiscAfterThrow());
         
         if(handSpeed >= controllerMaxSpeed)
         {
@@ -95,11 +102,13 @@ public class DiscBehaviourRelease : MonoBehaviour
     }
 
     IEnumerator DiscColliderOn()
-    {
-        yield return new WaitForSeconds(0.5f);
+    {   
+        yield return new WaitForSeconds(0.25f);
+        discRB.constraints = RigidbodyConstraints.None;
+        yield return new WaitForSeconds(0.25f);
         colliders[0].enabled = true; 
         colliders[1].enabled = true;
-        discRB.constraints = RigidbodyConstraints.None;
+
     }
 
 
@@ -117,5 +126,27 @@ public class DiscBehaviourRelease : MonoBehaviour
         discThrown = true;
 
     }
+
+    public IEnumerator DestroyDiscAfterThrow()
+    {
+        yield return new WaitForSeconds(destroyTinmeAfterThrow);
+        DestroyDiscEffects();
+
+    }
     
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Disc")
+        {
+            DestroyDiscEffects();
+        }
+    }
+    public void DestroyDiscEffects()
+    {
+        GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
+        Destroy(particles, 1f);
+        Destroy(gameObject);
+    }
+
+
 }
