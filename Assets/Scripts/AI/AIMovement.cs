@@ -13,10 +13,15 @@ public class AIMovement : MonoBehaviour
     private void Start()
     {
         this.GetComponent<Rigidbody>().velocity = Vector3.forward * speed;
-        StartCoroutine(BobUpDown());
+
+        // generate random number 1 to 4 - play AI pattern based on number
+
+        StartCoroutine(LeftRightUpDown());
+
+        
     }
 
-    IEnumerator BobUpDown()
+    IEnumerator LeftRightUpDown()
     {
         yield return new WaitForSeconds(1);
         this.GetComponent<Rigidbody>().velocity = new Vector3(-1,0,1) * speed; // left & forward
@@ -36,11 +41,79 @@ public class AIMovement : MonoBehaviour
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(1);
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+    }
 
+    IEnumerator LeftRightDownUp()
+    {
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+    }
 
+    IEnumerator RightLeftUpDown()
+    {
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+    }
 
+    // RightLeftDownUp
 
+    IEnumerator RightLeftDownUp()
+    {
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        yield return new WaitForSeconds(1);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+    }
 
+    private void Update()
+    {
+        
     }
 
     // AI moves up/down && left/right towards the player over time
