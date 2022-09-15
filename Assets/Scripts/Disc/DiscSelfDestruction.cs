@@ -11,18 +11,26 @@ public class DiscSelfDestruction : MonoBehaviour
     public float discSelfDestructTimer = 3.0f;
     
     public GameObject particleSystemDestroy;
-    
-    public void DiscPickedUp()
+
+    private DiscPillar discPillar;
+
+    private void Start()
     {
-        Debug.Log("Touched disc");
+        discPillar = FindObjectOfType<DiscPillar>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Hands")
         holdingDisc = true;
     }
-    
-    public void DiscDropped()
+
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Dropped disc");
-        holdingDisc = false; 
+        if(other.gameObject.tag == "Hands")
+        holdingDisc = false;
     }
+    
 
     private void Update()
     {
@@ -32,6 +40,10 @@ public class DiscSelfDestruction : MonoBehaviour
 
             if (discSelfDestructTimer <= 0)
             {
+                //spawn new pillar
+                discPillar.DeActivatePillar();
+                discPillar.spawnNewDiscBool = true;
+                discPillar.SpawnNewDiscDelay(1f); 
                 GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
                 Destroy(particles, 1f);
                 Destroy(gameObject);
