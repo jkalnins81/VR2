@@ -8,6 +8,7 @@ TagManager:
   - FrontWall
   - AILaser
   - Disc
+  - Hands
   layers:
   - Default
   - TransparentFX
