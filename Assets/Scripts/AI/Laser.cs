@@ -5,6 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public int speed;
+    public int damage;
     GameObject AIEnemy;
 
     void Start()
@@ -18,6 +19,17 @@ public class Laser : MonoBehaviour
         if(other.CompareTag("FrontWall"))
         {
             Destroy(transform.parent.gameObject);
+        }
+
+        if(other.CompareTag("Disc"))
+        {
+            // instantitate VFX effect
+            Destroy(transform.parent.gameObject);
+        }
+
+        if (other.CompareTag("MainCamera"))
+        {
+
         }
     }
 
