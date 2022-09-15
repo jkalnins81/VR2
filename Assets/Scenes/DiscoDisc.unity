@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIEnemyPrefab: {fileID: 8390950676163898145, guid: e398d754324742a4bbe6747c694346f8, type: 3}
-  spawnRateInSeconds: 5
+  spawnRateInSeconds: 10
 --- !u!4 &687887545
 Transform:
   m_ObjectHideFlags: 0
