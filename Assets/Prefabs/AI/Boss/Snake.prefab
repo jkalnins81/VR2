@@ -12,9 +12,6 @@ GameObject:
   - component: {fileID: 5377744649613935465}
   - component: {fileID: 4992079022440025486}
   - component: {fileID: 3594495491503726468}
-  - component: {fileID: 1981753576649666403}
-  - component: {fileID: 8135336069948836394}
-  - component: {fileID: 2194893383842860157}
   - component: {fileID: 848126319029159276}
   m_Layer: 0
   m_Name: Snake7
@@ -101,48 +98,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1981753576649666403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793840682130509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &8135336069948836394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793840682130509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &2194893383842860157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793840682130509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &848126319029159276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,9 +126,6 @@ GameObject:
   - component: {fileID: 2819841962690742071}
   - component: {fileID: 6927011617094619651}
   - component: {fileID: 5819434819005430194}
-  - component: {fileID: 8184537220131190983}
-  - component: {fileID: 4516183677528116590}
-  - component: {fileID: 2611154353597992076}
   - component: {fileID: 626816616117934689}
   m_Layer: 0
   m_Name: Snake9
@@ -260,48 +212,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8184537220131190983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464473359114521025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &4516183677528116590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464473359114521025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &2611154353597992076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464473359114521025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &626816616117934689
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -330,9 +240,6 @@ GameObject:
   - component: {fileID: 9207593476114841791}
   - component: {fileID: 4994440466229083398}
   - component: {fileID: 3560049847817317010}
-  - component: {fileID: 4190755023804142771}
-  - component: {fileID: 1827419131921687687}
-  - component: {fileID: 5425944893061395447}
   - component: {fileID: 1910581393607140780}
   m_Layer: 0
   m_Name: Snake2
@@ -419,48 +326,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4190755023804142771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763560496632743281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &1827419131921687687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763560496632743281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &5425944893061395447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763560496632743281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &1910581393607140780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -489,9 +354,6 @@ GameObject:
   - component: {fileID: 12189267614113256}
   - component: {fileID: 77905857726640590}
   - component: {fileID: 2717469363775599614}
-  - component: {fileID: 3809381203164011217}
-  - component: {fileID: 7069303635955515277}
-  - component: {fileID: 7468403956251882851}
   - component: {fileID: 617828289189940230}
   m_Layer: 0
   m_Name: Snake10
@@ -578,48 +440,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3809381203164011217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3892202356713912502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &7069303635955515277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3892202356713912502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &7468403956251882851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3892202356713912502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &617828289189940230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -648,9 +468,6 @@ GameObject:
   - component: {fileID: 1609048170318558303}
   - component: {fileID: 7275066335602527445}
   - component: {fileID: 4610097738288539227}
-  - component: {fileID: 7166465813280167279}
-  - component: {fileID: 7658185393798317031}
-  - component: {fileID: 3886230569705894179}
   - component: {fileID: 4520088986941118711}
   m_Layer: 0
   m_Name: Snake6
@@ -737,48 +554,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7166465813280167279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4122418094176953962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &7658185393798317031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4122418094176953962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &3886230569705894179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4122418094176953962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &4520088986941118711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -807,9 +582,6 @@ GameObject:
   - component: {fileID: 2023402156565614424}
   - component: {fileID: 683333014892756034}
   - component: {fileID: 1682922351174602186}
-  - component: {fileID: 7674811504719348184}
-  - component: {fileID: 5799878148550095914}
-  - component: {fileID: 709425827852361194}
   - component: {fileID: 2707875803754049422}
   m_Layer: 0
   m_Name: Snake3
@@ -896,48 +668,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7674811504719348184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5419468501730215092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &5799878148550095914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5419468501730215092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &709425827852361194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5419468501730215092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &2707875803754049422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -966,9 +696,6 @@ GameObject:
   - component: {fileID: 3447401486087092595}
   - component: {fileID: 1547722556673475202}
   - component: {fileID: 229592860762327050}
-  - component: {fileID: 5612872506014581538}
-  - component: {fileID: 3185250325614211551}
-  - component: {fileID: 7498131441750470561}
   - component: {fileID: 5098374864081133987}
   m_Layer: 0
   m_Name: Snake8
@@ -1055,48 +782,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5612872506014581538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670222306222015201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &3185250325614211551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670222306222015201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &7498131441750470561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670222306222015201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &5098374864081133987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1125,9 +810,6 @@ GameObject:
   - component: {fileID: 1164712601850127426}
   - component: {fileID: 8464723842849290103}
   - component: {fileID: 8189504816576318975}
-  - component: {fileID: 1639898581557411506}
-  - component: {fileID: 269220078528650625}
-  - component: {fileID: 3307512910143082135}
   - component: {fileID: 2555033431242898148}
   m_Layer: 0
   m_Name: Snake5
@@ -1214,48 +896,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1639898581557411506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6912068903177606331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &269220078528650625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6912068903177606331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &3307512910143082135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6912068903177606331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &2555033431242898148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1284,9 +924,6 @@ GameObject:
   - component: {fileID: 2313182161488681206}
   - component: {fileID: 5490101073429842563}
   - component: {fileID: 6213588673331569123}
-  - component: {fileID: 8981840730266253131}
-  - component: {fileID: 7087970839885802749}
-  - component: {fileID: 759435826760711465}
   - component: {fileID: 6136844276118532742}
   m_Layer: 0
   m_Name: Snake4
@@ -1373,48 +1010,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8981840730266253131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295711315724877307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &7087970839885802749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295711315724877307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &759435826760711465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295711315724877307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &6136844276118532742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1440,6 +1035,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8390950676163898144}
+  - component: {fileID: 175549195039728575}
+  - component: {fileID: 8398828177649523269}
+  - component: {fileID: 5253483667712167342}
   m_Layer: 0
   m_Name: Snake
   m_TagString: AIEnemy
@@ -1473,6 +1071,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &175549195039728575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676163898145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee9a8c0b95485340bc3129559f0fc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  SnakeHead: {fileID: 8390950676691777312}
+  Snake1: {fileID: 9137922824950724431}
+  Snake2: {fileID: 2763560496632743281}
+  Snake3: {fileID: 5419468501730215092}
+  Snake4: {fileID: 7295711315724877307}
+  Snake5: {fileID: 6912068903177606331}
+  Snake6: {fileID: 4122418094176953962}
+  Snake7: {fileID: 1053793840682130509}
+  Snake8: {fileID: 6670222306222015201}
+  Snake9: {fileID: 1464473359114521025}
+  Snake10: {fileID: 3892202356713912502}
+--- !u!114 &8398828177649523269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676163898145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5253483667712167342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676163898145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5d290f8b3018342aeaaea90689dfd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8390950676691777312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,9 +1131,6 @@ GameObject:
   - component: {fileID: 8390950676691777325}
   - component: {fileID: 8390950676691777314}
   - component: {fileID: 8390950676691777315}
-  - component: {fileID: 8390950676691777327}
-  - component: {fileID: 8390950676691777321}
-  - component: {fileID: 6064724418442076110}
   - component: {fileID: 8390950676691777326}
   m_Layer: 0
   m_Name: SnakeHead
@@ -1574,48 +1217,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8390950676691777327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &8390950676691777321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &6064724418442076110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &8390950676691777326
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1644,9 +1245,6 @@ GameObject:
   - component: {fileID: 3160684036796448281}
   - component: {fileID: 234142305911690468}
   - component: {fileID: 672174132225942218}
-  - component: {fileID: 2878803036272133877}
-  - component: {fileID: 5366718601660931925}
-  - component: {fileID: 7976770670631516964}
   - component: {fileID: 2057224511136243640}
   m_Layer: 0
   m_Name: Snake1
@@ -1733,48 +1331,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2878803036272133877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137922824950724431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  changeDirectionSpeed: 2
---- !u!114 &5366718601660931925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137922824950724431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 2
---- !u!114 &7976770670631516964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137922824950724431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
 --- !u!54 &2057224511136243640
 Rigidbody:
   m_ObjectHideFlags: 0
