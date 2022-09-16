@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 1475092120222707923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.976, y: -0.059, z: -1.8698}
-  m_LocalScale: {x: 0.28999367, y: 0.019872976, z: 0.28999367}
+  m_LocalScale: {x: 0.29, y: 0.02, z: 0.29}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9199515511530101921}
@@ -450,10 +450,7 @@ MonoBehaviour:
   throwAngle: {x: 0, y: 0, z: 0, w: 0}
   destroyTinmeAfterThrow: 5
   particleSystemDestroy: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
-  discThrown: 0
-  holdingDisc: 0
   discSelfDestructTimer: 3
-  discPickedUp: 0
 --- !u!114 &-4582696778293817221
 MonoBehaviour:
   m_ObjectHideFlags: 0

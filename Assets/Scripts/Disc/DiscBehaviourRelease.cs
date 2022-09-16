@@ -28,6 +28,7 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     //Self Destruct
     public float discSelfDestructTimer = 3.0f;
+    
 
     private void Start()
     {
@@ -49,20 +50,20 @@ public class DiscBehaviourRelease : MonoBehaviour
         //     // float speed = 1.0f;
         //     // transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.identity, Time.deltaTime * 2);
         // }
-        
+
         //bool not working from controller script, checking colliders active or not instead
         if (colliders[0].enabled == false)
+        {
+            discSelfDestructTimer -= Time.deltaTime;
+
+            if (discSelfDestructTimer <= 0)
             {
-                discSelfDestructTimer -= Time.deltaTime;
 
-                if (discSelfDestructTimer <= 0)
-                {
-
-                    GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
-                    Destroy(particles, 1f);
-                    Destroy(gameObject);
-                }
+                GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
+                Destroy(particles, 1f);
+                Destroy(gameObject);
             }
+        }
     }
 
 
@@ -72,11 +73,15 @@ public class DiscBehaviourRelease : MonoBehaviour
         //Spawn new disc pillar on release
         DiscPillar.DeActivatePillar();
         DiscPillar.spawnNewDiscBool = true;
-        DiscPillar.SpawnNewDiscDelay(1f); 
-
-        StartCoroutine(DestroyDiscAfterThrow());
+        DiscPillar.SpawnNewDiscDelay(1f);
         
-        if(handSpeed >= controllerMaxSpeed)
+        //Scale Disc
+        StartCoroutine(ScaleOverTime(2f));
+        
+        //Destroy after X seconds
+        StartCoroutine(DestroyDiscAfterThrow());
+
+        if (handSpeed >= controllerMaxSpeed)
         {
             Debug.Log("Using max Speed");
 
@@ -100,10 +105,11 @@ public class DiscBehaviourRelease : MonoBehaviour
     public void DisableDiscCollider()
     {
         //Disable collider from controller script 
-        colliders[0].enabled = false; 
-        colliders[1].enabled = false; 
+        colliders[0].enabled = false;
+        colliders[1].enabled = false;
+
     }
-    
+
     public void EnabaleDiscCollider()
     {
         //Enable collider from controller script 
@@ -113,7 +119,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator DiscColliderOn()
     {
         yield return new WaitForSeconds(0.10f);
-        colliders[0].enabled = true; 
+        colliders[0].enabled = true;
         colliders[1].enabled = true;
         yield return new WaitForSeconds(0.20f);
         discRB.constraints = RigidbodyConstraints.None;
@@ -123,12 +129,10 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator AddForceAfterThrow()
     {
         //Ads force to the disc once it is released and has got the velocity from the controller 
-        
-        Debug.Log(throwAngle);
         yield return new WaitForSeconds(0.01f);
         thisXRGrabInteractable.throwVelocityScale = 50f;
         thisXRGrabInteractable.throwAngularVelocityScale = 10.0f;
-        discRB.AddForce(discRB.velocity.normalized  * forceMultiplier, ForceMode.Impulse);
+        discRB.AddForce(discRB.velocity.normalized * forceMultiplier, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         throwAngle = gameObject.transform.rotation;
     }
@@ -139,7 +143,7 @@ public class DiscBehaviourRelease : MonoBehaviour
         DestroyDiscEffects();
 
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Disc")
@@ -147,6 +151,7 @@ public class DiscBehaviourRelease : MonoBehaviour
             DestroyDiscEffects();
         }
     }
+
     public void DestroyDiscEffects()
     {
         GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
@@ -154,5 +159,20 @@ public class DiscBehaviourRelease : MonoBehaviour
         Destroy(gameObject);
     }
 
+    IEnumerator ScaleOverTime(float time)
+    {
+        Vector3 orgScale = gameObject.transform.localScale;
+        Debug.Log(orgScale);
+        Vector3 destinationScale = new Vector3(0.75f, 0.1f, 0.75f);
 
+        float currentTime = 0.0f;
+
+        do
+        {
+            gameObject.transform.localScale = Vector3.Lerp(orgScale, destinationScale, currentTime / time);
+            currentTime += Time.deltaTime;
+            yield return null;
+        } while (currentTime <= time);
+
+    }
 }
