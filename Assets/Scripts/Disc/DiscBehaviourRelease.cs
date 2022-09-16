@@ -19,14 +19,15 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     public DiscPillar DiscPillar;
 
-    public bool discThrown = false;
-
     public Quaternion throwAngle;
     private float time = 3.0f;
 
     public float destroyTinmeAfterThrow = 5f;
 
     public GameObject particleSystemDestroy;
+
+    //Self Destruct
+    public float discSelfDestructTimer = 3.0f;
 
     private void Start()
     {
@@ -48,14 +49,30 @@ public class DiscBehaviourRelease : MonoBehaviour
         //     // float speed = 1.0f;
         //     // transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.identity, Time.deltaTime * 2);
         // }
+        
+        //bool not working from controller script, checking colliders active or not instead
+        if (colliders[0].enabled == false)
+            {
+                discSelfDestructTimer -= Time.deltaTime;
+
+                if (discSelfDestructTimer <= 0)
+                {
+
+                    GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
+                    Destroy(particles, 1f);
+                    Destroy(gameObject);
+                }
+            }
     }
 
 
     public void ReleaseVelocity()
     {
         float handSpeed = controllerVelocity.rightHandRB.velocity.magnitude;
-
+        //Spawn new disc pillar on release
+        DiscPillar.DeActivatePillar();
         DiscPillar.spawnNewDiscBool = true;
+        DiscPillar.SpawnNewDiscDelay(1f); 
 
         StartCoroutine(DestroyDiscAfterThrow());
         
@@ -66,8 +83,6 @@ public class DiscBehaviourRelease : MonoBehaviour
             //Cap the max throw speed vel
             //Start coroutine and add force after the XR scripts adds it's own throw velocity 
             StartCoroutine(AddForceAfterThrow());
-            //Spawn new disc from pillar
-            DiscPillar.SpawnNewDiscDelay(1f);
         }
         else
         {
@@ -78,11 +93,6 @@ public class DiscBehaviourRelease : MonoBehaviour
             throwAngle = gameObject.transform.rotation;
             thisXRGrabInteractable.throwVelocityScale = 1.0f;
             discRB.AddForce(discRB.velocity.normalized * 0.5f, ForceMode.Impulse);
-            discThrown = true;
-            
-            //Spawn new disc from pillar
-            DiscPillar.SpawnNewDiscDelay(1f); 
-  
         }
 
     }
@@ -98,17 +108,15 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         //Enable collider from controller script 
         StartCoroutine(DiscColliderOn());
-        discThrown = true;
     }
 
     IEnumerator DiscColliderOn()
-    {   
-        yield return new WaitForSeconds(0.25f);
-        discRB.constraints = RigidbodyConstraints.None;
-        yield return new WaitForSeconds(0.25f);
+    {
+        yield return new WaitForSeconds(0.10f);
         colliders[0].enabled = true; 
         colliders[1].enabled = true;
-
+        yield return new WaitForSeconds(0.20f);
+        discRB.constraints = RigidbodyConstraints.None;
     }
 
 
@@ -123,8 +131,6 @@ public class DiscBehaviourRelease : MonoBehaviour
         discRB.AddForce(discRB.velocity.normalized  * forceMultiplier, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         throwAngle = gameObject.transform.rotation;
-        discThrown = true;
-
     }
 
     public IEnumerator DestroyDiscAfterThrow()

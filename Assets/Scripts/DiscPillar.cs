@@ -15,6 +15,8 @@ public class DiscPillar : MonoBehaviour
     private int currentRandomPillar; 
     [SerializeField] private GameObject disc;
 
+
+
     public bool spawnNewDiscBool = false;
 
     private void Start()
@@ -29,6 +31,7 @@ public class DiscPillar : MonoBehaviour
     }
     public void SpawnNewDisc()
     {
+        Debug.Log("Spawn new disc");
         currentRandomPillar = (UnityEngine.Random.Range(0, pillars.Length));
         spawnNewDiscBool = false;
         pillars[currentRandomPillar].SetActive(true);

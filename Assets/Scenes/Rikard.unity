@@ -5729,18 +5729,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -4582696778293817221, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
-        m_TargetAssemblyTypeName: DiscSelfDestruction, Assembly-CSharp
-        m_MethodName: DiscPickedUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -5753,30 +5741,6 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0.1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: -4582696778293817221, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
-        m_TargetAssemblyTypeName: DiscSelfDestruction, Assembly-CSharp
-        m_MethodName: DiscDropped
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1265796091}
-        m_TargetAssemblyTypeName: DiscPillar, Assembly-CSharp
-        m_MethodName: DeActivatePillar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -6057,6 +6021,7 @@ MonoBehaviour:
   - {fileID: 388868835}
   - {fileID: 748505943}
   disc: {fileID: 1475092120222707923, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
+  canSpawnPillar: 0
   spawnNewDiscBool: 0
 --- !u!4 &1265796092
 Transform:
@@ -8798,18 +8763,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -4582696778293817221, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
-        m_TargetAssemblyTypeName: DiscSelfDestruction, Assembly-CSharp
-        m_MethodName: DiscPickedUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -8822,30 +8775,6 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0.1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1265796091}
-        m_TargetAssemblyTypeName: DiscPillar, Assembly-CSharp
-        m_MethodName: DeActivatePillar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: -4582696778293817221, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
-        m_TargetAssemblyTypeName: DiscSelfDestruction, Assembly-CSharp
-        m_MethodName: DiscDropped
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
