@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8390950676163898144}
   m_Layer: 0
-  m_Name: Wave1AIEnemy
+  m_Name: Wave1AIEnemy 1
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
