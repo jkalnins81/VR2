@@ -1083,7 +1083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee9a8c0b95485340bc3129559f0fc96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 0.5
+  movementDelay: 0.5
   SnakeHead: {fileID: 8390950676691777312}
   Snake1: {fileID: 9137922824950724431}
   Snake2: {fileID: 2763560496632743281}
