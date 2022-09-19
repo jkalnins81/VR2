@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snake (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8390950676163898145, guid: e398d754324742a4bbe6747c694346f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e398d754324742a4bbe6747c694346f8, type: 3}
 --- !u!1001 &105333215
@@ -694,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &120333007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5757230659ba71a48ae217af8a57ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIEnemyPrefab: {fileID: 8390950676163898145, guid: e398d754324742a4bbe6747c694346f8, type: 3}
+  AIEnemyPrefab: {fileID: 8390950676163898145, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
   spawnRateInSeconds: 10
 --- !u!4 &120333008
 Transform:
