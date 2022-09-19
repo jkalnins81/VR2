@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: movementDelay
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 175549195039728575, guid: e398d754324742a4bbe6747c694346f8, type: 3}
+      propertyPath: secsToNewMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8390950676163898144, guid: e398d754324742a4bbe6747c694346f8, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -487,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390950676163898145, guid: e398d754324742a4bbe6747c694346f8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e398d754324742a4bbe6747c694346f8, type: 3}
@@ -698,7 +702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &120333007
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class SnakeMovement : MonoBehaviour
     public float speed;
     public float movementDelay;
     public float lerp;
+    public float secsToNewMovement;
 
     float left = -1f;
     float right = 1f;
@@ -67,7 +68,7 @@ public class SnakeMovement : MonoBehaviour
         //SnakeHead.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, forward) * speed; 
         //Snake2...
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & up & right
 
@@ -93,7 +94,7 @@ public class SnakeMovement : MonoBehaviour
         yield return new WaitForSeconds(movementDelay);
         Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & down & left
 
@@ -119,7 +120,7 @@ public class SnakeMovement : MonoBehaviour
         yield return new WaitForSeconds(movementDelay);
         Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & left
 
@@ -145,7 +146,7 @@ public class SnakeMovement : MonoBehaviour
         yield return new WaitForSeconds(movementDelay);
         Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & right
 
@@ -171,7 +172,7 @@ public class SnakeMovement : MonoBehaviour
         yield return new WaitForSeconds(movementDelay);
         Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & down & right
 
@@ -197,7 +198,7 @@ public class SnakeMovement : MonoBehaviour
         yield return new WaitForSeconds(movementDelay);
         Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & up & left
 
