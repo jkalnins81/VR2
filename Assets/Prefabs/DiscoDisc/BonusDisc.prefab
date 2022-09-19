@@ -184,8 +184,9 @@ GameObject:
   - component: {fileID: 1475092120222707922}
   - component: {fileID: 2123649928556561719}
   - component: {fileID: 5297799309953078996}
+  - component: {fileID: -8001960853290362110}
   m_Layer: 0
-  m_Name: DiscoDisc
+  m_Name: BonusDisc
   m_TagString: Disc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +460,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475092120222707923}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74c33b328f407d649acd0d2ab9e38aec, type: 3}
   m_Name: 
@@ -507,8 +508,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144f03949a92e93469730d9760c20a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusDisc: {fileID: 1475092120222707923, guid: db1bcbeb0f607d94889446b21a5573a5, type: 3}
+  bonusDisc: {fileID: 1475092120222707923}
   streakBonusDiscNumber: 3
+--- !u!114 &-8001960853290362110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475092120222707923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fe27d7e2f8cec43bf130a6382dfe9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders: []
 --- !u!1 &2695428110341850157
 GameObject:
   m_ObjectHideFlags: 0

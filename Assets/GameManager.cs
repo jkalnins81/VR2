@@ -10,25 +10,27 @@ public class GameManager : MonoBehaviour
     public int enemyStreak = 0;
     public float enemyStreakTime = 3;
     private float enemyStreakTimereset;
-    
-    
+
     private static GameManager _instance;
 
     private void Start()
     {
-        enemyStreakTimereset = enemyStreakTimereset;
+        enemyStreakTimereset = enemyStreakTime;
     }
 
     private void Update()
     {
-        enemyStreakTime--;
+        // Streak timer
+        enemyStreakTime = enemyStreakTime - Time.deltaTime;
         if (enemyStreakTime <= 0)
         {
-            enemyStreakCounter.enabled = true;
+            enemyStreakCounter.enabled = false;
+            //Reset streak if timer is below 0
+            enemyStreak = 0;
         }
         else
         {
-            enemyStreakCounter.enabled = false; 
+            enemyStreakCounter.enabled = true; 
         }
     }
 
