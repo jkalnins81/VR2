@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SnakeManager : MonoBehaviour
 {
-    [SerializeField] float speed = 280;
-    [SerializeField] float turnSpeed = 18;
+    [SerializeField] float speed = 0.25f;
+    [SerializeField] float turnSpeed = 2f;
     [SerializeField] List<GameObject> bodyParts = new List<GameObject>();
     List<GameObject> snakeBody = new List<GameObject>();
 
@@ -19,6 +19,12 @@ public class SnakeManager : MonoBehaviour
             temp.AddComponent<Rigidbody>();
             temp.GetComponent<Rigidbody>().useGravity = false;
         }
+        snakeBody.Add(temp);
+    }
+
+    private void FixedUpdate()
+    {
+        SnakeMovement();
     }
 
     void SnakeMovement()
