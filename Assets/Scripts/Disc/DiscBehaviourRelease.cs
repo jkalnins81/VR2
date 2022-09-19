@@ -83,15 +83,12 @@ public class DiscBehaviourRelease : MonoBehaviour
 
         if (handSpeed >= controllerMaxSpeed)
         {
-            Debug.Log("Using max Speed");
-
             //Cap the max throw speed vel
             //Start coroutine and add force after the XR scripts adds it's own throw velocity 
             StartCoroutine(AddForceAfterThrow());
         }
         else
         {
-            Debug.Log("Using Low speed");
             // if arm movement is slow, output this 
             // float discPercentage = handSpeed / discMaxSpeed;
             // Debug.Log(discPercentage);
@@ -107,7 +104,6 @@ public class DiscBehaviourRelease : MonoBehaviour
         //Disable collider from controller script 
         colliders[0].enabled = false;
         colliders[1].enabled = false;
-
     }
 
     public void EnabaleDiscCollider()
@@ -162,7 +158,6 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator ScaleOverTime(float time)
     {
         Vector3 orgScale = gameObject.transform.localScale;
-        Debug.Log(orgScale);
         Vector3 destinationScale = new Vector3(0.75f, 0.1f, 0.75f);
 
         float currentTime = 0.0f;
