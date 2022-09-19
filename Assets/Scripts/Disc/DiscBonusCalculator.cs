@@ -39,26 +39,46 @@ public class DiscBonusCalculator : MonoBehaviour
             if (GameManager.Instance.enemyStreak == streakBonusDiscNumber)
             {
        
-               GameObject spawnBonusDisc = Instantiate(bonusDisc, spawnPos, Quaternion.identity);
-               Debug.Log(spawnBonusDisc.transform.position);
-               Debug.Log("BONUS DISC");
-               Rigidbody spawnedDiscRb = spawnBonusDisc.GetComponent<Rigidbody>();
+                SpawnBonusDisc(spawnPos);
 
-               float randomX = UnityEngine.Random.Range(-1, 1);
-               float randomY = UnityEngine.Random.Range(-1, 1);
-               float randomZ = UnityEngine.Random.Range(-1, 1);
-               Vector3 randomDir = new Vector3(randomX, randomY, randomZ);
-
-               StartCoroutine(AddForceDisc(spawnBonusDisc, randomDir));
-
+            }
+            
+            if (GameManager.Instance.enemyStreak == 6)
+            {
+                SpawnBonusDisc(spawnPos);
+                SpawnBonusDisc(spawnPos);
+            }
+            
+            if (GameManager.Instance.enemyStreak == 8)
+            {
+                SpawnBonusDisc(spawnPos);
+                SpawnBonusDisc(spawnPos);
+                SpawnBonusDisc(spawnPos);
+                
             }
         }
     }
 
-    IEnumerator AddForceDisc(GameObject spawnedDisc, Vector3 randomDir2)
+    void SpawnBonusDisc(Vector3 spawnPos)
+    {
+        GameObject spawnBonusDisc = Instantiate(bonusDisc, spawnPos, Quaternion.identity);
+        Debug.Log(spawnBonusDisc.transform.position);
+        Debug.Log("BONUS DISC");
+        Rigidbody spawnedDiscRb = spawnBonusDisc.GetComponent<Rigidbody>();
+
+        float randomX = UnityEngine.Random.Range(-1, 1);
+        float randomY = UnityEngine.Random.Range(-1, 1);
+        float randomZ = UnityEngine.Random.Range(-1, 1);
+        Vector3 randomDir = new Vector3(randomX, randomY, randomZ);
+
+        StartCoroutine(AddForceDisc(spawnBonusDisc, randomDir));
+
+    }
+
+    IEnumerator AddForceDisc(GameObject spawnedDisc, Vector3 randomDir)
     {
         yield return new WaitForSeconds(0.15f);
-        spawnedDisc.GetComponent<Rigidbody>().AddForce(randomDir2 * bonusDiscForceMultiplier, ForceMode.Impulse);
+        spawnedDisc.GetComponent<Rigidbody>().AddForce(randomDir * bonusDiscForceMultiplier, ForceMode.Impulse);
 
         
     }
