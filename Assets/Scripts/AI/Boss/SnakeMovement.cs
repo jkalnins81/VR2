@@ -54,17 +54,17 @@ public class SnakeMovement : MonoBehaviour
     {
         // move forward
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed * Time.deltaTime;
 
         //SnakeHead.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, forward) * speed; 
         //Snake2...
@@ -73,162 +73,162 @@ public class SnakeMovement : MonoBehaviour
 
         // move forward & up & right
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3UpRight + new Vector3(-wiggleOffset, -wiggleOffset, 0), lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3UpRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & down & left
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & left
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Left, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & right
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Right, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & down & right
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3DownRight, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         yield return new WaitForSeconds(secsToNewMovement);
 
         // move forward & up & left
 
-        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
-        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3UpLeft, lerp) * speed * Time.deltaTime;
         yield return new WaitForSeconds(movementDelay);
 
         // cobra pattern;
