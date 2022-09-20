@@ -14,9 +14,7 @@ public class SnakeManager : MonoBehaviour
 
     private void Start()
     {
-        countUp = distanceBetween;
         CreateBodyParts();
-
     }
 
     private void FixedUpdate()
@@ -31,6 +29,17 @@ public class SnakeManager : MonoBehaviour
     void SnakeMovement()
     {
         snakeBody[0].GetComponent<Rigidbody>().velocity = snakeBody[0].transform.forward * speed * Time.deltaTime;
+
+        if(snakeBody.Count > 1)
+        {
+            for (int i = 1; i < snakeBody.Count; i++)
+            {
+                MarkerManager markM = snakeBody[i - 1].GetComponent<MarkerManager>();
+                snakeBody[i].transform.position = markM.markerList[0].position;
+                snakeBody[i].transform.rotation = markM.markerList[0].rotation;
+                markM.markerList.RemoveAt(0);
+            }
+        }
     }
 
     void CreateBodyParts()
@@ -45,6 +54,8 @@ public class SnakeManager : MonoBehaviour
                 temp1.AddComponent<Rigidbody>();
                 temp1.GetComponent<Rigidbody>().useGravity = false;
             }
+            snakeBody.Add(temp1);
+            bodyParts.RemoveAt(0);
         }
 
         MarkerManager markM = snakeBody[snakeBody.Count - 1].GetComponent<MarkerManager>();
