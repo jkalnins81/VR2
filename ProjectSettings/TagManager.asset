@@ -7,8 +7,9 @@ TagManager:
   - AIEnemy
   - FrontWall
   - AILaser
-  - Disc
   - Hands
+  - Disc
+  - DiscHolding
   layers:
   - Default
   - TransparentFX

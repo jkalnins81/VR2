@@ -5,7 +5,7 @@ using UnityEngine;
 public class DiscBonusExtraBehaviour : MonoBehaviour
 {
    [SerializeField] private Collider[] colliders; 
-    // Start is called before the first frame update
+
     void Start()
     {
         colliders = transform.GetComponents<Collider>(); 
@@ -20,12 +20,6 @@ public class DiscBonusExtraBehaviour : MonoBehaviour
         
         //Scale Disc
         StartCoroutine(ScaleOverTime(2f));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-     
     }
 
     IEnumerator ActivatingCollider()

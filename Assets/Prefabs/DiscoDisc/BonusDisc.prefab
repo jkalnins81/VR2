@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4318042277276470751}
   m_Layer: 0
   m_Name: DiscoDisc (1)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5030811491519828062}
   m_Layer: 0
   m_Name: DiscoDisc (6)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,8 +183,8 @@ GameObject:
   - component: {fileID: -4582696778293817221}
   - component: {fileID: 1475092120222707922}
   - component: {fileID: 2123649928556561719}
-  - component: {fileID: 5297799309953078996}
   - component: {fileID: -8001960853290362110}
+  - component: {fileID: 8990128478103266068}
   m_Layer: 0
   m_Name: BonusDisc
   m_TagString: Disc
@@ -496,20 +496,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &5297799309953078996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475092120222707923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144f03949a92e93469730d9760c20a1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonusDisc: {fileID: 1475092120222707923}
-  streakBonusDiscNumber: 3
 --- !u!114 &-8001960853290362110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +509,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliders: []
+--- !u!114 &8990128478103266068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475092120222707923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d3c746d153b8f47905c7c9a07e7733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  streakBonusDiscNumber: 3
+  bonusDiscSpawner: {fileID: 0}
 --- !u!1 &2695428110341850157
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 7926158713029652923}
   m_Layer: 0
   m_Name: DiscoDisc (4)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 4648848691348442212}
   m_Layer: 0
   m_Name: DiscoDisc
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 550230363997348879}
   m_Layer: 0
   m_Name: ForceField
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 1001834799707640474}
   m_Layer: 0
   m_Name: DiscoDisc (2)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 7414805374694627817}
   m_Layer: 0
   m_Name: DiscoDisc (3)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 8320970317217537152}
   m_Layer: 0
   m_Name: DiscoDisc (5)
-  m_TagString: Disc
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

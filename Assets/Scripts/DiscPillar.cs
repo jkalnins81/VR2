@@ -14,9 +14,7 @@ public class DiscPillar : MonoBehaviour
     [SerializeField] private GameObject[] pillars;
     private int currentRandomPillar; 
     [SerializeField] private GameObject disc;
-
-
-
+    
     public bool spawnNewDiscBool = false;
 
     private void Start()

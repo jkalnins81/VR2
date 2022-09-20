@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            enemyStreakCounter.enabled = true; 
+            enemyStreakCounter.enabled = true;
         }
     }
 
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = GameObject.FindObjectOfType<GameManager>();
             }
@@ -47,17 +47,17 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public GameObject[] activeDiscs;
-
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void UpdateVisualScore()
+    //Streak Visual
+    public void UpdateVisualKillStreak()
     {
+        Debug.Log("Updating");
         enemyStreakCounter.text = enemyStreak.ToString();
         enemyStreakTime = enemyStreakTimereset;
     }
-    
+
 }

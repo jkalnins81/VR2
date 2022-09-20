@@ -31,6 +31,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     
 
     private void Start()
+    
     {
         discRB = GetComponent<Rigidbody>();
         controllerVelocity = FindObjectOfType<ControllerVelocity>();
@@ -102,6 +103,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     public void DisableDiscCollider()
     {
         //Disable collider from controller script 
+        
         colliders[0].enabled = false;
         colliders[1].enabled = false;
     }
@@ -109,6 +111,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     public void EnabaleDiscCollider()
     {
         //Enable collider from controller script 
+        gameObject.tag = "Disc";
         StartCoroutine(DiscColliderOn());
     }
 
