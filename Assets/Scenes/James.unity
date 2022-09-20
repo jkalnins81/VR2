@@ -1738,10 +1738,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f4036754b78184c913d4b29234ad7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 280
-  turnSpeed: 18
+  speed: 0.25
+  turnSpeed: 2
   bodyParts:
-  - {fileID: 0}
+  - {fileID: 3006220653503076072, guid: a85bbeaeef2fdfd48b81b0fd63f38e7e, type: 3}
+  - {fileID: 6174993276990407046, guid: 30ef55d367690bb4cbfd511b792e8c2f, type: 3}
+  - {fileID: 7919510219350115844, guid: 0fdbf8871d929ab48b9f0d989352c84f, type: 3}
+  - {fileID: 3270233765097812996, guid: e8a3b2032f4b313408f1b93f7c00215e, type: 3}
+  - {fileID: 2331884754048801818, guid: f61cd8f06589d6f408f95bbd23c3e23c, type: 3}
+  - {fileID: 1543911441089910079, guid: 3bd0eb2bd3040a74283ddffc21cd3b8f, type: 3}
+  - {fileID: 7462353810449944771, guid: 8adeba9eb5b52544abdb1c53723d996e, type: 3}
+  - {fileID: 820641835305391360, guid: ac4d403be9c61f144ada5a67828bf1a9, type: 3}
+  - {fileID: 4010743327907374734, guid: acfcbdbef8764c64cabb897ef9151ae8, type: 3}
+  - {fileID: 5773141669953063316, guid: 1716b6389359f2743a4dabf0a6f9ba1e, type: 3}
+  - {fileID: 209115440136448145, guid: 66c242f2b2c4c654db4a4a160cdaa537, type: 3}
 --- !u!4 &273688738
 Transform:
   m_ObjectHideFlags: 0
