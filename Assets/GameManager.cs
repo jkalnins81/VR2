@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public float enemyStreakTime = 3;
     private float enemyStreakTimereset;
 
+    public bool replacingDiscs;
+
     private static GameManager _instance;
 
     private void Start()

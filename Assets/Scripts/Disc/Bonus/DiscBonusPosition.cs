@@ -24,6 +24,9 @@ public class DiscBonusPosition : MonoBehaviour
             //Send position to BonusDiscInstantiator, where the new discs should emit
             Vector3 spawnPos = other.gameObject.transform.position;
             bonusDiscSpawner.BonusDiscInstantiator(spawnPos);
+            
+            //If the BonusDiscSpawner is replacing discs, then destroy the disc that has been thrown
+            if(GameManager.Instance.replacingDiscs) Destroy(gameObject);
         }
     }
 }

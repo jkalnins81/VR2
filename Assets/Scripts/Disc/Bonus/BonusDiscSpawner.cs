@@ -22,12 +22,26 @@ public class BonusDiscSpawner : MonoBehaviour
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
+
         }
         if (GameManager.Instance.enemyStreak == 3)
         {
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
+            GameManager.Instance.replacingDiscs = true;
+            _discReplacer.DiscChanger();
+        }    
+        
+        if (GameManager.Instance.enemyStreak == 6)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            GameManager.Instance.replacingDiscs = true;
             _discReplacer.DiscChanger();
         }    
     }

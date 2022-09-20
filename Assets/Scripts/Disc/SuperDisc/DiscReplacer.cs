@@ -10,7 +10,14 @@ public class DiscReplacer : MonoBehaviour
 
     public void DiscChanger()
     {
+        StartCoroutine(ReplaceAllDiscs());
 
+    }
+
+    public IEnumerator ReplaceAllDiscs()
+    {
+        yield return new WaitForSeconds(0.25f);
+        
         FindActiveDiscs();
 
         for (int i = 0; i < allActiveDiscs.Length; i++)
@@ -18,7 +25,7 @@ public class DiscReplacer : MonoBehaviour
             int numberOBJ = allActiveDiscs.Length;
 
             GameObject instantiatedSuperDisc = Instantiate(superDisc, allActiveDiscs[i].transform.position, Quaternion.identity);
-            instantiatedSuperDisc.GetComponent<Rigidbody>().AddForce(Vector3.down * 100, ForceMode.Impulse);
+            instantiatedSuperDisc.GetComponent<Rigidbody>().AddForce(allActiveDiscs[i].GetComponent<Rigidbody>().velocity * 10f, ForceMode.Impulse);
             instantiatedSuperDisc.tag = "Disc";
 
             Debug.Log(numberOBJ);
@@ -29,11 +36,13 @@ public class DiscReplacer : MonoBehaviour
                 for (int j = 0; j < numberOBJ; j++)
                 {
                     Destroy(allActiveDiscs[j].gameObject);
+                    GameManager.Instance.replacingDiscs = false;
                     // ClearDiscArray();
                 }
             }
         }
     }
+    
 
     void ClearDiscArray()
     {
