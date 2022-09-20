@@ -45,7 +45,7 @@ public class SnakeMovement : MonoBehaviour
         Vector3UpRight = new Vector3(right, up, forward);
         Vector3DownLeft = new Vector3(left, down, forward);
         Vector3DownRight = new Vector3(right, down, forward);
-        
+
         StartCoroutine(StartSnakeMovement());
     }
 
