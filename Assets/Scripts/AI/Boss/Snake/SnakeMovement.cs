@@ -5,9 +5,7 @@ using UnityEngine;
 public class SnakeMovement : MonoBehaviour
 {
     public float speed;
-    public float wiggleSpeed;
     public float movementDelay;
-    public float wiggleDelay;
     public float lerp;
     public float secsToNewMovement;
 
