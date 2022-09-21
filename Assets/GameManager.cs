@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public float enemyStreakTime = 3;
     private float enemyStreakTimereset;
 
+    public int playerHealth = 100;
+    [SerializeField] private TextMeshPro currentHealthDisplay;
+
     public bool replacingDiscs;
 
     private static GameManager _instance;
@@ -57,9 +60,13 @@ public class GameManager : MonoBehaviour
     //Streak Visual
     public void UpdateVisualKillStreak()
     {
-        Debug.Log("Updating");
         enemyStreakCounter.text = enemyStreak.ToString();
         enemyStreakTime = enemyStreakTimereset;
+    }
+
+    public void UpdateCurrentHealth()
+    {
+        currentHealthDisplay.text = playerHealth.ToString();
     }
 
 }
