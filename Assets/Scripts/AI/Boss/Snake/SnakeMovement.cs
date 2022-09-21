@@ -46,7 +46,19 @@ public class SnakeMovement : MonoBehaviour
         Vector3DownLeft = new Vector3(left, down, forward);
         Vector3DownRight = new Vector3(right, down, forward);
 
-        StartCoroutine(StartSnakeMovement());
+        SnakeHead.GetComponent<Rigidbody>().velocity = Vector3.Lerp(SnakeHead.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake1.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake1.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake2.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake2.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake3.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake3.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake4.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake4.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake5.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake5.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake6.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake6.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake7.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake7.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake8.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake8.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake9.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake9.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+        Snake10.GetComponent<Rigidbody>().velocity = Vector3.Lerp(Snake10.GetComponent<Rigidbody>().velocity, Vector3Forward, lerp) * speed;
+
+        //StartCoroutine(StartSnakeMovement());
     }
 
     IEnumerator StartSnakeMovement()

@@ -7913,8 +7913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5757230659ba71a48ae217af8a57ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIEnemyPrefab: {fileID: 8390950676163898145, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
-  spawnRateInSeconds: 2
+  AIEnemyPrefab: {fileID: 1355440134213967760, guid: e398d754324742a4bbe6747c694346f8, type: 3}
+  spawnRateInSeconds: 100
 --- !u!4 &1664967753
 Transform:
   m_ObjectHideFlags: 0

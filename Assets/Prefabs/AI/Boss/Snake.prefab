@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1355440132600649640}
   - component: {fileID: 1355440132600649641}
   - component: {fileID: 1355440132600649684}
+  - component: {fileID: 7067384346845331483}
   m_Layer: 0
   m_Name: Snake3
   m_TagString: Untagged
@@ -127,9 +128,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.6
+--- !u!114 &7067384346845331483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440132600649642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440132796115984
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +160,7 @@ GameObject:
   - component: {fileID: 1355440132796115998}
   - component: {fileID: 1355440132796115999}
   - component: {fileID: 1355440132796115994}
+  - component: {fileID: 6211476219607303667}
   m_Layer: 0
   m_Name: Snake5
   m_TagString: Untagged
@@ -257,9 +274,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 1
+--- !u!114 &6211476219607303667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440132796115984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440132798903753
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +306,7 @@ GameObject:
   - component: {fileID: 1355440132798903799}
   - component: {fileID: 1355440132798903752}
   - component: {fileID: 1355440132798903795}
+  - component: {fileID: 6439441854390105658}
   m_Layer: 0
   m_Name: Snake10
   m_TagString: Untagged
@@ -387,9 +420,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0
+--- !u!114 &6439441854390105658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440132798903753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440132884712565
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,9 +452,10 @@ GameObject:
   - component: {fileID: 1355440132884712563}
   - component: {fileID: 1355440132884712564}
   - component: {fileID: 1355440132884712575}
+  - component: {fileID: 5794507847749867445}
   m_Layer: 0
   m_Name: SnakeHead
-  m_TagString: Untagged
+  m_TagString: SnakeHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,9 +566,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0
+--- !u!114 &5794507847749867445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440132884712565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440133170021479
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +598,7 @@ GameObject:
   - component: {fileID: 1355440133170021477}
   - component: {fileID: 1355440133170021478}
   - component: {fileID: 1355440133170021473}
+  - component: {fileID: 2310956987231808954}
   m_Layer: 0
   m_Name: Snake1
   m_TagString: Untagged
@@ -647,9 +712,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.2
+--- !u!114 &2310956987231808954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440133170021479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440133249701803
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +744,7 @@ GameObject:
   - component: {fileID: 1355440133249701801}
   - component: {fileID: 1355440133249701802}
   - component: {fileID: 1355440133249701845}
+  - component: {fileID: 9152489917010885208}
   m_Layer: 0
   m_Name: Snake7
   m_TagString: Untagged
@@ -777,9 +858,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.6
+--- !u!114 &9152489917010885208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440133249701803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440133819976537
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +890,7 @@ GameObject:
   - component: {fileID: 1355440133819976519}
   - component: {fileID: 1355440133819976536}
   - component: {fileID: 1355440133819976515}
+  - component: {fileID: 2910636635790451127}
   m_Layer: 0
   m_Name: Snake8
   m_TagString: Untagged
@@ -907,9 +1004,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.4
+--- !u!114 &2910636635790451127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440133819976537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440134007479176
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +1036,7 @@ GameObject:
   - component: {fileID: 1355440134007479222}
   - component: {fileID: 1355440134007479223}
   - component: {fileID: 1355440134007479218}
+  - component: {fileID: 5337413936695090938}
   m_Layer: 0
   m_Name: Snake2
   m_TagString: Untagged
@@ -1037,9 +1150,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.4
+--- !u!114 &5337413936695090938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440134007479176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440134213967760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1355440134213967772}
   - component: {fileID: 1355440134213967773}
-  - component: {fileID: 1355440134213967774}
   - component: {fileID: 1355440134213967775}
   m_Layer: 0
   m_Name: Snake
@@ -1097,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee9a8c0b95485340bc3129559f0fc96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   movementDelay: 0.25
   lerp: 0.5
   secsToNewMovement: 0
@@ -1117,18 +1244,6 @@ MonoBehaviour:
   Snake8: {fileID: 1355440133819976537}
   Snake9: {fileID: 1355440134473014480}
   Snake10: {fileID: 1355440132798903753}
---- !u!114 &1355440134213967774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355440134213967760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1355440134213967775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,6 +1270,7 @@ GameObject:
   - component: {fileID: 1355440134223777633}
   - component: {fileID: 1355440134223777634}
   - component: {fileID: 1355440134223777645}
+  - component: {fileID: 3678980770174133567}
   m_Layer: 0
   m_Name: Snake6
   m_TagString: Untagged
@@ -1268,9 +1384,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.8
+--- !u!114 &3678980770174133567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440134223777635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440134274356944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1416,7 @@ GameObject:
   - component: {fileID: 1355440134274356958}
   - component: {fileID: 1355440134274356959}
   - component: {fileID: 1355440134274356954}
+  - component: {fileID: 3781035699491450452}
   m_Layer: 0
   m_Name: Snake4
   m_TagString: Untagged
@@ -1398,9 +1530,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.8
+--- !u!114 &3781035699491450452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440134274356944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
 --- !u!1 &1355440134473014480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1562,7 @@ GameObject:
   - component: {fileID: 1355440134473014494}
   - component: {fileID: 1355440134473014495}
   - component: {fileID: 1355440134473014490}
+  - component: {fileID: 303389810384446536}
   m_Layer: 0
   m_Name: Snake9
   m_TagString: Untagged
@@ -1528,6 +1676,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.2
+--- !u!114 &303389810384446536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440134473014480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakeHealthPoints: 1
+  SnakeHeadHealthPoints: 3
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
