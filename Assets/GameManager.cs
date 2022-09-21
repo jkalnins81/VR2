@@ -16,11 +16,16 @@ public class GameManager : MonoBehaviour
 
     public bool replacingDiscs;
 
+    public GameObject streakDisplayGO;
+    public GameObject currentHealthDisplayGO;
+    public GameObject gameOverDisplayGO;
+
     private static GameManager _instance;
 
     private void Start()
     {
         enemyStreakTimereset = enemyStreakTime;
+        gameOverDisplayGO.SetActive(false);
     }
 
     private void Update()
@@ -67,6 +72,14 @@ public class GameManager : MonoBehaviour
     public void UpdateCurrentHealth()
     {
         currentHealthDisplay.text = playerHealth.ToString();
+
+        if(playerHealth <= 0)
+        {
+            Time.timeScale = 0;
+            streakDisplayGO.SetActive(false);
+            currentHealthDisplayGO.SetActive(false);
+            gameOverDisplayGO.SetActive(true);
+        }
     }
 
 }
