@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DiscoDisc.unity
+    guid: af01f12351b18f9459fd25f2e3db511b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9b4f68125d9e4fa4aa135253f6fa3044, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6ae78df4c9ad33145838258dc1f26547, type: 2}

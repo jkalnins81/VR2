@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject streakDisplayGO;
     public GameObject currentHealthDisplayGO;
     public GameObject gameOverDisplayGO;
+    public GameObject canvas;
 
     private static GameManager _instance;
 
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         enemyStreakTimereset = enemyStreakTime;
         gameOverDisplayGO.SetActive(false);
+        canvas.SetActive(false);
     }
 
     private void Update()
@@ -79,7 +82,19 @@ public class GameManager : MonoBehaviour
             streakDisplayGO.SetActive(false);
             currentHealthDisplayGO.SetActive(false);
             gameOverDisplayGO.SetActive(true);
+            canvas.SetActive(true);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("DiscoDisc");
+    }
+
+    public void Quit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        // Replace with "Application.Quit();" if built
     }
 
 }
