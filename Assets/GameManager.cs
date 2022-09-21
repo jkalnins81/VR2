@@ -88,7 +88,14 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1;
+        gameOverDisplayGO.SetActive(false);
+        canvas.SetActive(false);
+        currentHealthDisplayGO.SetActive(true);
+        streakDisplayGO.SetActive(true);
         SceneManager.LoadScene("DiscoDisc");
+        playerHealth = 10;
+        UpdateCurrentHealth();
     }
 
     public void Quit()
