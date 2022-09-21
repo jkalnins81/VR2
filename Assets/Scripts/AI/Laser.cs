@@ -16,21 +16,10 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("FrontWall"))
-        {
-            Destroy(transform.parent.gameObject);
-        }
-
         if(other.CompareTag("Disc"))
         {
             // instantitate VFX effect
             Destroy(transform.parent.gameObject);
         }
-
-        if (other.CompareTag("MainCamera"))
-        {
-
-        }
     }
-
 }
