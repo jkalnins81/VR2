@@ -10,6 +10,17 @@ TagManager:
   - Hands
   - Disc
   - DiscHolding
+  - SnakeHead
+  - Snake1
+  - Snake2
+  - Snake3
+  - Snake4
+  - Snake5
+  - Snake6
+  - Snake7
+  - Snake8
+  - Snake9
+  - Snake10
   layers:
   - Default
   - TransparentFX
