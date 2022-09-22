@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +8,20 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
     public float powerupMovementTimer = 2f;
     private float powerupMovementTimerReset;
 
+    private DiscReplacer _discReplacer;
+
     private Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
     {
         powerupMovementTimerReset = powerupMovementTimer;
         _rb = GetComponent<Rigidbody>();
+        
+        _discReplacer = FindObjectOfType<DiscReplacer>();
 
         StartCoroutine(DestroyPowerupTimer());
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -31,7 +37,15 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
 
     IEnumerator DestroyPowerupTimer()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
             Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Disc")
+        {
+            _discReplacer.DiscChanger();
+        }
     }
 }
