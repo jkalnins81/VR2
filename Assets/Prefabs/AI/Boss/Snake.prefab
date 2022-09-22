@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -300,7 +299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -456,7 +454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -611,8 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
+  SnakeHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -768,7 +764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -924,7 +919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -1080,7 +1074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -1236,7 +1229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -1480,7 +1472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -1636,7 +1627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
@@ -1792,7 +1782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnakeHealthPoints: 1
-  SnakeHeadHealthPoints: 3
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 1355440133170021479}
   snake2: {fileID: 1355440134007479176}
