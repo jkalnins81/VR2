@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 1355440132884712564}
   - component: {fileID: 1355440132884712575}
   - component: {fileID: 5794507847749867445}
+  - component: {fileID: 7044646908964565739}
   m_Layer: 0
   m_Name: SnakeHead
   m_TagString: SnakeHead
@@ -620,6 +621,20 @@ MonoBehaviour:
   snake8: {fileID: 1355440133819976537}
   snake9: {fileID: 1355440134473014480}
   snake10: {fileID: 1355440132798903753}
+--- !u!114 &7044646908964565739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355440132884712565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
+  firingRateInSeconds: 1
 --- !u!1 &1355440133170021479
 GameObject:
   m_ObjectHideFlags: 0
