@@ -4281,6 +4281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726864019}
+  - component: {fileID: 726864020}
   m_Layer: 0
   m_Name: EnemyWaveSpawner
   m_TagString: Untagged
@@ -4315,6 +4316,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726864020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726864018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2f2a5979d6f0c41ab98219b9d315c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ableToSpawn: 0
+  waves:
+  - name: Circle Enemy
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    count: 100
+    rate: 1
+  spawnPoints:
+  - {fileID: 1705512116}
+  - {fileID: 311747670}
+  - {fileID: 1388760244}
+  - {fileID: 1555941795}
+  - {fileID: 1862469910}
+  - {fileID: 1376931871}
+  - {fileID: 2121143166}
+  - {fileID: 1548613656}
+  - {fileID: 324390711}
+  - {fileID: 540122147}
+  - {fileID: 1225617795}
+  - {fileID: 1577204410}
+  timeBetweenWaves: 2
+  waveCountDown: 0
+  searchCountdown: 1
+  state: 2
 --- !u!1001 &742010212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8253,7 +8289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1664967752
 MonoBehaviour:
   m_ObjectHideFlags: 0
