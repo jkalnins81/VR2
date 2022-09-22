@@ -5,7 +5,6 @@ using UnityEngine;
 public class SnakeHealth : MonoBehaviour
 {
     public int SnakeHealthPoints;
-    public int SnakeHeadHealthPoints;
     public GameObject AIExplosion;
 
     public GameObject snake1;
@@ -22,120 +21,128 @@ public class SnakeHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(this.gameObject.CompareTag("SnakeHead"))
-        {
-            if (other.CompareTag("Disc"))
-            {
-                SnakeHeadHealthPoints -= 1;
-                // insert flashing snake function
-
-                if(SnakeHeadHealthPoints <= 0)
+                if (other.CompareTag("Disc"))
                 {
-                    Instantiate(AIExplosion, transform.position, Quaternion.identity);
-                    SnakeDie();
+                    SnakeHealthPoints -= 1;
+                    // insert flashing snake function
+
+                    if(SnakeHealthPoints <= 0 && this.gameObject.CompareTag("SnakeHead"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        SnakeDie();
+                    }
+
+                    if(SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake1"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake1);
+                        Destroy(snake2);
+                        Destroy(snake3);
+                        Destroy(snake4);
+                        Destroy(snake5);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake2"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake2);
+                        Destroy(snake3);
+                        Destroy(snake4);
+                        Destroy(snake5);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake3"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake3);
+                        Destroy(snake4);
+                        Destroy(snake5);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake4"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake4);
+                        Destroy(snake5);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake5"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake5);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake6"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake6);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake7"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake7);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake8"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake8);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake9"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake9);
+                        Destroy(snake10);
+                    }
+
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake10"))
+                    {
+                        Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                        Destroy(snake10);
+                    }
+            
                 }
 
-                if(SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake1"))
+                if (other.CompareTag("FrontWall"))
                 {
-                    Destroy(snake1);
-                    Destroy(snake2);
-                    Destroy(snake3);
-                    Destroy(snake4);
-                    Destroy(snake5);
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
+                SnakeDie();
                 }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake2"))
-                {
-                    Destroy(snake2);
-                    Destroy(snake3);
-                    Destroy(snake4);
-                    Destroy(snake5);
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake3"))
-                {
-                    Destroy(snake3);
-                    Destroy(snake4);
-                    Destroy(snake5);
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake4"))
-                {
-                    Destroy(snake4);
-                    Destroy(snake5);
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake5"))
-                {
-                    Destroy(snake5);
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake6"))
-                {
-                    Destroy(snake6);
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake7"))
-                {
-                    Destroy(snake7);
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake8"))
-                {
-                    Destroy(snake8);
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake9"))
-                {
-                    Destroy(snake9);
-                    Destroy(snake10);
-                }
-
-                if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("Snake10"))
-                {
-                    Destroy(snake10);
-                }
-            }
-        }
-
-        if (other.CompareTag("FrontWall"))
-        {
-            SnakeDie();
-        }
     }
 
     void SnakeDie()
