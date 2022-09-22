@@ -21,6 +21,7 @@ TagManager:
   - Snake8
   - Snake9
   - Snake10
+  - Powerup
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,8 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
     {
         powerupMovementTimerReset = powerupMovementTimer;
         _rb = GetComponent<Rigidbody>();
+
+        StartCoroutine(DestroyPowerupTimer());
     }
 
     // Update is called once per frame
@@ -25,5 +27,11 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
             //Reset streak if timer is below 0
             // enemyStreak = 0;
         }
+    }
+
+    IEnumerator DestroyPowerupTimer()
+    {
+        yield return new WaitForSeconds(6);
+            Destroy(gameObject);
     }
 }

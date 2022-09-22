@@ -11,7 +11,7 @@ public class PowerupObjectSpawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public Transform bonusObj;
+        public Transform powerupObj;
         public int count;
         public float rate;
     }
@@ -30,7 +30,7 @@ public class PowerupObjectSpawner : MonoBehaviour
 
     private void Start()
     {
-        ableToSpawn = false;
+        ableToSpawn = true;
 
         waveCountDown = timeBetweenWaves;
 
@@ -46,7 +46,7 @@ public class PowerupObjectSpawner : MonoBehaviour
         {
             if (state == SpawnState.waiting)
             {
-                if (!EnemyIsAlive())
+                if (!PowerupObjectIsAlive())
                 {
                     WaveCompleted();
                     return;
@@ -80,8 +80,8 @@ public class PowerupObjectSpawner : MonoBehaviour
         if(nextWave + 1 > waves.Length - 1)
         {
             //All waves completed
-            ableToSpawn = false;
-            Destroy(transform.parent.gameObject);
+            nextWave = 0;
+            ableToSpawn = true;
         }
         else
         {
@@ -90,14 +90,14 @@ public class PowerupObjectSpawner : MonoBehaviour
 
     }
 
-    bool EnemyIsAlive()
+    bool PowerupObjectIsAlive()
     {
         searchCountdown -= Time.deltaTime;
 
         if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectsWithTag("Bonus Object Spawned").Length <= 0)
+            if (GameObject.FindGameObjectsWithTag("Powerup").Length <= 0)
             {
                 return false;
             }
@@ -111,7 +111,7 @@ public class PowerupObjectSpawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            SpawnEnemy(_wave.bonusObj);
+            SpawnPowerup(_wave.powerupObj);
             yield return new WaitForSeconds(_wave.rate);
         }
         state = SpawnState.waiting;
@@ -119,7 +119,7 @@ public class PowerupObjectSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy (Transform _enemy)
+    void SpawnPowerup (Transform _enemy)
     {
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);

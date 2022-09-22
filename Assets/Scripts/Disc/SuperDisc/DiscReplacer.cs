@@ -28,8 +28,6 @@ public class DiscReplacer : MonoBehaviour
             instantiatedSuperDisc.GetComponent<Rigidbody>().AddForce(allActiveDiscs[i].GetComponent<Rigidbody>().velocity * 10f, ForceMode.Impulse);
             instantiatedSuperDisc.tag = "Disc";
 
-            Debug.Log(numberOBJ);
-
             //Destroy old active discs
             if (i == numberOBJ - 1)
             {
