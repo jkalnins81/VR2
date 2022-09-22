@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4401209571081435450}
   - component: {fileID: 4401209571081435449}
   m_Layer: 0
-  m_Name: Disc
+  m_Name: TestDisc
   m_TagString: Disc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
