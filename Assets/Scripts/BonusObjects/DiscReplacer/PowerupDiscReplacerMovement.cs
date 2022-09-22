@@ -41,11 +41,14 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Disc")
+        if (other.gameObject.tag == "Disc")
         {
+            Destroy(gameObject);
+            GameManager.Instance.replacingDiscs = true;
             _discReplacer.DiscChanger();
         }
     }
+    
 }

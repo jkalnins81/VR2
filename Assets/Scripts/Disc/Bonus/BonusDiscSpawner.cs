@@ -29,8 +29,6 @@ public class BonusDiscSpawner : MonoBehaviour
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
-            GameManager.Instance.replacingDiscs = true;
-            _discReplacer.DiscChanger();
         }    
         
         if (GameManager.Instance.enemyStreak == 6)
@@ -41,8 +39,22 @@ public class BonusDiscSpawner : MonoBehaviour
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
-            GameManager.Instance.replacingDiscs = true;
-            _discReplacer.DiscChanger();
+        }   
+        
+        if (GameManager.Instance.enemyStreak == 12)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
         }    
     }
     
