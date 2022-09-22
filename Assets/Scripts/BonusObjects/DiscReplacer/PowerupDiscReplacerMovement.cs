@@ -8,6 +8,8 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
     public float powerupMovementTimer = 2f;
     private float powerupMovementTimerReset;
 
+    [SerializeField] private GameObject particleSystemDestroy;
+
     private DiscReplacer _discReplacer;
 
     private Rigidbody _rb;
@@ -48,7 +50,15 @@ public class PowerupDiscReplacerMovement : MonoBehaviour
             Destroy(gameObject);
             GameManager.Instance.replacingDiscs = true;
             _discReplacer.DiscChanger();
+            DestroyEffects();
         }
+    }
+    
+    public void DestroyEffects()
+    {
+        GameObject particles = Instantiate(particleSystemDestroy, transform.position, Quaternion.identity);
+        Destroy(particles, 1f);
+        Destroy(gameObject);
     }
     
 }
