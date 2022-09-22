@@ -21,7 +21,7 @@ public class AIHealth : MonoBehaviour
         }
     }
 
-    void AIDie()
+    public void AIDie()
     {
         Destroy(transform.parent.gameObject);
     }
