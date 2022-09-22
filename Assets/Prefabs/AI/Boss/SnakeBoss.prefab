@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.6
 --- !u!114 &5948493721673158521
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.4
 --- !u!114 &5085687874545887689
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.2
 --- !u!114 &5074618993395929521
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 1
 --- !u!114 &5292189912295076254
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.8
 --- !u!114 &290898784560409536
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.4
 --- !u!114 &5061988538305415470
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0
 --- !u!114 &5713474972254268659
@@ -2348,7 +2348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.6
 --- !u!114 &5974565894629910145
@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.8
 --- !u!114 &5014878854811495935
@@ -3068,7 +3068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6551ac16293f241a126aafc9891cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 2.5
   magnitude: 0.01
   offset: 0.2
 --- !u!114 &4936772172066653217
