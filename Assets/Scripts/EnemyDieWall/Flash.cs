@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour
 {
-    //[SerializeField] private Material enemyDieWallMaterial;
-
-    [SerializeField] private Renderer enemyDieWallRenderer;
+    [SerializeField] private Material enemyDieWallMaterial;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,9 +17,9 @@ public class Flash : MonoBehaviour
 
     IEnumerator StartFlash()
     {
-        enemyDieWallRenderer.material.color = new Color(241f, 61f, 61f, 145f);
-        Debug.Log(enemyDieWallRenderer.material.color);
+        enemyDieWallMaterial.color = new Color(241f, 61f, 61f, 145f);
+        Debug.Log(enemyDieWallMaterial.color);
         yield return new WaitForSeconds(0.5f);
-        enemyDieWallRenderer.material.color = new Color(255f, 255f, 255f, 0f);
+        enemyDieWallMaterial.color = new Color(255f, 255f, 255f, 0f);
     }
 }

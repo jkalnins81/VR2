@@ -6,7 +6,7 @@ public class SnakeManager : MonoBehaviour
 {
     [SerializeField] float distanceBetween = 0.2f;
     [SerializeField] float speed = 100f;
-    [SerializeField] float turnSpeed = 2f;
+    //[SerializeField] float turnSpeed = 2f;
     [SerializeField] List<GameObject> bodyParts = new List<GameObject>();
     List<GameObject> snakeBody = new List<GameObject>();
 
