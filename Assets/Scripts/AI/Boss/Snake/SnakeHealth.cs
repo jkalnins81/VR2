@@ -18,7 +18,6 @@ public class SnakeHealth : MonoBehaviour
     public GameObject snake9;
     public GameObject snake10;
 
-
     private void OnTriggerEnter(Collider other)
     {
                 if (other.CompareTag("Disc"))
@@ -141,7 +140,7 @@ public class SnakeHealth : MonoBehaviour
 
                 if (other.CompareTag("FrontWall"))
                 {
-                SnakeDie();
+                    SnakeDie();
                 }
     }
 

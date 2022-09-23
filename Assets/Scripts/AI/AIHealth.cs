@@ -6,6 +6,12 @@ public class AIHealth : MonoBehaviour
 {
     public int AIHealthPoints;
     public GameObject AIExplosion;
+    GameObject EnemyDieWall;
+
+    private void Start()
+    {
+        EnemyDieWall = GameObject.Find("EnemyDieWall");
+    }
 
     private void OnTriggerEnter(Collider other)
     {

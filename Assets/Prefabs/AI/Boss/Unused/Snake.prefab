@@ -1265,7 +1265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1355440134213967772}
   - component: {fileID: 1355440134213967773}
-  - component: {fileID: 1355440134213967775}
   m_Layer: 0
   m_Name: Snake
   m_TagString: AIEnemy
@@ -1331,18 +1330,6 @@ MonoBehaviour:
   Snake8: {fileID: 1355440133819976537}
   Snake9: {fileID: 1355440134473014480}
   Snake10: {fileID: 1355440132798903753}
---- !u!114 &1355440134213967775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355440134213967760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5d290f8b3018342aeaaea90689dfd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1355440134223777635
 GameObject:
   m_ObjectHideFlags: 0
