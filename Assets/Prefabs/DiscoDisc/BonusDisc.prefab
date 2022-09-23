@@ -447,6 +447,7 @@ MonoBehaviour:
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
   colliders: []
+  forceMultiplier: 150
   thisXRGrabInteractable: {fileID: 0}
   DiscPillar: {fileID: 0}
   throwAngle: {x: 0, y: 0, z: 0, w: 0}
@@ -521,7 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3c746d153b8f47905c7c9a07e7733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streakBonusDiscNumber: 3
   bonusDiscSpawner: {fileID: 0}
 --- !u!1 &2695428110341850157
 GameObject:

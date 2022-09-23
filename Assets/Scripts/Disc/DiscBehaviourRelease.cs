@@ -10,10 +10,11 @@ public class DiscBehaviourRelease : MonoBehaviour
     public Rigidbody discRB;
     public ControllerVelocity controllerVelocity;
 
+    
     public Collider[] colliders;
 
-    private float controllerMaxSpeed = 1.8f;
-    private float forceMultiplier = 100;
+    private float controllerMaxSpeed = 1f;
+    [SerializeField] private float forceMultiplier = 100;
 
     public XRGrabInteractable thisXRGrabInteractable;
 
@@ -33,10 +34,11 @@ public class DiscBehaviourRelease : MonoBehaviour
     private void Start()
     
     {
+        GetComponent<Renderer>().material.SetColor("color", Color.black);
         discRB = GetComponent<Rigidbody>();
         controllerVelocity = FindObjectOfType<ControllerVelocity>();
 
-        colliders = GetComponentsInChildren<Collider>();
+        // colliders = GetComponentsInChildren<Collider>();
         thisXRGrabInteractable = GetComponent<XRGrabInteractable>();
 
         DiscPillar = FindObjectOfType<DiscPillar>();
@@ -53,18 +55,19 @@ public class DiscBehaviourRelease : MonoBehaviour
         // }
 
         //bool not working from controller script, checking colliders active or not instead
-        if (colliders[0].enabled == false)
-        {
-            discSelfDestructTimer -= Time.deltaTime;
-
-            if (discSelfDestructTimer <= 0)
-            {
-
-                GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
-                Destroy(particles, 1f);
-                Destroy(gameObject);
-            }
-        }
+        
+        //Self destruct
+        // if (colliders[0].enabled == false)
+        // {
+        //     discSelfDestructTimer -= Time.deltaTime;
+        //
+        //     if (discSelfDestructTimer <= 0)
+        //     {
+        //         GameObject particles = Instantiate(particleSystemDestroy, transform.position, quaternion.identity);
+        //         Destroy(particles, 1f);
+        //         Destroy(gameObject);
+        //     }
+        // }
     }
 
 
@@ -94,8 +97,8 @@ public class DiscBehaviourRelease : MonoBehaviour
             // float discPercentage = handSpeed / discMaxSpeed;
             // Debug.Log(discPercentage);
             throwAngle = gameObject.transform.rotation;
-            thisXRGrabInteractable.throwVelocityScale = 1.0f;
-            discRB.AddForce(discRB.velocity.normalized * 0.5f, ForceMode.Impulse);
+            thisXRGrabInteractable.throwVelocityScale = 200f;
+            discRB.AddForce(discRB.velocity.normalized, ForceMode.Impulse);
         }
 
     }
@@ -106,6 +109,7 @@ public class DiscBehaviourRelease : MonoBehaviour
         
         colliders[0].enabled = false;
         colliders[1].enabled = false;
+        colliders[2].enabled = false;
     }
 
     public void EnabaleDiscCollider()
@@ -119,9 +123,12 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         yield return new WaitForSeconds(0.10f);
         colliders[0].enabled = true;
-        colliders[1].enabled = true;
+        colliders[2].enabled = true;
         yield return new WaitForSeconds(0.20f);
         discRB.constraints = RigidbodyConstraints.None;
+        yield return new WaitForSeconds(0.10f);
+        colliders[1].enabled = true;
+        
     }
 
 
@@ -129,8 +136,8 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         //Ads force to the disc once it is released and has got the velocity from the controller 
         yield return new WaitForSeconds(0.01f);
-        thisXRGrabInteractable.throwVelocityScale = 50f;
-        thisXRGrabInteractable.throwAngularVelocityScale = 10.0f;
+        thisXRGrabInteractable.throwVelocityScale = 2000f;
+        thisXRGrabInteractable.throwAngularVelocityScale = 2f;
         discRB.AddForce(discRB.velocity.normalized * forceMultiplier, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
         throwAngle = gameObject.transform.rotation;

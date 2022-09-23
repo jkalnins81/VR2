@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1475092120222707922}
   - component: {fileID: 2123649928556561719}
   - component: {fileID: 3873201541563273787}
+  - component: {fileID: 8386647831129695018}
   m_Layer: 0
   m_Name: DiscoDisc
   m_TagString: DiscHolding
@@ -37,6 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9045442287123539419}
+  - {fileID: 158756647158506323}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -244,7 +246,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 158756647158506323}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -276,8 +278,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 2.5
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowVelocityScale: 5
+  m_ThrowAngularVelocityScale: 3
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -295,7 +297,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   discRB: {fileID: 0}
   controllerVelocity: {fileID: 0}
-  colliders: []
+  colliders:
+  - {fileID: 1475092120222707922}
+  - {fileID: 2123649928556561719}
+  - {fileID: 8386647831129695018}
+  forceMultiplier: 20000
   thisXRGrabInteractable: {fileID: 0}
   DiscPillar: {fileID: 0}
   throwAngle: {x: 0, y: 0, z: 0, w: 0}
@@ -343,6 +349,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonusDiscSpawner: {fileID: 0}
+--- !u!135 &8386647831129695018
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475092120222707923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &4281424484973727778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158756647158506323}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158756647158506323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281424484973727778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.361, y: 0, z: 0.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1475092120222707928}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5613759718109154765
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5613759718109154765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.47, z: 0}
+  m_LocalPosition: {x: 0.124, y: 0.47, z: 0}
   m_LocalScale: {x: 0.4192289, y: 6.078818, z: 0.4192289}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -449,19 +499,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7345476238063957983, guid: a4b875680e2b65c47aa85fa6a6deb098, type: 3}
   m_PrefabInstance: {fileID: 571030524698850466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6954388589020507889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7069783371736122237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8769aeb2272162b4285827051dffeca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioClip: {fileID: 8300000, guid: dd8b1e6845cd77f4dbee80cde630b328, type: 3}
 --- !u!82 &3648131216609388703
 AudioSource:
   m_ObjectHideFlags: 0
@@ -558,6 +595,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6954388589020507889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069783371736122237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8769aeb2272162b4285827051dffeca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: dd8b1e6845cd77f4dbee80cde630b328, type: 3}
 --- !u!4 &7590599642408802759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7979128484795493733, guid: a4b875680e2b65c47aa85fa6a6deb098, type: 3}
