@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour
 {
-    [SerializeField] private Material enemyDieWallMaterial;
+    [SerializeField] public Material glass;
+    [SerializeField] public Material redGlass;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,9 +18,8 @@ public class Flash : MonoBehaviour
 
     IEnumerator StartFlash()
     {
-        enemyDieWallMaterial.color = new Color(241f, 61f, 61f, 145f);
-        Debug.Log(enemyDieWallMaterial.color);
+        this.gameObject.GetComponent<Renderer>().material = redGlass;
         yield return new WaitForSeconds(0.5f);
-        enemyDieWallMaterial.color = new Color(255f, 255f, 255f, 0f);
+        this.gameObject.GetComponent<Renderer>().material = glass;
     }
 }
