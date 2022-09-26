@@ -111,9 +111,16 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
+            if (i % 3 == 0)
+            {
+                Debug.Log("SpawnBoss");
+                SpawnBoss(_wave.enemyObj);
+            }
+
             SpawnEnemy(_wave.enemyObj);
             yield return new WaitForSeconds(_wave.rate);
         }
+
         state = SpawnState.waiting;
 
         yield break;
@@ -123,5 +130,11 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
+    }
+
+    void SpawnBoss(Transform _enemy)
+    {
+        //Transform _spBoss = spawnPoints[12];
+        Instantiate(_enemy, new Vector3(-0.29f, -0.6f, -1.11f), Quaternion.identity);
     }
 }
