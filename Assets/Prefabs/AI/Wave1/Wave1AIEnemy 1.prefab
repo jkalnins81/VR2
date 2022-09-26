@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8390950676691777327}
   - component: {fileID: 8390950676691777321}
   - component: {fileID: 6064724418442076110}
+  - component: {fileID: 8576429934512729519}
   - component: {fileID: 8390950676691777326}
   m_Layer: 0
   m_Name: Sphere
@@ -176,6 +177,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIHealthPoints: 100
   AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
+--- !u!114 &8576429934512729519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676691777312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c674cddd3e0fd484fb126f361c8f3af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &8390950676691777326
 Rigidbody:
   m_ObjectHideFlags: 0

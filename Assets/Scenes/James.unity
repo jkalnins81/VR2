@@ -8238,7 +8238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5757230659ba71a48ae217af8a57ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIEnemyPrefab: {fileID: 1355440134213967760, guid: e398d754324742a4bbe6747c694346f8, type: 3}
+  AIEnemyPrefab: {fileID: 8631765937741834355, guid: 37aea80b78ff204418120f291bd42b56, type: 3}
   spawnRateInSeconds: 100
 --- !u!4 &1664967753
 Transform:

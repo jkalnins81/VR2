@@ -72,6 +72,11 @@ public class GameManager : MonoBehaviour
         enemyStreakTime = enemyStreakTimereset;
     }
 
+    public void TakeDamage(int damage)
+    {
+        playerHealth -= damage;
+    }
+
     public void UpdateCurrentHealth()
     {
         currentHealthDisplay.text = playerHealth.ToString();
