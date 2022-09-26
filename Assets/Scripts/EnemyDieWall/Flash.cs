@@ -6,6 +6,7 @@ public class Flash : MonoBehaviour
 {
     [SerializeField] public Material glass;
     [SerializeField] public Material redGlass;
+    [SerializeField] public AudioSource enemyDieWallSFX;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,7 @@ public class Flash : MonoBehaviour
 
     IEnumerator StartFlash()
     {
+        enemyDieWallSFX.Play();
         this.gameObject.GetComponent<Renderer>().material = redGlass;
         yield return new WaitForSeconds(0.5f);
         this.gameObject.GetComponent<Renderer>().material = glass;
