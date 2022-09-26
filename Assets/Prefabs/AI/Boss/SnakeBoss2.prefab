@@ -127,6 +127,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937147411849
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -366,6 +369,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937158808540
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -522,6 +528,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937324709427
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -762,6 +771,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937355362351
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -918,6 +930,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937364463677
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1074,6 +1089,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937443506479
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1313,6 +1331,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765937657388716
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1793,6 +1814,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765938220111292
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2281,6 +2305,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765938545160704
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2525,6 +2552,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 8631765938453328932}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!135 &8631765938706941347
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2561,7 +2591,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8631765938706941356}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
   m_Name: 
@@ -2708,6 +2738,9 @@ MonoBehaviour:
   snake8: {fileID: 8631765937657388718}
   snake9: {fileID: 8631765937158808542}
   snake10: {fileID: 8631765937355362345}
+  cube004: {fileID: 0}
+  snakeMaterial: {fileID: 0}
+  snakeFlashMaterial: {fileID: 0}
 --- !u!135 &8631765938890046263
 SphereCollider:
   m_ObjectHideFlags: 0

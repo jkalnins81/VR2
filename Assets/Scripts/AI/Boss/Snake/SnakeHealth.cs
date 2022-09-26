@@ -18,14 +18,18 @@ public class SnakeHealth : MonoBehaviour
     public GameObject snake9;
     public GameObject snake10;
 
+    [SerializeField] public GameObject cube004;
+    [SerializeField] public Material snakeMaterial;
+    [SerializeField] public Material snakeFlashMaterial;
+
     private void OnTriggerEnter(Collider other)
     {
-                if (other.CompareTag("Disc"))
-                {
-                    SnakeHealthPoints -= 1;
-                    // insert flashing snake function
+           if (other.CompareTag("Disc"))
+            {
+                SnakeHealthPoints -= 1;
+                StartCoroutine(SnakeFlash());
 
-                    if(SnakeHealthPoints <= 0 && this.gameObject.CompareTag("SnakeHead"))
+                    if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("SnakeHead"))
                     {
                         Instantiate(AIExplosion, transform.position, Quaternion.identity);
                         SnakeDie();
@@ -136,12 +140,23 @@ public class SnakeHealth : MonoBehaviour
                         Destroy(snake10);
                     }
             
-                }
+           }
 
-                if (other.CompareTag("FrontWall"))
-                {
-                    SnakeDie();
-                }
+            if (other.CompareTag("FrontWall"))
+            {
+                SnakeDie();
+            }
+    }
+
+    IEnumerator SnakeFlash()
+    {
+        cube004.GetComponent<Renderer>().material = snakeFlashMaterial;
+        yield return new WaitForSeconds(0.1f);
+        cube004.GetComponent<Renderer>().material = snakeMaterial;
+        yield return new WaitForSeconds(0.1f);
+        cube004.GetComponent<Renderer>().material = snakeFlashMaterial;
+        yield return new WaitForSeconds(0.1f);
+        cube004.GetComponent<Renderer>().material = snakeMaterial;
     }
 
     void SnakeDie()
