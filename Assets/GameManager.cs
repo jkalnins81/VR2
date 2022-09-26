@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         currentHealthDisplayGO.SetActive(true);
         streakDisplayGO.SetActive(true);
         SceneManager.LoadScene("DiscoDisc");
-        playerHealth = 10;
+        playerHealth = 100;
         UpdateCurrentHealth();
     }
 
