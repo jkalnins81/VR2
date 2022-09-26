@@ -11467,15 +11467,15 @@ MonoBehaviour:
   - name: Circle Enemy
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 1
-    rate: 5
+    rate: 1
   - name: Circle Enemy
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 1
-    rate: 5
+    rate: 1
   - name: Circle Enemy
     enemyObj: {fileID: 8631765937741834353, guid: 37aea80b78ff204418120f291bd42b56, type: 3}
     count: 1
-    rate: 4
+    rate: 1
   spawnPoints:
   - {fileID: 374815220}
   - {fileID: 172408230}

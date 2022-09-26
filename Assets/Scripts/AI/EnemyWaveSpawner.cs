@@ -111,7 +111,7 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            if (i % 3 == 0)
+            if (i != 0 && i % 3 == 0)
             {
                 Debug.Log("SpawnBoss");
                 SpawnBoss(_wave.enemyObj);
@@ -134,7 +134,8 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     void SpawnBoss(Transform _enemy)
     {
-        //Transform _spBoss = spawnPoints[12];
-        Instantiate(_enemy, new Vector3(-0.29f, -0.6f, -1.11f), Quaternion.identity);
+        Transform _spBoss = spawnPoints[12];
+        Instantiate(_enemy, _spBoss.position, _spBoss.rotation);
+        Debug.Log("SnakeBossInstantiate");
     }
 }
