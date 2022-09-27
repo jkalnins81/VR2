@@ -42,11 +42,6 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    SpawnBoss();
-        //}
-
         if (ableToSpawn)
         {
             if (state == SpawnState.waiting)
@@ -140,11 +135,9 @@ public class EnemyWaveSpawner : MonoBehaviour
         Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 
-    [ContextMenu("Test")]
     public void SpawnBoss(Transform _enemy)
     {
         Transform _spBoss = spawnPoints[12];
         Instantiate(_enemy, _spBoss.position, _spBoss.rotation);
-        Debug.Log("SnakeBossInstantiate");
     }
 }
