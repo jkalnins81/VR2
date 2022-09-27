@@ -2671,9 +2671,9 @@ MonoBehaviour:
   floorPrefab15: {fileID: 2120431497}
   floorPrefab16: {fileID: 1931132517}
   floorPrefab17: {fileID: 504049735}
-  floorMat: {fileID: 0}
-  floorMatFlash: {fileID: 0}
-  flashSFX: {fileID: 0}
+  floorMat: {fileID: 2100000, guid: 98632dd768aed264681d387160c4c1bd, type: 2}
+  floorMatFlash: {fileID: 2100000, guid: 8a6f8dbc950526c4c8965a73524e0805, type: 2}
+  enemyWaveSpawner: {fileID: 2113807736}
 --- !u!1 &438990577
 GameObject:
   m_ObjectHideFlags: 0
@@ -14158,6 +14158,7 @@ MonoBehaviour:
   waveCountDown: 0
   searchCountdown: 1
   state: 2
+  waveFlashGO: {fileID: 411889730}
 --- !u!4 &2113807738
 Transform:
   m_ObjectHideFlags: 0

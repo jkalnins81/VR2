@@ -29,8 +29,13 @@ public class WaveFlash : MonoBehaviour
 
     [SerializeField] public GameObject enemyWaveSpawner;
 
+    public void StartWaveFlash()
+    {
+        StartCoroutine(WaveFlashing());
+    }
 
-    public IEnumerator StartWaveFlash()
+
+    public IEnumerator WaveFlashing()
     {
         float timeTillNextWave = enemyWaveSpawner.GetComponent<EnemyWaveSpawner>().timeBetweenWaves;
 
@@ -62,7 +67,25 @@ public class WaveFlash : MonoBehaviour
         floorPrefab9.GetComponent<Renderer>().material = floorMatFlash;
         yield return new WaitForSeconds(timeTillNextWave / 9);
 
-        //waveFlashSFX.Play();
+        floorPrefab.GetComponent<Renderer>().material = floorMat;
+        floorPrefab12.GetComponent<Renderer>().material = floorMat;
+        floorPrefab1.GetComponent<Renderer>().material = floorMat;
+        floorPrefab11.GetComponent<Renderer>().material = floorMat;
+        floorPrefab2.GetComponent<Renderer>().material = floorMat;
+        floorPrefab15.GetComponent<Renderer>().material = floorMat;
+        floorPrefab3.GetComponent<Renderer>().material = floorMat;
+        floorPrefab16.GetComponent<Renderer>().material = floorMat;
+        floorPrefab5.GetComponent<Renderer>().material = floorMat;
+        floorPrefab17.GetComponent<Renderer>().material = floorMat;
+        floorPrefab6.GetComponent<Renderer>().material = floorMat;
+        floorPrefab14.GetComponent<Renderer>().material = floorMat;
+        floorPrefab7.GetComponent<Renderer>().material = floorMat;
+        floorPrefab13.GetComponent<Renderer>().material = floorMat;
+        floorPrefab8.GetComponent<Renderer>().material = floorMat;
+        floorPrefab10.GetComponent<Renderer>().material = floorMat;
+        floorPrefab4.GetComponent<Renderer>().material = floorMat;
+        floorPrefab9.GetComponent<Renderer>().material = floorMat;
         
+        //waveFlashSFX.Play();
     }
 }
