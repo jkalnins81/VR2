@@ -42,6 +42,11 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    SpawnBoss();
+        //}
+
         if (ableToSpawn)
         {
             if (state == SpawnState.waiting)
@@ -116,8 +121,11 @@ public class EnemyWaveSpawner : MonoBehaviour
                 Debug.Log("SpawnBoss");
                 SpawnBoss(_wave.enemyObj);
             }
-
-            SpawnEnemy(_wave.enemyObj);
+            if(i == 0 || i % 3 != 0)
+            {
+                SpawnEnemy(_wave.enemyObj);
+            }
+            
             yield return new WaitForSeconds(_wave.rate);
         }
 
@@ -132,10 +140,12 @@ public class EnemyWaveSpawner : MonoBehaviour
         Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 
-    void SpawnBoss(Transform _enemy)
+    [ContextMenu("Test")]
+    public void SpawnBoss(Transform _enemy)
     {
-        Transform _spBoss = spawnPoints[12];
-        Instantiate(_enemy, _spBoss.position, _spBoss.rotation);
+        //Transform _spBoss = spawnPoints[12]; // for some reason the world position was not working 
+        //Instantiate(_enemy, _spBoss.position, _spBoss.rotation);
+        Instantiate(_enemy, new Vector3(6.941f, 2.217f, -16.691f), Quaternion.identity);
         Debug.Log("SnakeBossInstantiate");
     }
 }
