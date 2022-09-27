@@ -114,14 +114,14 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            if(i == 3)
-            {
-                SpawnBoss(_wave.enemyObj);
-            }
-            
-            if(i != 3)
+            if (i !=2)
             {
                 SpawnEnemy(_wave.enemyObj);
+            }
+
+            if (i == 2)
+            {
+                SpawnBoss(_wave.enemyObj);
             }
 
             yield return new WaitForSeconds(_wave.rate);
@@ -138,9 +138,9 @@ public class EnemyWaveSpawner : MonoBehaviour
         Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 
-    public void SpawnBoss(Transform _enemy)
+    public void SpawnBoss(Transform _boss)
     {
         Transform _spBoss = spawnPoints[12];
-        Instantiate(_enemy, _spBoss.position, _spBoss.rotation);
+        Instantiate(_boss, _spBoss.position, _spBoss.rotation);
     }
 }
