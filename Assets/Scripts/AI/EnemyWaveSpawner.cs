@@ -28,6 +28,8 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     public SpawnState state = SpawnState.counting;
 
+    public GameObject waveFlashGO;
+
     private void Start()
     {
         ableToSpawn = true;
@@ -76,8 +78,9 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         state = SpawnState.counting;
         waveCountDown = timeBetweenWaves;
+        waveFlashGO.GetComponent<WaveFlash>().StartWaveFlash();
 
-        if(nextWave + 1 > waves.Length - 1)
+        if (nextWave + 1 > waves.Length - 1)
         {
             //All waves completed
             nextWave = 0;

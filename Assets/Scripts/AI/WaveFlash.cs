@@ -25,13 +25,44 @@ public class WaveFlash : MonoBehaviour
 
     [SerializeField] public Material floorMat;
     [SerializeField] public Material floorMatFlash;
-    [SerializeField] public AudioSource flashSFX;
+    //[SerializeField] public AudioSource waveFlashSFX;
 
-    IEnumerator StartWaveFlash()
+    [SerializeField] public GameObject enemyWaveSpawner;
+
+
+    public IEnumerator StartWaveFlash()
     {
-        enemyDieWallSFX.Play();
-        this.gameObject.GetComponent<Renderer>().material = redGlass;
-        yield return new WaitForSeconds(0.5f);
-        this.gameObject.GetComponent<Renderer>().material = glass;
+        float timeTillNextWave = enemyWaveSpawner.GetComponent<EnemyWaveSpawner>().timeBetweenWaves;
+
+        floorPrefab.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab12.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave/9);
+        floorPrefab1.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab11.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab2.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab15.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab3.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab16.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab5.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab17.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab6.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab14.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab7.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab13.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab8.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab10.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+        floorPrefab4.GetComponent<Renderer>().material = floorMatFlash;
+        floorPrefab9.GetComponent<Renderer>().material = floorMatFlash;
+        yield return new WaitForSeconds(timeTillNextWave / 9);
+
+        //waveFlashSFX.Play();
+        
     }
 }
