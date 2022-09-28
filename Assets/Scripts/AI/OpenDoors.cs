@@ -9,16 +9,14 @@ public class OpenDoors : MonoBehaviour
     public float lerp = 0.5f;
     public float speed = 1.5f;
 
-    //bool doorsOpen = false;
-    bool leftDoorClosing = false;
-    bool rightDoorClosing = false;
+    public bool leftDoorClosing = false;
+    public bool rightDoorClosing = false;
 
 
     public void openingDoors()
     {
         leftDoor.GetComponent<Rigidbody>().velocity = Vector3.Lerp(leftDoor.GetComponent<Rigidbody>().velocity, Vector3.right, lerp) * speed;
         rightDoor.GetComponent<Rigidbody>().velocity = Vector3.Lerp(rightDoor.GetComponent<Rigidbody>().velocity, -Vector3.right, lerp) * speed;
-        //doorsOpen = true;
     }
 
     public void closingDoors()
