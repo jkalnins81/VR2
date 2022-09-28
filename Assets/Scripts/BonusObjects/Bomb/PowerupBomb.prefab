@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupMovementTimer: 2
-  radiusBomb: 2
-  particleSystemDestroy: {fileID: 6153064627773947338, guid: 960adebb410b3674ea1189996966f300, type: 3}
+  radiusBomb: 20
+  particleSystemDestroy: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
 --- !u!54 &8252121207152494211
 Rigidbody:
   m_ObjectHideFlags: 0
