@@ -13173,6 +13173,8 @@ MonoBehaviour:
   rightDoor: {fileID: 1144067182}
   lerp: 0.5
   speed: 1.5
+  leftDoorClosing: 0
+  rightDoorClosing: 0
 --- !u!1 &2037318254
 GameObject:
   m_ObjectHideFlags: 0
@@ -14247,7 +14249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113807736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2307887, y: 2.9769742, z: -15.58106}
+  m_LocalPosition: {x: 7.2307887, y: 2.9769742, z: -17.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
