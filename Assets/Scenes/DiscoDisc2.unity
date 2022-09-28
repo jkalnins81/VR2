@@ -9118,7 +9118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2872214383562475441, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_Name
-      value: Door_final (1)
+      value: DoorsGO
       objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_RootOrder

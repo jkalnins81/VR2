@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class WaveFlash : MonoBehaviour
 {
-    [SerializeField] public GameObject floorPrefab;
-    [SerializeField] public GameObject floorPrefab1;
-    [SerializeField] public GameObject floorPrefab2;
-    [SerializeField] public GameObject floorPrefab3;
-    [SerializeField] public GameObject floorPrefab4;
-    [SerializeField] public GameObject floorPrefab5;
-    [SerializeField] public GameObject floorPrefab6;
-    [SerializeField] public GameObject floorPrefab7;
-    [SerializeField] public GameObject floorPrefab8;
-    [SerializeField] public GameObject floorPrefab9;
-    [SerializeField] public GameObject floorPrefab10;
-    [SerializeField] public GameObject floorPrefab11;
-    [SerializeField] public GameObject floorPrefab12;
-    [SerializeField] public GameObject floorPrefab13;
-    [SerializeField] public GameObject floorPrefab14;
-    [SerializeField] public GameObject floorPrefab15;
-    [SerializeField] public GameObject floorPrefab16;
-    [SerializeField] public GameObject floorPrefab17;
+    GameObject floorPrefab;
+    GameObject floorPrefab1;
+    GameObject floorPrefab2;
+    GameObject floorPrefab3;
+    GameObject floorPrefab4;
+    GameObject floorPrefab5;
+    GameObject floorPrefab6;
+    GameObject floorPrefab7;
+    GameObject floorPrefab8;
+    GameObject floorPrefab9;
+    GameObject floorPrefab10;
+    GameObject floorPrefab11;
+    GameObject floorPrefab12;
+    GameObject floorPrefab13;
+    GameObject floorPrefab14;
+    GameObject floorPrefab15;
+    GameObject floorPrefab16;
+    GameObject floorPrefab17;
 
     [SerializeField] public Material floorMat;
     [SerializeField] public Material floorMatFlash;
@@ -32,6 +32,27 @@ public class WaveFlash : MonoBehaviour
 
     public void StartWaveFlash()
     {
+        floorPrefab = GameObject.Find("Floor_Prefab");
+        floorPrefab1 = GameObject.Find("Floor_Prefab(1)");
+        floorPrefab2 = GameObject.Find("Floor_Prefab(2)");
+        floorPrefab3 = GameObject.Find("Floor_Prefab(3)");
+        floorPrefab4 = GameObject.Find("Floor_Prefab(4)");
+        floorPrefab5 = GameObject.Find("Floor_Prefab(5)");
+        floorPrefab6 = GameObject.Find("Floor_Prefab(6)");
+        floorPrefab7 = GameObject.Find("Floor_Prefab(7)");
+        floorPrefab8 = GameObject.Find("Floor_Prefab(8)");
+        floorPrefab9 = GameObject.Find("Floor_Prefab(9)");
+        floorPrefab10 = GameObject.Find("Floor_Prefab(10)");
+        floorPrefab11 = GameObject.Find("Floor_Prefab(11)");
+        floorPrefab12 = GameObject.Find("Floor_Prefab(12)");
+        floorPrefab13 = GameObject.Find("Floor_Prefab(13)");
+        floorPrefab14 = GameObject.Find("Floor_Prefab(14)");
+        floorPrefab15 = GameObject.Find("Floor_Prefab(15)");
+        floorPrefab16 = GameObject.Find("Floor_Prefab(16)");
+        floorPrefab17 = GameObject.Find("Floor_Prefab(17)");
+
+
+
         StartCoroutine(WaveFlashing());
     }
 
