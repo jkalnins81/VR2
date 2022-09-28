@@ -32,24 +32,24 @@ public class WaveFlash : MonoBehaviour
 
     public void StartWaveFlash()
     {
-        floorPrefab = GameObject.Find("Floor_Prefab");
-        floorPrefab1 = GameObject.Find("Floor_Prefab(1)");
-        floorPrefab2 = GameObject.Find("Floor_Prefab(2)");
-        floorPrefab3 = GameObject.Find("Floor_Prefab(3)");
-        floorPrefab4 = GameObject.Find("Floor_Prefab(4)");
-        floorPrefab5 = GameObject.Find("Floor_Prefab(5)");
-        floorPrefab6 = GameObject.Find("Floor_Prefab(6)");
-        floorPrefab7 = GameObject.Find("Floor_Prefab(7)");
-        floorPrefab8 = GameObject.Find("Floor_Prefab(8)");
-        floorPrefab9 = GameObject.Find("Floor_Prefab(9)");
-        floorPrefab10 = GameObject.Find("Floor_Prefab(10)");
-        floorPrefab11 = GameObject.Find("Floor_Prefab(11)");
-        floorPrefab12 = GameObject.Find("Floor_Prefab(12)");
-        floorPrefab13 = GameObject.Find("Floor_Prefab(13)");
-        floorPrefab14 = GameObject.Find("Floor_Prefab(14)");
-        floorPrefab15 = GameObject.Find("Floor_Prefab(15)");
-        floorPrefab16 = GameObject.Find("Floor_Prefab(16)");
-        floorPrefab17 = GameObject.Find("Floor_Prefab(17)");
+        floorPrefab = GameObject.Find("0");
+        floorPrefab1 = GameObject.Find("1");
+        floorPrefab2 = GameObject.Find("2");
+        floorPrefab3 = GameObject.Find("3");
+        floorPrefab4 = GameObject.Find("4");
+        floorPrefab5 = GameObject.Find("5");
+        floorPrefab6 = GameObject.Find("6");
+        floorPrefab7 = GameObject.Find("7");
+        floorPrefab8 = GameObject.Find("8");
+        floorPrefab9 = GameObject.Find("9");
+        floorPrefab10 = GameObject.Find("10");
+        floorPrefab11 = GameObject.Find("11");
+        floorPrefab12 = GameObject.Find("12");
+        floorPrefab13 = GameObject.Find("13)");
+        floorPrefab14 = GameObject.Find("14");
+        floorPrefab15 = GameObject.Find("15");
+        floorPrefab16 = GameObject.Find("16");
+        floorPrefab17 = GameObject.Find("17");
 
 
 
