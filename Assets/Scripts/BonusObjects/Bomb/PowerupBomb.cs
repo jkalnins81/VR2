@@ -66,10 +66,10 @@ public class PowerupBomb : MonoBehaviour
             if (hitCollider.gameObject.tag == "AIEnemy")
             {
                 GameObject particles = Instantiate(particleSystemDestroy, hitCollider.gameObject.transform.position, Quaternion.identity);
-                particles.transform.parent = null;
                 Destroy(particles, 1f);
-                Destroy(hitCollider.gameObject);
-                Debug.Log("Destroying Enemy");
+                particles.transform.parent = null;
+                GameObject enemy = hitCollider.gameObject;
+                Destroy(enemy.transform.parent.gameObject);
             }
         }
     }
@@ -84,8 +84,8 @@ public class PowerupBomb : MonoBehaviour
     {
         GameObject particles = Instantiate(particleSystemDestroy, transform.position, Quaternion.identity);
         particles.transform.parent = null;
-        Destroy(particles, 1f);
-        Destroy(gameObject);
+        Destroy(particles, 2f);
+        Destroy(gameObject, 1f);
     }
     
 
