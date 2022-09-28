@@ -5987,7 +5987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.915
+      value: 6.163
       objectReference: {fileID: 0}
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7902,10 +7902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8564800886371407198, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
     - target: {fileID: 8564800887132409656, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
       propertyPath: m_Name
       value: DiscoBox (1)
@@ -7954,26 +7950,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8564800887222627817, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
-    - target: {fileID: 8564800887415365048, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
-    - target: {fileID: 8564800887434657317, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
-    - target: {fileID: 8564800887474251407, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
-    - target: {fileID: 8564800887758345970, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
 --- !u!1 &2132671882
