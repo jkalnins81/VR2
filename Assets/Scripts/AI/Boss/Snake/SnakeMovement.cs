@@ -34,7 +34,12 @@ public class SnakeMovement : MonoBehaviour
     Vector3 Vector3UpRight;
     Vector3 Vector3DownLeft;
     Vector3 Vector3DownRight;
-    
+
+
+    private void Awake()
+    {
+        transform.SetPositionAndRotation(new Vector3(6.941f, 2.217f, -16.691f), Quaternion.identity);
+    }
 
     private void Start()
     {
