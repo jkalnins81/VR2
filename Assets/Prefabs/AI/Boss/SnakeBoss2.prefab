@@ -2540,7 +2540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnakeHealthPoints: 3
+  SnakeHealthPoints: 10
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
   snake1: {fileID: 8631765938890046257}
   snake2: {fileID: 8631765938545160706}
