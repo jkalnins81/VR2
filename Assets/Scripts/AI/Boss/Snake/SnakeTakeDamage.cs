@@ -41,6 +41,7 @@ public class SnakeTakeDamage : MonoBehaviour
                     if(!this.gameObject.CompareTag("SnakeHead"))
                     {
                         snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth -= 2.5f;
+                        StartCoroutine(SnakeFlash());
                     }
                     
 
