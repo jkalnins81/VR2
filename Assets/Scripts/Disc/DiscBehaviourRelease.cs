@@ -30,10 +30,16 @@ public class DiscBehaviourRelease : MonoBehaviour
     //Self Destruct
     public float discSelfDestructTimer = 3.0f;
     
+    //Spawn Manager
+
+    private DiscSpawnManager _discSpawnManager;
+    
 
     private void Start()
-    
+
     {
+        _discSpawnManager = FindObjectOfType<DiscSpawnManager>();
+        
         GetComponent<Renderer>().material.SetColor("color", Color.black);
         discRB = GetComponent<Rigidbody>();
         controllerVelocity = FindObjectOfType<ControllerVelocity>();
@@ -75,9 +81,9 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         float handSpeed = controllerVelocity.rightHandRB.velocity.magnitude;
         //Spawn new disc pillar on release
-        DiscPillar.DeActivatePillar();
-        DiscPillar.spawnNewDiscBool = true;
-        DiscPillar.SpawnNewDiscDelay(1f);
+        // DiscPillar.DeActivatePillar();
+        // DiscPillar.spawnNewDiscBool = true;
+        // DiscPillar.SpawnNewDiscDelay(1f);
         
         //Scale Disc
         StartCoroutine(ScaleOverTime(2f));
@@ -180,4 +186,15 @@ public class DiscBehaviourRelease : MonoBehaviour
         } while (currentTime <= time);
 
     }
+
+    public void LeftDiscSpawn()
+    {
+        _discSpawnManager.SpawnDiscLeft();
+    }
+    
+    public void RightDiscSpawn()
+    {
+        _discSpawnManager.SpawnDiscRight();
+    }
+    
 }
