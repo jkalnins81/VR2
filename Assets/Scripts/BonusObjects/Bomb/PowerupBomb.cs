@@ -12,7 +12,9 @@ public class PowerupBomb : MonoBehaviour
     
     [SerializeField] private float radiusBomb = 2f;
 
-    [SerializeField] private GameObject particleSystemDestroy;
+    [SerializeField] private GameObject particleSystemDestroyBomb;
+    [SerializeField] private GameObject particleSystemDestroyEnemy;
+    
     
 
     private Rigidbody _rb;
@@ -50,9 +52,8 @@ public class PowerupBomb : MonoBehaviour
         {
             if (other.tag == "Disc")
             {
-                ExplosionDamage(gameObject.transform.position, radiusBomb);
                 StartCoroutine(DestroyDelayMyself());
-
+                ExplosionDamage(gameObject.transform.position, radiusBomb);
             }
         }
     }
@@ -65,7 +66,7 @@ public class PowerupBomb : MonoBehaviour
 
             if (hitCollider.gameObject.tag == "AIEnemy")
             {
-                GameObject particles = Instantiate(particleSystemDestroy, hitCollider.gameObject.transform.position, Quaternion.identity);
+                GameObject particles = Instantiate(particleSystemDestroyEnemy, hitCollider.gameObject.transform.position, Quaternion.identity);
                 Destroy(particles, 1f);
                 particles.transform.parent = null;
                 GameObject enemy = hitCollider.gameObject;
@@ -82,10 +83,11 @@ public class PowerupBomb : MonoBehaviour
     
     public void DestroyEffects()
     {
-        GameObject particles = Instantiate(particleSystemDestroy, transform.position, Quaternion.identity);
+        GameObject particles = Instantiate(particleSystemDestroyBomb, transform.position, Quaternion.identity);
+        particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         particles.transform.parent = null;
-        Destroy(particles, 2f);
-        Destroy(gameObject, 1f);
+        Destroy(particles, 0.5f);
+        Destroy(gameObject);
     }
     
 
