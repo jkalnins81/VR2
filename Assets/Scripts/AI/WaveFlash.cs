@@ -45,7 +45,7 @@ public class WaveFlash : MonoBehaviour
         floorPrefab10 = GameObject.Find("10");
         floorPrefab11 = GameObject.Find("11");
         floorPrefab12 = GameObject.Find("12");
-        floorPrefab13 = GameObject.Find("13)");
+        floorPrefab13 = GameObject.Find("13");
         floorPrefab14 = GameObject.Find("14");
         floorPrefab15 = GameObject.Find("15");
         floorPrefab16 = GameObject.Find("16");
