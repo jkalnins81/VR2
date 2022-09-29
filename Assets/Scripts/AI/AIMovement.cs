@@ -9,11 +9,15 @@ public class AIMovement : MonoBehaviour
     public float changeDirectionSpeed;
     private int randomNumber;
 
+    private Rigidbody _rb;
+
     // AI moves slowly && smoothly towards the player over time
 
     private void Start()
     {
-        this.GetComponent<Rigidbody>().velocity = Vector3.forward * speed;
+
+        _rb = GetComponent<Rigidbody>();
+        _rb.velocity = Vector3.forward * speed;
 
         StartRandomAIPattern();
     }
@@ -46,23 +50,23 @@ public class AIMovement : MonoBehaviour
     IEnumerator LeftRightUpDown()
     {
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1,0,1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1,0,1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1,0,1) * speed; // right & forward
+        _rb.velocity = new Vector3(1,0,1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0,1,1) * speed; // up & forward
+        _rb.velocity = new Vector3(0,1,1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+        _rb.velocity = new Vector3(0, 0, 1) * speed; // forward
 
         StartRandomAIPattern();
 
@@ -72,23 +76,23 @@ public class AIMovement : MonoBehaviour
     IEnumerator LeftRightDownUp()
     {
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+        _rb.velocity = new Vector3(0, 0, 1) * speed; // forward
 
         StartRandomAIPattern();
     }
@@ -96,23 +100,23 @@ public class AIMovement : MonoBehaviour
     IEnumerator RightLeftUpDown()
     {
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+        _rb.velocity = new Vector3(0, 0, 1) * speed; // forward
 
         StartRandomAIPattern();
     }
@@ -120,23 +124,23 @@ public class AIMovement : MonoBehaviour
     IEnumerator RightLeftDownUp()
     {
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 1, 1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 1) * speed; // down & forward
+        _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1) * speed; // forward
+        _rb.velocity = new Vector3(0, 0, 1) * speed; // forward
 
         StartRandomAIPattern();
     }
