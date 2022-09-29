@@ -5651,7 +5651,7 @@ MonoBehaviour:
   waves:
   - name: Dog
     enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
-    count: 50
+    count: 1
     rate: 1
   - name: Dog
     enemyObj: {fileID: 6252486283671881560, guid: 0d8d5a35f5b272646bf8b29df64066a2, type: 3}
