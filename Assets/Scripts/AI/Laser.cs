@@ -19,7 +19,10 @@ public class Laser : MonoBehaviour
         if(other.CompareTag("Disc") || other.CompareTag("DiscHolding"))
         {
             // instantitate VFX effect
-            Destroy(transform.parent.gameObject);
+
+            transform.parent.gameObject.SetActive(false);
+
+            //Destroy(transform.parent.gameObject);
         }
     }
 }
