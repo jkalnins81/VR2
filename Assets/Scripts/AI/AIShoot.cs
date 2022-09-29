@@ -10,7 +10,7 @@ public class AIShoot : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(laserPrefab, transform.position, Quaternion.identity);
+        //Instantiate(laserPrefab, transform.position, Quaternion.identity);
     }
 
     private void Update()
@@ -19,11 +19,16 @@ public class AIShoot : MonoBehaviour
 
         if(timer >= firingRateInSeconds)
         {
-            Instantiate(laserPrefab, transform.position, Quaternion.identity);
-            timer = 0;
+            GameObject laser = LaserObjectPool.SharedInstance.GetPooledObject();
+
+            if (laser != null)
+            {
+                laser.transform.position = transform.position;
+                laser.transform.rotation = transform.rotation;
+                laser.SetActive(true);
+            }
+                //Instantiate(laserPrefab, transform.position, Quaternion.identity);
+                timer = 0;
         }
     }
-
-
-    // Shoot in a random place within a funnel towards the player
 }
