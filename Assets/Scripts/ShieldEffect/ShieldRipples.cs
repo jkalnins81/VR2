@@ -13,8 +13,8 @@ public class ShieldRipples : MonoBehaviour
             ContactPoint contact = collision.contacts[0];
             Quaternion rot = Quaternion.FromToRotation(Vector3.forward, contact.normal);
             Vector3 pos = contact.point;
-            Instantiate(impactEffectForceField, pos, rot);
-            
+            GameObject forceField = Instantiate(impactEffectForceField, pos, rot) as GameObject;
+            Destroy(forceField, 0.5f);
         }
     }
 }
