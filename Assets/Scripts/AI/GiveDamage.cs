@@ -13,8 +13,16 @@ public class GiveDamage : MonoBehaviour
                 GameManager.Instance.TakeDamage(damage);
                 GameManager.Instance.UpdateCurrentHealth();
 
-                Destroy(transform.parent.gameObject);
+                if(this.gameObject.CompareTag("AILaser"))
+                {
+                    transform.parent.gameObject.SetActive(false);
+                }
+
+                if(!this.gameObject.CompareTag("AILaser"))
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
-        }
+    }
 }
 

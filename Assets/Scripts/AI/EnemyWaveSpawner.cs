@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
- public enum SpawnState {spawning, waiting, counting};
+
+    public GameObject textWaveFinished;
+    public enum SpawnState {spawning, waiting, counting};
     [HideInInspector] public bool ableToSpawn;
 
     [System.Serializable]
@@ -102,6 +105,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             searchCountdown = 1f;
             if (GameObject.FindGameObjectsWithTag("AIEnemy").Length <= 0)
             {
+                WaveFinishedText();
                 return false;
             }
     }
@@ -143,4 +147,22 @@ public class EnemyWaveSpawner : MonoBehaviour
         Transform _spBoss = spawnPoints[12];
         Instantiate(_boss, _spBoss.position, _spBoss.rotation);
     }
+
+
+    
+    void WaveFinishedText()
+    {
+        StartCoroutine(WaveTextFinished());
+    }
+
+    IEnumerator WaveTextFinished()
+    {
+        yield return new WaitForSeconds(0.5f);
+        textWaveFinished.GetComponentInChildren<TextMeshPro>().text = ("Wave ") + nextWave.ToString() + (" Finished");
+        textWaveFinished.SetActive(true);
+        
+        yield return new WaitForSeconds(4.5f);
+        textWaveFinished.SetActive(false);
+    }
+    
 }
