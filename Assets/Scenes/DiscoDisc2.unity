@@ -5647,6 +5647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2f2a5979d6f0c41ab98219b9d315c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textWaveFinished: {fileID: 0}
   ableToSpawn: 0
   waves:
   - name: Dog
