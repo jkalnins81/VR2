@@ -13,7 +13,7 @@ public class DiscSpawnManager : MonoBehaviour
    [SerializeField] private GameObject discLeft;
    [SerializeField] private GameObject discRight;
    
-   private Vector3 yOffset = new Vector3(0,0.8f,0);
+   private Vector3 yOffset = new Vector3(0,1f,0);
    
 
    private void Start()
