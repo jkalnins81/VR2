@@ -24,7 +24,7 @@ public class AIShoot : MonoBehaviour
             if (laser != null)
             {
                 laser.transform.position = transform.position;
-                laser.transform.rotation = transform.rotation;
+                laser.transform.rotation = Quaternion.identity;
                 laser.SetActive(true);
             }
                 //Instantiate(laserPrefab, transform.position, Quaternion.identity);
