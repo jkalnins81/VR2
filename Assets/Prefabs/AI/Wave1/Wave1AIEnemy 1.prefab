@@ -49,8 +49,7 @@ GameObject:
   - component: {fileID: 6064724418442076110}
   - component: {fileID: 8576429934512729519}
   - component: {fileID: 8390950676691777326}
-  - component: {fileID: 1585511607045364282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
@@ -134,8 +133,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.85742605, y: 2.1285977, z: 2.3279896}
-  m_Center: {x: 0.065156996, y: -0.41634583, z: -0.4688635}
+  m_Size: {x: 0.85742605, y: 2.332052, z: 2.3279896}
+  m_Center: {x: 0.065156996, y: -0.3146187, z: -0.4688635}
 --- !u!114 &8390950676691777327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,19 +206,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1585511607045364282
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.85742605, y: 2.1285977, z: 2.3279896}
-  m_Center: {x: 0.065156996, y: -0.41634583, z: -0.4688635}
 --- !u!1001 &4995010221688480765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_Dog_Animation
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad9bfb9134df1594aa73e0660acda906, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3885826111214106644, guid: ad9bfb9134df1594aa73e0660acda906, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -352,10 +342,10 @@ BoxCollider:
   m_GameObject: {fileID: 5300946240343826092}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.061854884, y: 0.025651976, z: 0.06042769}
-  m_Center: {x: -0.008901835, y: 0.00037672688, z: 0.0052777706}
+  m_Size: {x: 0.061854884, y: 0.025651976, z: 0.067150794}
+  m_Center: {x: -0.008901836, y: 0.00037672647, z: 0.008639331}
 --- !u!95 &3128593835299852636
 Animator:
   serializedVersion: 4
