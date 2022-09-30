@@ -528,7 +528,7 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
     count: 10
     rate: 1
   - name: Dog

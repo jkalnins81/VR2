@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6760663037022357234}
   - component: {fileID: 5406064388744657223}
   - component: {fileID: 3328370050279322382}
-  m_Layer: 0
+  - component: {fileID: 4304087934792116185}
+  m_Layer: 10
   m_Name: ScriptsCollider
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
@@ -121,8 +122,21 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &4304087934792116185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822849710702942403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.304635, y: 6.168742, z: 5.4205084}
+  m_Center: {x: 0.35345078, y: 2.584371, z: -1.15926}
 --- !u!1 &6741496706140184034
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 6741496706140184034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 177009588765750287}
