@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 6064724418442076110}
   - component: {fileID: 8576429934512729519}
   - component: {fileID: 8390950676691777326}
-  m_Layer: 0
+  - component: {fileID: 2526470528511563557}
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
@@ -180,8 +181,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0715714, y: 2.4725032, z: 2.107214}
-  m_Center: {x: 0.037352085, y: -0.24439311, z: -0.5792513}
+  m_Size: {x: 1.5255587, y: 2.8675811, z: 2.107214}
+  m_Center: {x: -0.02381723, y: -0.32699662, z: -0.57925117}
 --- !u!114 &8390950676691777327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +252,21 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &2526470528511563557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676691777312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5255587, y: 2.8675811, z: 2.107214}
+  m_Center: {x: -0.02381723, y: -0.32699662, z: -0.57925117}
 --- !u!1001 &7249963491253996256
 PrefabInstance:
   m_ObjectHideFlags: 0
