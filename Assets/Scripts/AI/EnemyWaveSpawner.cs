@@ -33,8 +33,12 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     public GameObject waveFlashGO;
 
+    private AudioSource audioData;
+
     private void Start()
     {
+        audioData = GetComponent<AudioSource>();
+        
         ableToSpawn = true;
 
         waveCountDown = timeBetweenWaves;
@@ -106,6 +110,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("AIEnemy").Length <= 0)
             {
                 WaveFinishedText();
+                audioData.Play(1);
                 return false;
             }
     }

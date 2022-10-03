@@ -18,11 +18,13 @@ public class PowerupBomb : MonoBehaviour
     public float destroyMyselfTimer = 10.0f;
     
     
+    
 
     private Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
     {
+
         powerupMovementTimerReset = powerupMovementTimer;
         _rb = GetComponent<Rigidbody>();
 
