@@ -34,9 +34,16 @@ public class EnemyWaveSpawner : MonoBehaviour
     public GameObject waveFlashGO;
 
     private AudioSource audioData;
+    
+    //Doors
+
+    [SerializeField] private OpenDoors openDoors;
 
     private void Start()
     {
+
+        openDoors = FindObjectOfType<OpenDoors>();
+        
         audioData = GetComponent<AudioSource>();
         
         ableToSpawn = true;
@@ -49,6 +56,11 @@ public class EnemyWaveSpawner : MonoBehaviour
         }
     }
 
+    
+
+    
+
+ 
     private void Update()
     {
         if (ableToSpawn)
@@ -84,6 +96,10 @@ public class EnemyWaveSpawner : MonoBehaviour
     void WaveCompleted()
     {
         state = SpawnState.counting;
+        
+        //Close door
+        openDoors.closingDoors();
+        
         waveCountDown = timeBetweenWaves;
         waveFlashGO.GetComponent<WaveFlash>().StartWaveFlash();
 
@@ -121,6 +137,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         //Sound Door
         GameManager.Instance.PlaySound(GameManager.Instance.audioClips[5], 2f);
+        //Open Door
+        openDoors.openingDoors();
         
         state = SpawnState.spawning;
 

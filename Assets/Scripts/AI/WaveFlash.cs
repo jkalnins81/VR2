@@ -28,7 +28,6 @@ public class WaveFlash : MonoBehaviour
     //[SerializeField] public AudioSource waveFlashSFX;
 
     [SerializeField] public GameObject enemyWaveSpawner;
-    [SerializeField] public GameObject doorsGO;
 
     public void StartWaveFlash()
     {
@@ -107,11 +106,7 @@ public class WaveFlash : MonoBehaviour
         floorPrefab4.GetComponent<Renderer>().material = floorMat;
         floorPrefab9.GetComponent<Renderer>().material = floorMat;
 
-        doorsGO.GetComponent<OpenDoors>().openingDoors();
 
-        yield return new WaitForSeconds(5f);
-
-        doorsGO.GetComponent<OpenDoors>().closingDoors();
 
         //waveFlashSFX.Play();
     }
