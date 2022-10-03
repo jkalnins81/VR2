@@ -110,7 +110,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("AIEnemy").Length <= 0)
             {
                 WaveFinishedText();
-                audioData.Play(1);
+                audioData.Play(5);
                 return false;
             }
     }

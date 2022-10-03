@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour
     {
         playerHealth -= damage;
     }
+    public void GiveHealth(int health)
+    {
+        playerHealth += health;
+    }
 
     public void UpdateCurrentHealth()
     {

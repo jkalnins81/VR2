@@ -9813,7 +9813,7 @@ MonoBehaviour:
   waves:
   - name: Dog
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
-    count: 35
+    count: 5
     rate: 1
   - name: Dog
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
@@ -9887,7 +9887,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4463117d45fa0b04ab067e0e2d0167c4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10143,10 +10143,10 @@ MonoBehaviour:
   waves:
   - name: PowerUpBomb
     powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
-    count: 10
+    count: 1
     rate: 4
-  - name: PowerUpDiscReplacer
-    powerupObj: {fileID: 2053007138303277101, guid: efb3623d17aeda94592d1ebc35443c59, type: 3}
+  - name: PowerUpHealth
+    powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
     count: 2
     rate: 2
   spawnPoints:
