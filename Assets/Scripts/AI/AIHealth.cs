@@ -8,6 +8,8 @@ public class AIHealth : MonoBehaviour
     public GameObject AIExplosion;
     GameObject EnemyDieWall;
 
+    private int randomSound;
+
     private void Start()
     {
         EnemyDieWall = GameObject.Find("EnemyDieWall");
@@ -17,6 +19,10 @@ public class AIHealth : MonoBehaviour
     {
         if(other.CompareTag("Disc"))
         {
+            //Sound
+            randomSound = UnityEngine.Random.Range(6, 9);
+            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomSound], 0.35f);
+            
             Instantiate(AIExplosion, transform.position, Quaternion.identity);
             GameManager.Instance.UpdateScore(5);
             AIDie();

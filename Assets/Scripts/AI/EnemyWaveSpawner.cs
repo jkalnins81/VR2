@@ -119,6 +119,9 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave (Wave _wave)
     {
+        //Sound Door
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[5], 2f);
+        
         state = SpawnState.spawning;
 
         for (int i = 0; i < _wave.count; i++)
