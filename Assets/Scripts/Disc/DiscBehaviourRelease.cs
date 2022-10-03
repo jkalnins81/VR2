@@ -76,6 +76,11 @@ public class DiscBehaviourRelease : MonoBehaviour
         // }
     }
 
+    public void PlayThrowSound()
+    {
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[2]);
+    }
+
 
     public void ReleaseVelocity()
     {

@@ -3762,6 +3762,7 @@ MonoBehaviour:
   discPillarRight: {fileID: 1453673980}
   discLeft: {fileID: 1475092120222707923, guid: 5af02ebe1c51fd046a641402ab1ef274, type: 3}
   discRight: {fileID: 1475092120222707923, guid: 309c0a886eb5be14ba5a91e03d464f93, type: 3}
+  particleEffect: {fileID: 3510147808941451042, guid: 1e8d67b722215ac44b048dddde3f7145, type: 3}
 --- !u!1 &517767232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7505,6 +7506,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 3040fed0ddd2e2c4ab49737791da937d, type: 3}
   - {fileID: 8300000, guid: 0718d01c5740ee44d9943e79aad11736, type: 3}
+  - {fileID: 8300000, guid: 5b98ce3d34cddc44e8166bfeb7d58c26, type: 3}
 --- !u!4 &1268968301
 Transform:
   m_ObjectHideFlags: 0
