@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    [SerializeField] private TextMeshPro scoreText;
+    public int score;
+
     [SerializeField] private TextMeshPro enemyStreakCounter;
     public int enemyStreak = 0;
     public float enemyStreakTime = 3;
@@ -23,9 +27,11 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
 
     private static GameManager _instance;
-
+    
     private void Start()
     {
+        scoreText.text = "0";
+        
         enemyStreakTimereset = enemyStreakTime;
         gameOverDisplayGO.SetActive(false);
         canvas.SetActive(false);
@@ -63,6 +69,12 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }
+    
+    //Streak Visual
+    public void UpdateScore()
+    {
+        scoreText.text = score.ToString();
     }
 
     //Streak Visual
