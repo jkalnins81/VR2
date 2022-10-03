@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIHealthPoints: 100
-  AIExplosion: {fileID: 7408908489932021496, guid: a9f648cb196fd314a8fd594c64a852a8, type: 3}
+  AIExplosion: {fileID: 5447266757407202328, guid: 63c81d0e859253046817daeed2250791, type: 3}
 --- !u!114 &8576429934512729519
 MonoBehaviour:
   m_ObjectHideFlags: 0
