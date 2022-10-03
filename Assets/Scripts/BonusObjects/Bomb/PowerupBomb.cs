@@ -14,6 +14,8 @@ public class PowerupBomb : MonoBehaviour
 
     [SerializeField] private GameObject particleSystemDestroyBomb;
     [SerializeField] private GameObject particleSystemDestroyEnemy;
+
+    public float destroyMyselfTimer = 10.0f;
     
     
 
@@ -42,7 +44,7 @@ public class PowerupBomb : MonoBehaviour
 
     IEnumerator DestroyPowerupTimer()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(destroyMyselfTimer);
         Destroy(gameObject);
     }
 
