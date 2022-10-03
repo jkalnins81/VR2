@@ -27,9 +27,13 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
 
     private static GameManager _instance;
+
+    public AudioSource audioSource;
+    public AudioClip[] audioClips;
     
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         scoreText.text = "0";
         
         enemyStreakTimereset = enemyStreakTime;
@@ -124,6 +128,11 @@ public class GameManager : MonoBehaviour
     {
         UnityEditor.EditorApplication.isPlaying = false;
         // Replace with "Application.Quit();" if built
+    }
+
+    public void PlaySound(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
     }
 
 }

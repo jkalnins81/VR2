@@ -81,6 +81,7 @@ public class PowerupBomb : MonoBehaviour
 
     IEnumerator DestroyDelayMyself()
     {
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[1]);
         yield return new WaitForSeconds(0.1f);
         DestroyEffects();
     }

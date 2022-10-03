@@ -59,38 +59,27 @@ public class PowerUpHealth : MonoBehaviour
             if (other.tag == "Disc")
             {
                 GameManager.Instance.GiveHealth(150);
+
+                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[0]);
+
                 GameManager.Instance.UpdateCurrentHealth();
-                DestroyDelayMyself();
-            }
-        }
-    }
 
-    void ExplosionDamage(Vector3 center, float radius)
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        foreach (var hitCollider in hitColliders)
-        {
+                StartCoroutine(DestroyDelayMyself());
 
-            if (hitCollider.gameObject.tag == "AIEnemy")
-            {
-                GameObject particles = Instantiate(particleSystemDestroyEnemy,
-                    hitCollider.gameObject.transform.position, Quaternion.identity);
-                Destroy(particles, 1f);
-                particles.transform.parent = null;
-                GameObject enemy = hitCollider.gameObject;
-                Destroy(enemy.transform.parent.gameObject);
             }
         }
     }
 
     IEnumerator DestroyDelayMyself()
     {
+
         yield return new WaitForSeconds(0.1f);
-        DestroyEffects();
+        DestroyEffects2();
     }
 
-    public void DestroyEffects()
+    private void DestroyEffects2()
     {
+
         GameObject particles = Instantiate(particleSystemDestroyBomb, transform.position, Quaternion.identity);
         particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         particles.transform.parent = null;
