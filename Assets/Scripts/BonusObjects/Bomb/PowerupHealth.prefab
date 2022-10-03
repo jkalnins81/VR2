@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerupMovementTimer: 2
   radiusBomb: 2
-  particleSystemDestroyBomb: {fileID: 1729578255774386584, guid: dbb1c6de201c0cc4eb3b3bad96733781, type: 3}
+  particleSystemDestroyBomb: {fileID: 1729578255774386584, guid: 3349f74c0d924764a835a2db539f2b05, type: 3}
   particleSystemDestroyEnemy: {fileID: 4749334818494273136, guid: afb7938046e8e3245ad7996e4df65fac, type: 3}
   destroyMyselfTimer: 10
 --- !u!54 &8252121207152494211
