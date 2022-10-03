@@ -18,15 +18,14 @@ public class AIHealth : MonoBehaviour
         if(other.CompareTag("Disc"))
         {
             Instantiate(AIExplosion, transform.position, Quaternion.identity);
-            GameManager.Instance.score += 5;
-            GameManager.Instance.UpdateScore();
+            GameManager.Instance.UpdateScore(5);
             AIDie();
         }
 
         if (other.CompareTag("FrontWall"))
         {
-            GameManager.Instance.score -= 500;
-            GameManager.Instance.UpdateScore();
+ 
+            GameManager.Instance.UpdateScore(-500);
             AIDie();
         }
     }

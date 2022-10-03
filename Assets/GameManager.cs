@@ -72,9 +72,10 @@ public class GameManager : MonoBehaviour
     }
     
     //Streak Visual
-    public void UpdateScore()
+    public void UpdateScore(int scoreValue)
     {
-        scoreText.text = score.ToString();
+        int tmpScoreAdd = score += scoreValue;
+        scoreText.text = tmpScoreAdd.ToString();
     }
 
     //Streak Visual
