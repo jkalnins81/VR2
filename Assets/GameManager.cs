@@ -130,9 +130,9 @@ public class GameManager : MonoBehaviour
         // Replace with "Application.Quit();" if built
     }
 
-    public void PlaySound(AudioClip audioClip)
+    public void PlaySound(AudioClip audioClip, float volume)
     {
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(audioClip, volume);
     }
 
 }

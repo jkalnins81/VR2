@@ -60,7 +60,7 @@ public class PowerUpHealth : MonoBehaviour
             {
                 GameManager.Instance.GiveHealth(150);
 
-                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[0]);
+                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[0], 1f);
 
                 GameManager.Instance.UpdateCurrentHealth();
 
