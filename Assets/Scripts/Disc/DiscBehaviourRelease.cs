@@ -158,10 +158,10 @@ public class DiscBehaviourRelease : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Disc")
-        {
-            DestroyDiscEffects();
-        }
+        // if (collision.gameObject.tag == "Disc")
+        // {
+        //     DestroyDiscEffects();
+        // }
     }
 
     public void DestroyDiscEffects()

@@ -24,7 +24,7 @@ public class DiscBonusExtraBehaviour : MonoBehaviour
 
     IEnumerator ActivatingCollider()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         foreach (Collider collider in colliders)
         {
             collider.enabled = true;

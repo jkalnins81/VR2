@@ -22,6 +22,9 @@ public class BonusDiscSpawner : MonoBehaviour
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            
 
         }
         if (GameManager.Instance.enemyStreak == 3)
@@ -80,7 +83,7 @@ public class BonusDiscSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
         spawnedDisc.SetActive(true);
-        float randomBonusDiscForceMultiplier = UnityEngine.Random.Range(80.0f, 200f);
+        float randomBonusDiscForceMultiplier = UnityEngine.Random.Range(120f, 200f);
         spawnedDisc.GetComponent<Rigidbody>().AddForce(randomDir * randomBonusDiscForceMultiplier, ForceMode.Impulse);
     }
 
