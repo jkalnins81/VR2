@@ -35,8 +35,15 @@ public class SnakeNewMovement : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
+
         Vector3Forward = new Vector3(0, 0, forward);
+        Vector3Left = new Vector3(left, 0, forward);
+        Vector3Right = new Vector3(right, 0, forward);
+        Vector3UpLeft = new Vector3(left, up, forward);
         Vector3UpRight = new Vector3(right, up, forward);
+        Vector3DownLeft = new Vector3(left, down, forward);
+        Vector3DownRight = new Vector3(right, down, forward);
+        
         StartCoroutine(StartSnakeMovement());
     }
 
