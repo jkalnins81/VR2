@@ -7405,16 +7405,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e8b3ba33fb37d4b92056fbce4d14c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 546334075}
-  score: 0
   enemyStreakCounter: {fileID: 1343289432}
   enemyStreak: 0
   enemyStreakTime: 3
   playerHealth: 1000
   currentHealthDisplay: {fileID: 36868995}
   replacingDiscs: 0
-  streakDisplayGO: {fileID: 0}
-  currentHealthDisplayGO: {fileID: 0}
+  scoreText: {fileID: 546334075}
+  scoreImage: {fileID: 302858573}
+  score: 0
+  streakDisplayGO: {fileID: 556437872}
+  streakImage: {fileID: 556437872}
+  currentHealthDisplayGO: {fileID: 2060303779}
+  healthImage: {fileID: 2060303779}
   gameOverDisplayGO: {fileID: 203372167}
   canvas: {fileID: 1914072939}
   audioSource: {fileID: 0}
@@ -7429,6 +7432,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 59e4da9aba0026a4e8d1d479f719719e, type: 3}
   - {fileID: 8300000, guid: 2a61d3a6b088e004e84edd5d0eb19b68, type: 3}
   - {fileID: 8300000, guid: 95e1cb88f02393a4f9913e82be8fc5c2, type: 3}
+  - {fileID: 8300000, guid: d6939455368ee424bba9b1c8843241d4, type: 3}
 --- !u!4 &1268968301
 Transform:
   m_ObjectHideFlags: 0

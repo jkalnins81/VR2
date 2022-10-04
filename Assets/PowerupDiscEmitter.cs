@@ -57,7 +57,7 @@ public class PowerupDiscEmitter : MonoBehaviour
             if (other.tag == "Disc")
             {
                 StartCoroutine(DestroyDelayMyself());
-                GameManager.Instance.UpdateScore(50);
+                GameManager.Instance.UpdateScore(150);
                 SpawnBonusDisc(gameObject.transform.position, Vector3.up);
                 SpawnBonusDisc(gameObject.transform.position, Vector3.down);
                 SpawnBonusDisc(gameObject.transform.position, Vector3.left);
@@ -70,7 +70,7 @@ public class PowerupDiscEmitter : MonoBehaviour
 
     IEnumerator DestroyDelayMyself()
     {
-        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[1], 1f);
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[10], 1.3f);
         yield return new WaitForSeconds(0.1f);
         DestroyEffects();
     }

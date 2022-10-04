@@ -1,15 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private TextMeshPro scoreText;
-    public int score;
+
 
     [SerializeField] private TextMeshPro enemyStreakCounter;
     public int enemyStreak = 0;
@@ -20,9 +22,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshPro currentHealthDisplay;
 
     public bool replacingDiscs;
+    
+    [SerializeField] private TextMeshPro scoreText;
+    public GameObject scoreImage;
+    private Image scoreImage2;
+    public int score;
 
     public GameObject streakDisplayGO;
+    public GameObject streakImage;
+    private Image streakImage2;
+    
     public GameObject currentHealthDisplayGO;
+    public GameObject healthImage;
+    private Image healthImage2;
+    
     public GameObject gameOverDisplayGO;
     public GameObject canvas;
 
@@ -33,6 +46,10 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        healthImage2 = healthImage.GetComponent<Image>();
+        streakImage2 = streakImage.GetComponent<Image>();
+        scoreImage2 = scoreImage.GetComponent<Image>();
+        
         audioSource = GetComponent<AudioSource>();
         scoreText.text = "0";
         
@@ -79,29 +96,64 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreValue)
     {
         int tmpScoreAdd = score += scoreValue;
+        StartCoroutine(TextColorFlash(scoreText, scoreImage2));
         scoreText.text = tmpScoreAdd.ToString();
     }
 
     //Streak Visual
+
     public void UpdateVisualKillStreak()
     {
         enemyStreakCounter.text = enemyStreak.ToString();
+        StartCoroutine(TextColorFlash(enemyStreakCounter, streakImage2));
         enemyStreakTime = enemyStreakTimereset;
+    }
+
+    IEnumerator TextColorFlash(TextMeshPro text, Image image)
+    {
+        text.color = new Color(227, 35, 0, 255);
+        image.color = new Color(227, 35, 0, 255);
+        yield return new WaitForSeconds(0.2f);
+        text.color = new Color(202, 205, 255, 255);
+        image.color = new Color(202, 205, 255, 255);
+ 
+    }
+    
+    IEnumerator HealthColorFlashRed(TextMeshPro text, Image image)
+    {
+        text.color = new Color(255, 70, 0, 102);
+        image.color = new Color(255, 70, 0, 102);
+        yield return new WaitForSeconds(0.2f);
+        text.color = new Color(202, 205, 255, 255);
+        image.color = new Color(202, 205, 255, 255);
+ 
+    }
+    
+    IEnumerator HealthColorFlashGreen(TextMeshPro text, Image image)
+    {
+        text.color = new Color(93, 255, 102, 255);
+        image.color = new Color(93, 255, 102, 255);
+        yield return new WaitForSeconds(0.2f);
+        text.color = new Color(202, 205, 255, 255);
+        image.color = new Color(202, 205, 255, 255);
+ 
     }
 
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;
+        StartCoroutine(HealthColorFlashRed(currentHealthDisplay, healthImage2));
     }
     public void GiveHealth(int health)
     {
         playerHealth += health;
+        StartCoroutine(HealthColorFlashGreen(currentHealthDisplay, healthImage2));
     }
 
     public void UpdateCurrentHealth()
     {
         currentHealthDisplay.text = playerHealth.ToString();
-
+        
         if(playerHealth <= 0)
         {
             Time.timeScale = 0;
