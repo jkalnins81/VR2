@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5253854069699673266}
-  - component: {fileID: 5925830062981046176}
   m_Layer: 0
   m_Name: ShootHolder
   m_TagString: Untagged
@@ -32,20 +31,6 @@ Transform:
   m_Father: {fileID: 8390950676691777324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5925830062981046176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3750523054606297542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 1.14
 --- !u!1 &8390950676163898145
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8390950676163898144}
   m_Layer: 0
-  m_Name: Wave2
+  m_Name: Buzzer
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
   firingRateInSeconds: 2
+  shootHolder: {fileID: 3750523054606297542}
 --- !u!114 &6064724418442076110
 MonoBehaviour:
   m_ObjectHideFlags: 0

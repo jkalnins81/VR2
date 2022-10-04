@@ -9668,6 +9668,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 9.14
       objectReference: {fileID: 0}
+    - target: {fileID: 8564800887474251407, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+      propertyPath: m_Size.z
+      value: 46.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564800887474251407, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
 --- !u!1001 &1493712618
@@ -11234,16 +11242,28 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
+    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    count: 10
+    rate: 0.5
+  - name: Claw Arms
     enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
-    count: 5
-    rate: 1
-  - name: Dog
+    count: 10
+    rate: 0.5
+  - name: Buzzer
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
-    count: 50
+    count: 10
+    rate: 0.5
+  - name: "pl\xE5tniklas"
+    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    count: 10
     rate: 1
   - name: Snake Boss
-    enemyObj: {fileID: 8631765937741834353, guid: 37aea80b78ff204418120f291bd42b56, type: 3}
-    count: 1
+    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    count: 100
+    rate: 1
+  - name: Snake Boss
+    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    count: 100
     rate: 1
   - name: Snake Boss
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}

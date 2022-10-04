@@ -11,12 +11,11 @@ public class Laser : MonoBehaviour
     void Start()
     {
         AIEnemy = GameObject.FindGameObjectWithTag("AIEnemy");
-        this.GetComponent<Rigidbody>().velocity = Vector3.forward * speed;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Disc") || other.CompareTag("DiscHolding"))
+        if(other.CompareTag("Disc") || other.CompareTag("DiscHolding") || other.CompareTag("FrontWall"))
         {
             // instantitate VFX effect
 

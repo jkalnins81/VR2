@@ -35,6 +35,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2604233826089603102}
   - {fileID: 2861288872933448863}
   - {fileID: 8637942124973706394}
   m_Father: {fileID: 6252486283671881560}
@@ -68,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
   firingRateInSeconds: 2
+  shootHolder: {fileID: 9218726479982089517}
 --- !u!114 &6760663037022357234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6252486283671881560}
   m_Layer: 0
-  m_Name: Robot2_prefab(NEW) 1
+  m_Name: ClawArms
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,6 +172,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9218726479982089517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2604233826089603102}
+  m_Layer: 0
+  m_Name: ShootHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2604233826089603102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9218726479982089517}
+  m_LocalRotation: {x: -0, y: -0.9999829, z: -0, w: 0.005856716}
+  m_LocalPosition: {x: 0.0143290525, y: 4.096, z: -1.2477694}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 177009588765750287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2323838082656549748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,7 +212,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2386cc3c9eb4d0d41b073294cbde862f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2386cc3c9eb4d0d41b073294cbde862f, type: 3}
       propertyPath: m_LocalScale.x
@@ -290,7 +323,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 659790047637663454, guid: 1e8d67b722215ac44b048dddde3f7145, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 659790047637663454, guid: 1e8d67b722215ac44b048dddde3f7145, type: 3}
       propertyPath: m_LocalScale.x

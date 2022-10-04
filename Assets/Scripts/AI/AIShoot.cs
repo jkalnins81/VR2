@@ -7,6 +7,9 @@ public class AIShoot : MonoBehaviour
     public GameObject laserPrefab;
     float timer;
     public float firingRateInSeconds;
+    public float firingSpeed = 50f;
+
+    public GameObject shootHolder;
 
     private void Start()
     {
@@ -23,9 +26,10 @@ public class AIShoot : MonoBehaviour
 
             if (laser != null)
             {
-                laser.transform.position = transform.position;
+                laser.transform.position = shootHolder.transform.position;
                 laser.transform.rotation = Quaternion.identity;
                 laser.SetActive(true);
+                laser.GetComponent<Rigidbody>().velocity = Vector3.forward * firingSpeed;
             }
                 //Instantiate(laserPrefab, transform.position, Quaternion.identity);
                 timer = 0;
