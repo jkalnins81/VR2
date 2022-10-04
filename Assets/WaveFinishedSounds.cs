@@ -11,12 +11,13 @@ public class WaveFinishedSounds : MonoBehaviour
     public AudioClip[] audioClipsKillStreak;
 
     public AudioClip discoStart;
+    public AudioClip gameOverVoice;
 
     
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(discoStart, 2);
+        // audioSource.PlayOneShot(discoStart, 2);
     }
 
     public void PlayWaveSound()
@@ -30,5 +31,11 @@ public class WaveFinishedSounds : MonoBehaviour
     {
         audioSource.Stop();
         audioSource.PlayOneShot(audioClipsKillStreak[streakNumber], 1.8f);
+    }
+
+    public void PlaygameOverSound()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(gameOverVoice, 0.5f);
     }
 }

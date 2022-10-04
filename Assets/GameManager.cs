@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private float enemyStreakTimereset;
 
     public int playerHealth = 100;
+    private int playerRestartHealth;
     [SerializeField] private TextMeshPro currentHealthDisplay;
 
     public bool replacingDiscs;
@@ -37,7 +38,6 @@ public class GameManager : MonoBehaviour
     private Image healthImage2;
     
     public GameObject gameOverDisplayGO;
-    public GameObject canvas;
 
     private static GameManager _instance;
 
@@ -46,9 +46,16 @@ public class GameManager : MonoBehaviour
 
     private Color colorReset;
     private bool greenlight = false;
+
+    private WaveFinishedSounds _waveFinishedSounds;
     
     private void Start()
     {
+        playerRestartHealth = playerHealth;
+
+        currentHealthDisplay.text = playerRestartHealth.ToString();
+        
+        _waveFinishedSounds = FindObjectOfType<WaveFinishedSounds>();
         colorReset = new Color(202, 205, 255, 255);
         
         healthImage2 = healthImage.GetComponent<Image>();
@@ -60,7 +67,6 @@ public class GameManager : MonoBehaviour
         
         enemyStreakTimereset = enemyStreakTime;
         gameOverDisplayGO.SetActive(false);
-        canvas.SetActive(false);
     }
 
     private void Update()
@@ -79,24 +85,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static GameManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindObjectOfType<GameManager>();
-            }
+    private static GameManager instance = null; // the private static singleton instance variable
+    public static GameManager Instance { get { return instance; } } // public getter property, anyone can access it!
 
-            return _instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            // if the singleton instance has not yet been initialized
+            instance = this;
+        }
+        else
+        {
+            // the singleton instance has already been initialized
+            if (instance != this)
+            {
+                // if this instance of GameManager is not the same as the initialized singleton instance, it is a second instance, so it must be destroyed!
+                Destroy(gameObject); // watch out, this can cause trouble!
+            }
         }
     }
-    
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-    
+
+
     //Streak Visual
     public void UpdateScore(int scoreValue)
     {
@@ -131,24 +141,41 @@ public class GameManager : MonoBehaviour
         
         if(playerHealth <= 0)
         {
+            StartCoroutine(RestartSceneDelay());
             Time.timeScale = 0;
+            _waveFinishedSounds.PlaygameOverSound();
             streakDisplayGO.SetActive(false);
             currentHealthDisplayGO.SetActive(false);
             gameOverDisplayGO.SetActive(true);
-            canvas.SetActive(true);
+    
         }
     }
 
-    public void Restart()
+    // public void Restart()
+    // {
+    //     Time.timeScale = 1;
+    //     gameOverDisplayGO.SetActive(false);
+    //     currentHealthDisplayGO.SetActive(true);
+    //     streakDisplayGO.SetActive(true);
+    //     SceneManager.LoadScene("DiscoDisc");
+    //     playerHealth = 100;
+    //     UpdateCurrentHealth();
+    //
+    // }
+
+    IEnumerator RestartSceneDelay()
     {
+        yield return new WaitForSecondsRealtime(10.0f);
+        // Scene scene = SceneManager.GetActiveScene(); 
+        // SceneManager.LoadScene(scene.name);
+        Debug.Log("RestartScene2");
         Time.timeScale = 1;
         gameOverDisplayGO.SetActive(false);
-        canvas.SetActive(false);
         currentHealthDisplayGO.SetActive(true);
         streakDisplayGO.SetActive(true);
-        SceneManager.LoadScene("DiscoDisc");
-        playerHealth = 100;
-        UpdateCurrentHealth();
+        playerHealth = playerRestartHealth;
+        score = 0;
+        SceneManager.LoadScene("Rikard2");
     }
 
     public void Quit()

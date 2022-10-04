@@ -23,36 +23,36 @@ public class Fireworks : MonoBehaviour
 
     IEnumerator PlayFireworks()
     {
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.1f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.2f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.1f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.5f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.5f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.1f);
         fireWorks[0].SetActive(true);
         yield return new WaitForSeconds(0.2f);
         fireWorks[1].SetActive(true);
         yield return new WaitForSeconds(0.2f);
         fireWorks[2].SetActive(true);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.2f);
         fireWorks[3].SetActive(true);
         yield return new WaitForSeconds(0.2f);
         fireWorks[4].SetActive(true);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         yield return new WaitForSeconds(0.2f);
         fireWorks[5].SetActive(true);
      
         yield return new WaitForSeconds(0.2f);
         fireWorks[6].SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        _audioSource.PlayOneShot(fireworksClip, 2);
+        _audioSource.PlayOneShot(fireworksClip, 1);
         fireWorks[7].SetActive(true);
         yield return new WaitForSeconds(1f);
         fireWorks[8].SetActive(true);

@@ -5397,7 +5397,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ccc5e6fb88f044245851228ac190af87, type: 3}
   - {fileID: 8300000, guid: 77cb5b2506bfa4e40af2787d7bb72dff, type: 3}
   - {fileID: 8300000, guid: a995136ed8a48914bb106fcbbf5602fc, type: 3}
-  discoStart: {fileID: 0}
+  discoStart: {fileID: 8300000, guid: 367a80ae9666c1f44a0ce6e2c8cd3798, type: 3}
+  gameOverVoice: {fileID: 8300000, guid: c769845e248548642901a83f912a4607, type: 3}
 --- !u!1 &737759345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7278,7 +7279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 271854320352975770, guid: fe18c2f42af9ec74786e59ea44d6a5ef, type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 271854320352975772, guid: fe18c2f42af9ec74786e59ea44d6a5ef, type: 3}
       propertyPath: m_RootOrder
@@ -8136,7 +8137,7 @@ MonoBehaviour:
   enemyStreakCounter: {fileID: 1343289432}
   enemyStreak: 0
   enemyStreakTime: 3
-  playerHealth: 1000
+  playerHealth: 100
   currentHealthDisplay: {fileID: 36868995}
   replacingDiscs: 0
   scoreText: {fileID: 546334075}
@@ -8147,7 +8148,6 @@ MonoBehaviour:
   currentHealthDisplayGO: {fileID: 2060303779}
   healthImage: {fileID: 2060303779}
   gameOverDisplayGO: {fileID: 203372167}
-  canvas: {fileID: 1914072939}
   audioSource: {fileID: 0}
   audioClips:
   - {fileID: 8300000, guid: 3040fed0ddd2e2c4ab49737791da937d, type: 3}
@@ -8161,6 +8161,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2a61d3a6b088e004e84edd5d0eb19b68, type: 3}
   - {fileID: 8300000, guid: 95e1cb88f02393a4f9913e82be8fc5c2, type: 3}
   - {fileID: 8300000, guid: d6939455368ee424bba9b1c8843241d4, type: 3}
+  - {fileID: 8300000, guid: c769845e248548642901a83f912a4607, type: 3}
 --- !u!4 &1268968301
 Transform:
   m_ObjectHideFlags: 0
@@ -11960,7 +11961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1914072940
 MonoBehaviour:
   m_ObjectHideFlags: 0
