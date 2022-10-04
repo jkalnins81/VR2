@@ -26,6 +26,11 @@ public class SnakeNewMovement : MonoBehaviour
     Vector3 Vector3DownLeft;
     Vector3 Vector3DownRight;
 
+    private void Awake()
+    {
+        transform.SetPositionAndRotation(new Vector3(7f, 1.98f, -18f), Quaternion.identity); // override EnemyWaveSpawner spawn position
+    }
+
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
