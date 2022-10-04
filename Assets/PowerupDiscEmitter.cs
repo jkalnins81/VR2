@@ -18,9 +18,7 @@ public class PowerupDiscEmitter : MonoBehaviour
 
     
     [SerializeField] private GameObject bonusDisc;
-
-
-   
+    
     
     
     // Start is called before the first frame update
@@ -60,9 +58,10 @@ public class PowerupDiscEmitter : MonoBehaviour
             {
                 StartCoroutine(DestroyDelayMyself());
                 GameManager.Instance.UpdateScore(50);
-                SpawnBonusDisc(gameObject.transform.position);
-                SpawnBonusDisc(gameObject.transform.position);
-                SpawnBonusDisc(gameObject.transform.position);
+                SpawnBonusDisc(gameObject.transform.position, Vector3.up);
+                SpawnBonusDisc(gameObject.transform.position, Vector3.down);
+                SpawnBonusDisc(gameObject.transform.position, Vector3.left);
+                SpawnBonusDisc(gameObject.transform.position, Vector3.right);
                 GetComponent<Collider>().enabled = false; 
             }
         }
@@ -85,10 +84,9 @@ public class PowerupDiscEmitter : MonoBehaviour
         Destroy(gameObject);
     }
     
-    public void SpawnBonusDisc(Vector3 spawnPos)
+    public void SpawnBonusDisc(Vector3 spawnPos, Vector3 dir)
     {
         
-        // Random Vector
         float randomX = UnityEngine.Random.Range(-1, 1);
         float randomY = UnityEngine.Random.Range(-1, 1);
         float randomZ = UnityEngine.Random.Range(-1, 1);
@@ -103,11 +101,11 @@ public class PowerupDiscEmitter : MonoBehaviour
   
 
         //Add Exception if direction is zeroed out 
-        if (randomDir == Vector3.zero) randomDir = new Vector3(1, 0, 1);
+        // if (randomDir == Vector3.zero) randomDir = new Vector3(1, 0, 1);
         
         //Wait to add force and enable obj in order to avoid the disc to collide 
         float randomBonusDiscForceMultiplier = UnityEngine.Random.Range(120f, 200f);
-        spawnedDiscRb.AddForce(randomDir * randomBonusDiscForceMultiplier, ForceMode.Impulse);
+        spawnedDiscRb.AddForce(dir * randomBonusDiscForceMultiplier, ForceMode.Impulse);
     }
 
 
