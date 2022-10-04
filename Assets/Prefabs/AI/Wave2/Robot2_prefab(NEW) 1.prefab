@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3328370050279322382}
   - component: {fileID: 4304087934792116185}
   - component: {fileID: 4806375460119930923}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ScriptsCollider
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}
