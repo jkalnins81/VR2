@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177009588765750287}
-  - component: {fileID: 2357435935485302148}
   - component: {fileID: 7385416821477437534}
   - component: {fileID: 6653674745249057220}
   - component: {fileID: 6760663037022357234}
   - component: {fileID: 5406064388744657223}
   - component: {fileID: 3328370050279322382}
   - component: {fileID: 4304087934792116185}
+  - component: {fileID: 4806375460119930923}
   m_Layer: 10
   m_Name: ScriptsCollider
   m_TagString: AIEnemy
@@ -40,19 +40,6 @@ Transform:
   m_Father: {fileID: 6252486283671881560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.329, z: 0}
---- !u!65 &2357435935485302148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4822849710702942403}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.304635, y: 6.168742, z: 5.4205084}
-  m_Center: {x: 0.35345078, y: 2.584371, z: -1.15926}
 --- !u!114 &7385416821477437534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +122,22 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.304635, y: 6.168742, z: 5.4205084}
-  m_Center: {x: 0.35345078, y: 2.584371, z: -1.15926}
+  m_Size: {x: 6.1798935, y: 5.8532133, z: 5.4205084}
+  m_Center: {x: -0.2420907, y: 2.6761785, z: -1.1592591}
+--- !u!136 &4806375460119930923
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822849710702942403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5.2856994
+  m_Height: 10.571398
+  m_Direction: 1
+  m_Center: {x: 0.18755245, y: 2.8119898, z: -0.7154465}
 --- !u!1 &6741496706140184034
 GameObject:
   m_ObjectHideFlags: 0
