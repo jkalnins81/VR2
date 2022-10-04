@@ -1119,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_LocalScale.x
@@ -3926,7 +3926,7 @@ Transform:
   - {fileID: 1453673981}
   - {fileID: 1414848160}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &512828494
 MonoBehaviour:
@@ -6680,7 +6680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7000219096783807732, guid: 62b40ef33ef8d9d4cb8e72959045a3f9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7000219096783807732, guid: 62b40ef33ef8d9d4cb8e72959045a3f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7439,7 +7439,7 @@ Transform:
   - {fileID: 1914072943}
   - {fileID: 261081229}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!82 &1268968302
 AudioSource:
@@ -9630,7 +9630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10131,7 +10131,7 @@ Transform:
   - {fileID: 1781887376}
   - {fileID: 1369472951}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1819713506
 AudioSource:
@@ -10242,7 +10242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 590900443307977943, guid: 5819bf187ccd24841b038be19ee01b02, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 590900443307977943, guid: 5819bf187ccd24841b038be19ee01b02, type: 3}
       propertyPath: m_LocalScale.x
@@ -10311,7 +10311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2283037775005194837, guid: 020b5e401c018394f9d88c36745e91e2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2283037775005194837, guid: 020b5e401c018394f9d88c36745e91e2, type: 3}
       propertyPath: m_LocalScale.x
@@ -10399,9 +10399,13 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: PowerUpBomb
-    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
     count: 10
     rate: 3
+  - name: PowerUpHealth
+    powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
+    count: 2
+    rate: 2
   - name: PowerUpHealth
     powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
     count: 2
@@ -10432,7 +10436,7 @@ Transform:
   - {fileID: 2052523356}
   - {fileID: 1774968050}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1858606725
 PrefabInstance:
@@ -11113,7 +11117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6848195177619124238, guid: 24dac8267c8ce8f4ba868793ef7a448b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6848195177619124238, guid: 24dac8267c8ce8f4ba868793ef7a448b, type: 3}
       propertyPath: m_LocalScale.x
@@ -12671,7 +12675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564800887132409659, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8564800887132409659, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
       propertyPath: m_LocalScale.x
@@ -12991,7 +12995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_LocalPosition.x
