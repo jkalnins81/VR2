@@ -93,6 +93,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: SnakeDown
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeIdle
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeUp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6500292276788436138}
   m_Solo: 0
@@ -158,6 +164,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: SnakeIdle
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeUp
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeDown
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8781470437252605122}
   m_Solo: 0
@@ -183,6 +195,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: SnakeIdle
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeDown
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeUp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8781470437252605122}
   m_Solo: 0
@@ -207,6 +225,12 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: SnakeUp
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeIdle
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SnakeDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8843088913179139428}
