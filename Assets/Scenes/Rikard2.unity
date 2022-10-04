@@ -11352,7 +11352,7 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 10
     rate: 0.5
   - name: Claw Arms
@@ -11695,17 +11695,17 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: PowerUpBomb
-    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
-    count: 4
-    rate: 3
-  - name: PowerUpHealth
-    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
     count: 4
     rate: 2
+  - name: PowerUpHealth
+    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    count: 2
+    rate: 1
   - name: PowerUpHealth
     powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
-    count: 4
-    rate: 2
+    count: 1
+    rate: 1
   spawnPoints:
   - {fileID: 1709751373}
   - {fileID: 141450533}
