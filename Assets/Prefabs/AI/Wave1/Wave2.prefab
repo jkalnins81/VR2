@@ -89,13 +89,13 @@ GameObject:
   - component: {fileID: 8390950676691777324}
   - component: {fileID: 8390950676691777325}
   - component: {fileID: 8390950676691777314}
-  - component: {fileID: 7895863089528828624}
   - component: {fileID: 8390950676691777327}
   - component: {fileID: 8390950676691777321}
   - component: {fileID: 6064724418442076110}
   - component: {fileID: 8576429934512729519}
   - component: {fileID: 8390950676691777326}
   - component: {fileID: 2526470528511563557}
+  - component: {fileID: 7525389816368504776}
   m_Layer: 10
   m_Name: Sphere
   m_TagString: AIEnemy
@@ -170,19 +170,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7895863089528828624
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5255587, y: 2.8675811, z: 2.107214}
-  m_Center: {x: -0.02381723, y: -0.32699662, z: -0.57925117}
 --- !u!114 &8390950676691777327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,8 +252,22 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5255587, y: 2.8675811, z: 2.107214}
-  m_Center: {x: -0.02381723, y: -0.32699662, z: -0.57925117}
+  m_Size: {x: 1.4941145, y: 2.8675811, z: 1.5090393}
+  m_Center: {x: -0.008095185, y: -0.32699662, z: -0.6105777}
+--- !u!136 &7525389816368504776
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676691777312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.1143149
+  m_Height: 3.7778928
+  m_Direction: 1
+  m_Center: {x: -2.6950572e-14, y: -0.2820848, z: -0.4560495}
 --- !u!1001 &7249963491253996256
 PrefabInstance:
   m_ObjectHideFlags: 0
