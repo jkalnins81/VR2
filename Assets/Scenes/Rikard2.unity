@@ -8591,6 +8591,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8564800887474251407, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+      propertyPath: m_Size.x
+      value: 9.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564800887474251407, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+      propertyPath: m_Size.y
+      value: 9.14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
 --- !u!1001 &1493712618

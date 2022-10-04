@@ -43,9 +43,13 @@ public class GameManager : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip[] audioClips;
+
+    private Color colorReset;
     
     private void Start()
     {
+        colorReset = new Color(202, 205, 255, 255);
+        
         healthImage2 = healthImage.GetComponent<Image>();
         streakImage2 = streakImage.GetComponent<Image>();
         scoreImage2 = scoreImage.GetComponent<Image>();
@@ -105,38 +109,8 @@ public class GameManager : MonoBehaviour
     public void UpdateVisualKillStreak()
     {
         enemyStreakCounter.text = enemyStreak.ToString();
-        StartCoroutine(TextColorFlash(enemyStreakCounter, streakImage2));
+        StartCoroutine(StreakColorFlashCyan(enemyStreakCounter, streakImage2));
         enemyStreakTime = enemyStreakTimereset;
-    }
-
-    IEnumerator TextColorFlash(TextMeshPro text, Image image)
-    {
-        text.color = new Color(227, 35, 0, 255);
-        image.color = new Color(227, 35, 0, 255);
-        yield return new WaitForSeconds(0.2f);
-        text.color = new Color(202, 205, 255, 255);
-        image.color = new Color(202, 205, 255, 255);
- 
-    }
-    
-    IEnumerator HealthColorFlashRed(TextMeshPro text, Image image)
-    {
-        text.color = new Color(255, 70, 0, 102);
-        image.color = new Color(255, 70, 0, 102);
-        yield return new WaitForSeconds(0.2f);
-        text.color = new Color(202, 205, 255, 255);
-        image.color = new Color(202, 205, 255, 255);
- 
-    }
-    
-    IEnumerator HealthColorFlashGreen(TextMeshPro text, Image image)
-    {
-        text.color = new Color(93, 255, 102, 255);
-        image.color = new Color(93, 255, 102, 255);
-        yield return new WaitForSeconds(0.2f);
-        text.color = new Color(202, 205, 255, 255);
-        image.color = new Color(202, 205, 255, 255);
- 
     }
 
     public void TakeDamage(int damage)
@@ -186,5 +160,51 @@ public class GameManager : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip, volume);
     }
+    
+    
+    //Text Color flashes
+    
+    
+    IEnumerator TextColorFlash(TextMeshPro text, Image image)
+    {
+        text.color = new Color(227, 35, 0, 255);
+        image.color = new Color(227, 35, 0, 255);
+        yield return new WaitForSeconds(0.2f);
+        text.color = colorReset;
+        image.color = colorReset;
+ 
+    }
+    
+    IEnumerator StreakColorFlashCyan(TextMeshPro text, Image image)
+    {
+        text.color = Color.cyan;
+        image.color = Color.cyan;
+        yield return new WaitForSeconds(0.2f);
+        text.color = colorReset;;
+        image.color = colorReset;
+ 
+    }
+    
+    IEnumerator HealthColorFlashRed(TextMeshPro text, Image image)
+    {
+        text.color = Color.red;
+        image.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        text.color = colorReset;;
+        image.color = colorReset;
+ 
+    }
+    
+    IEnumerator HealthColorFlashGreen(TextMeshPro text, Image image)
+    {
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+        text.color = colorReset;
+        image.color = colorReset;
+
+    }
+
+    
 
 }
