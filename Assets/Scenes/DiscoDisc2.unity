@@ -988,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorsGO
       objectReference: {fileID: 0}
+    - target: {fileID: 2872214383562475441, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3392,11 +3396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: speed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: forward
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: secsToNewMovement
