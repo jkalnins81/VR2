@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     public AudioClip[] audioClips;
 
     private Color colorReset;
+    private bool greenlight = false;
     
     private void Start()
     {
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;
-        StartCoroutine(HealthColorFlashRed(currentHealthDisplay, healthImage2));
+        if(!greenlight) StartCoroutine(HealthColorFlashRed(currentHealthDisplay, healthImage2));
     }
     public void GiveHealth(int health)
     {
@@ -197,11 +198,49 @@ public class GameManager : MonoBehaviour
     
     IEnumerator HealthColorFlashGreen(TextMeshPro text, Image image)
     {
+        greenlight = true;
         text.color = Color.green;
         image.color = Color.green;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         text.color = colorReset;
         image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        text.color = colorReset;
+        image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        text.color = colorReset;
+        image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        text.color = colorReset;
+        image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        text.color = colorReset;
+        image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        text.color = colorReset;
+        image.color = colorReset;
+        yield return new WaitForSeconds(0.1f);
+        text.color = Color.green;
+        image.color = Color.green;
+        yield return new WaitForSeconds(1.5f);
+        text.color = colorReset;
+        image.color = colorReset;
+        greenlight = false;
 
     }
 

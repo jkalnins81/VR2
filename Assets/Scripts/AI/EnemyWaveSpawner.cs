@@ -34,6 +34,10 @@ public class EnemyWaveSpawner : MonoBehaviour
     public GameObject waveFlashGO;
 
     private AudioSource audioData;
+
+    private WaveFinishedSounds _waveFinishedSounds;
+
+    private Fireworks _fireworks;
     
     //Doors
 
@@ -41,6 +45,9 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     private void Start()
     {
+        _fireworks = FindObjectOfType<Fireworks>();
+        
+        _waveFinishedSounds = FindObjectOfType<WaveFinishedSounds>();
 
         openDoors = FindObjectOfType<OpenDoors>();
         
@@ -178,6 +185,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     
     void WaveFinishedText()
     {
+        _waveFinishedSounds.PlayWaveSound();
+        _fireworks.FireWorks();
         StartCoroutine(WaveTextFinished());
     }
 

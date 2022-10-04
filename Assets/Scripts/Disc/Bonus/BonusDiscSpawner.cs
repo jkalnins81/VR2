@@ -9,42 +9,117 @@ public class BonusDiscSpawner : MonoBehaviour
 
     [SerializeField] private DiscReplacer _discReplacer;
 
+    private WaveFinishedSounds waveFinishedSounds;
+    
     private void Start()
     {
+        waveFinishedSounds = FindObjectOfType<WaveFinishedSounds>();
+        
         _discReplacer = FindObjectOfType<DiscReplacer>();
     }
 
     public void BonusDiscInstantiator(Vector3 spawnPos)
     {
         
-        if (GameManager.Instance.enemyStreak == 2)
+        if (GameManager.Instance.enemyStreak == 5)
         {
-            SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             
-
+            waveFinishedSounds.PlayKillStreakSound(0);
         }
-        if (GameManager.Instance.enemyStreak == 3)
+        if (GameManager.Instance.enemyStreak == 10)
         {
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(1);
         }    
         
-        if (GameManager.Instance.enemyStreak == 6)
+        if (GameManager.Instance.enemyStreak == 20)
         {
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(2);
+     
         }   
         
-        if (GameManager.Instance.enemyStreak == 12)
+        if (GameManager.Instance.enemyStreak == 30)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(3);
+
+        }    
+        
+        if (GameManager.Instance.enemyStreak == 40)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(4);
+
+        }    
+        
+        if (GameManager.Instance.enemyStreak == 50)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(5);
+
+        }    
+        
+        if (GameManager.Instance.enemyStreak == 60)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(6);
+
+        }    
+        if (GameManager.Instance.enemyStreak == 70)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(7);
+
+        }  
+        if (GameManager.Instance.enemyStreak == 80)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(8);
+
+        }   
+        if (GameManager.Instance.enemyStreak == 90)
+        {
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            SpawnBonusDisc(spawnPos);
+            waveFinishedSounds.PlayKillStreakSound(9);
+
+        }   
+        if (GameManager.Instance.enemyStreak == 100)
         {
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
@@ -56,10 +131,23 @@ public class BonusDiscSpawner : MonoBehaviour
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
             SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
-            SpawnBonusDisc(spawnPos);
-        }    
+            waveFinishedSounds.PlayKillStreakSound(10);
+
+        }   
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public void SpawnBonusDisc(Vector3 spawnPos)
     {
