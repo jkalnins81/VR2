@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SnakeNewMovement : MonoBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 1.5f;
     public float lerp = 0.5f;
 
     public float left = -1f;
     public float right = 1f;
     public float up = 1f;
     public float down = -1f;
-    public float forward = 0.25f;
+    public float forward = 1f;
 
     public float secsToNewMovement = 2f;
 
@@ -35,8 +35,15 @@ public class SnakeNewMovement : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
+
         Vector3Forward = new Vector3(0, 0, forward);
+        Vector3Left = new Vector3(left, 0, forward);
+        Vector3Right = new Vector3(right, 0, forward);
+        Vector3UpLeft = new Vector3(left, up, forward);
         Vector3UpRight = new Vector3(right, up, forward);
+        Vector3DownLeft = new Vector3(left, down, forward);
+        Vector3DownRight = new Vector3(right, down, forward);
+        
         StartCoroutine(StartSnakeMovement());
     }
 
@@ -50,7 +57,7 @@ public class SnakeNewMovement : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3Forward, lerp) * speed;
 
-        yield return new WaitForSeconds(secsToNewMovement);
+        yield return new WaitForSeconds(secsToNewMovement * 2);
 
         // snake forward, up & right
 
@@ -62,6 +69,16 @@ public class SnakeNewMovement : MonoBehaviour
 
         yield return new WaitForSeconds(secsToNewMovement);
 
+        // snake forward
+
+        animator.SetBool("SnakeIdle", true);
+        animator.SetBool("SnakeUp", false);
+        animator.SetBool("SnakeDown", false);
+
+        rb.velocity = Vector3.Lerp(rb.velocity, Vector3Forward, lerp) * speed;
+
+        yield return new WaitForSeconds(secsToNewMovement);
+
         // snake forward, down & left
 
         animator.SetBool("SnakeIdle", false);
@@ -70,7 +87,7 @@ public class SnakeNewMovement : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3DownLeft, lerp) * speed;
 
-        yield return new WaitForSeconds(secsToNewMovement);
+        yield return new WaitForSeconds(secsToNewMovement * 2);
 
         // snake forward, left
 
@@ -90,7 +107,7 @@ public class SnakeNewMovement : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3Right, lerp) * speed;
 
-        yield return new WaitForSeconds(secsToNewMovement);
+        yield return new WaitForSeconds(secsToNewMovement * 2);
 
         // move forward & down & right
 
@@ -99,6 +116,16 @@ public class SnakeNewMovement : MonoBehaviour
         animator.SetBool("SnakeDown", true);
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3DownRight, lerp) * speed;
+
+        yield return new WaitForSeconds(secsToNewMovement);
+
+        // snake forward
+
+        animator.SetBool("SnakeIdle", true);
+        animator.SetBool("SnakeUp", false);
+        animator.SetBool("SnakeDown", false);
+
+        rb.velocity = Vector3.Lerp(rb.velocity, Vector3Forward, lerp) * speed;
 
         yield return new WaitForSeconds(secsToNewMovement);
 

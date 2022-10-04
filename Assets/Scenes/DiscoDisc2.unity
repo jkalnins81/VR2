@@ -988,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorsGO
       objectReference: {fileID: 0}
+    - target: {fileID: 2872214383562475441, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3213308916233542923, guid: 8c9614fec9229b8418fd83814f488892, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1079,6 +1083,7 @@ MonoBehaviour:
   speed: 1.5
   leftDoorClosing: 0
   rightDoorClosing: 0
+  backDoor: {fileID: 0}
 --- !u!54 &191648468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3391,15 +3396,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: speed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
-      propertyPath: forward
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
+      propertyPath: forward
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: secsToNewMovement
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
@@ -12726,16 +12731,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e8b3ba33fb37d4b92056fbce4d14c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
   enemyStreakCounter: {fileID: 2081082298}
   enemyStreak: 0
   enemyStreakTime: 3
   playerHealth: 1000
   currentHealthDisplay: {fileID: 676747252}
   replacingDiscs: 0
+  scoreText: {fileID: 0}
+  scoreImage: {fileID: 0}
+  score: 0
   streakDisplayGO: {fileID: 1203482039}
+  streakImage: {fileID: 0}
   currentHealthDisplayGO: {fileID: 1295425777}
+  healthImage: {fileID: 0}
   gameOverDisplayGO: {fileID: 883647777}
   canvas: {fileID: 1283465472}
   audioSource: {fileID: 0}
