@@ -16,6 +16,8 @@ public class OpenDoors : MonoBehaviour
     private Rigidbody leftDoorRB;
     private Rigidbody rightDoorRB;
 
+    public Collider backDoor;
+
     private void Start()
     {
         leftDoorRB = leftDoor.GetComponent<Rigidbody>();
@@ -26,6 +28,7 @@ public class OpenDoors : MonoBehaviour
     {
         leftDoor.GetComponent<Rigidbody>().velocity = Vector3.Lerp(leftDoorRB.velocity, Vector3.right, lerp) * speed;
         rightDoor.GetComponent<Rigidbody>().velocity = Vector3.Lerp(rightDoorRB.velocity, -Vector3.right, lerp) * speed;
+        StartCoroutine(DeActivateCollidersBackDoor());
     }
 
     public void closingDoors()
@@ -34,6 +37,7 @@ public class OpenDoors : MonoBehaviour
         rightDoor.GetComponent<Rigidbody>().velocity = Vector3.Lerp(rightDoorRB.velocity, Vector3.right, lerp * 2) * speed;
         leftDoorClosing = true;
         rightDoorClosing = true;
+        StartCoroutine(ActivateCollidersBackDoor());
     }
 
     private void Update()
@@ -59,5 +63,17 @@ public class OpenDoors : MonoBehaviour
             rightDoorRB.velocity = new Vector3(0, 0, 0);
             rightDoorClosing = false;
         }
+    }
+
+    IEnumerator ActivateCollidersBackDoor()
+    {
+        yield return new WaitForSeconds(3f);
+        backDoor.enabled = true;
+    }
+    
+    IEnumerator DeActivateCollidersBackDoor()
+    {
+        yield return new WaitForSeconds(3f);
+        backDoor.enabled = false;
     }
 }
