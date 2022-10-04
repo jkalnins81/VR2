@@ -48,9 +48,12 @@ public class GameManager : MonoBehaviour
     private bool greenlight = false;
 
     private WaveFinishedSounds _waveFinishedSounds;
+
+    public CameraManager cameraManager;
     
     private void Start()
     {
+        
         playerRestartHealth = playerHealth;
 
         currentHealthDisplay.text = playerRestartHealth.ToString();
@@ -139,15 +142,14 @@ public class GameManager : MonoBehaviour
     {
         currentHealthDisplay.text = playerHealth.ToString();
         
-        if(playerHealth <= 0)
+        if(playerHealth == 0)
         {
-            StartCoroutine(RestartSceneDelay());
-            Time.timeScale = 0;
             _waveFinishedSounds.PlaygameOverSound();
             streakDisplayGO.SetActive(false);
             currentHealthDisplayGO.SetActive(false);
             gameOverDisplayGO.SetActive(true);
-    
+            StartCoroutine(RestartSceneDelay());
+            Time.timeScale = 0;
         }
     }
 
@@ -162,14 +164,14 @@ public class GameManager : MonoBehaviour
     //     UpdateCurrentHealth();
     //
     // }
+    
 
     IEnumerator RestartSceneDelay()
     {
-        yield return new WaitForSecondsRealtime(10.0f);
-        // Scene scene = SceneManager.GetActiveScene(); 
-        // SceneManager.LoadScene(scene.name);
-        Debug.Log("RestartScene2");
+        yield return new WaitForSecondsRealtime(10f);
         Time.timeScale = 1;
+        cameraManager.FadeOut();
+        yield return new WaitForSeconds(6f);
         gameOverDisplayGO.SetActive(false);
         currentHealthDisplayGO.SetActive(true);
         streakDisplayGO.SetActive(true);

@@ -63,11 +63,6 @@ public class EnemyWaveSpawner : MonoBehaviour
         }
     }
 
-    
-
-    
-
- 
     private void Update()
     {
         if (ableToSpawn)
