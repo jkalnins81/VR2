@@ -96,6 +96,7 @@ public class DiscBehaviourRelease : MonoBehaviour
         //Destroy after X seconds
         StartCoroutine(DestroyDiscAfterThrow());
 
+
         if (handSpeed >= controllerMaxSpeed)
         {
             //Cap the max throw speed vel
@@ -133,6 +134,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator DiscColliderOn()
     {
         yield return new WaitForSeconds(0.10f);
+        GetComponent<XRGrabInteractable>().enabled = false;
         colliders[0].enabled = true;
         colliders[2].enabled = true;
         yield return new WaitForSeconds(0.20f);

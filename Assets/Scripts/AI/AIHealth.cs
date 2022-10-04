@@ -8,6 +8,8 @@ public class AIHealth : MonoBehaviour
     public GameObject AIExplosion;
     GameObject EnemyDieWall;
 
+    public int scoreWhenKill = 5;
+
     private int randomSound;
 
     private void Start()
@@ -24,7 +26,9 @@ public class AIHealth : MonoBehaviour
             GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomSound], 0.35f);
             
             Instantiate(AIExplosion, transform.position, Quaternion.identity);
-            GameManager.Instance.UpdateScore(5);
+            
+            //Give Score
+            GameManager.Instance.UpdateScore(scoreWhenKill);
             AIDie();
         }
 
@@ -39,5 +43,11 @@ public class AIHealth : MonoBehaviour
     public void AIDie()
     {
         Destroy(transform.parent.gameObject);
+    }
+
+    public void SendVisualStreakBomb()
+    {
+        GameManager.Instance.enemyStreak++;
+        GameManager.Instance.UpdateVisualKillStreak();
     }
 }

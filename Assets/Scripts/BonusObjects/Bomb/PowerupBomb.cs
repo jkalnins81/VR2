@@ -64,6 +64,9 @@ public class PowerupBomb : MonoBehaviour
     
     void ExplosionDamage(Vector3 center, float radius)
     {
+        //Funkar ej att ge på alla, så ger en per bomb ist för att ljud skall spelas up
+ 
+        
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var hitCollider in hitColliders)
         {
@@ -74,14 +77,12 @@ public class PowerupBomb : MonoBehaviour
                 Destroy(particles, 1f);
                 particles.transform.parent = null;
                 GameObject enemy = hitCollider.gameObject;
-                Destroy(enemy.transform.parent.gameObject);
+                
+                enemy.GetComponent<AIHealth>().AIDie();
+                // Destroy(enemy.transform.parent.gameObject);
                 
                 //Score 
-                GameManager.Instance.UpdateScore(5);
-            }
-            else
-            {
-                break; 
+                GameManager.Instance.UpdateScore(50);
             }
         }
     }
@@ -89,6 +90,10 @@ public class PowerupBomb : MonoBehaviour
     IEnumerator DestroyDelayMyself()
     {
         GameManager.Instance.PlaySound(GameManager.Instance.audioClips[1], 1f);
+       
+
+
+        
         yield return new WaitForSeconds(0.1f);
         DestroyEffects();
     }
@@ -99,6 +104,7 @@ public class PowerupBomb : MonoBehaviour
         particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         particles.transform.parent = null;
         Destroy(particles, 0.5f);
+        
         Destroy(gameObject);
     }
     

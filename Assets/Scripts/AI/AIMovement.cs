@@ -20,6 +20,7 @@ public class AIMovement : MonoBehaviour
         _rb.velocity = Vector3.forward * speed;
 
         StartRandomAIPattern();
+
     }
 
     void StartRandomAIPattern()
@@ -50,15 +51,15 @@ public class AIMovement : MonoBehaviour
     IEnumerator LeftRightUpDown()
     {
         yield return new WaitForSeconds(changeDirectionSpeed);
-        _rb.velocity = new Vector3(-1,0,1) * speed; // left & forward
+        _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        _rb.velocity = new Vector3(1,0,1) * speed; // right & forward
+        _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
         _rb.velocity = new Vector3(1, 0, 1) * speed; // right & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
         _rb.velocity = new Vector3(-1, 0, 1) * speed; // left & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
-        _rb.velocity = new Vector3(0,1,1) * speed; // up & forward
+        _rb.velocity = new Vector3(0, 1, 1) * speed; // up & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
         _rb.velocity = new Vector3(0, -1, 1) * speed; // down & forward
         yield return new WaitForSeconds(changeDirectionSpeed);
@@ -144,4 +145,5 @@ public class AIMovement : MonoBehaviour
 
         StartRandomAIPattern();
     }
+
 }
