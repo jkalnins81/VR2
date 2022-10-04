@@ -10068,7 +10068,7 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
     count: 5
     rate: 1
   - name: Dog
@@ -12715,6 +12715,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564800887132409659, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564800887415365054, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8564800887474251405, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}

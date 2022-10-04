@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8390950676691777326}
   - component: {fileID: 2526470528511563557}
   - component: {fileID: 7525389816368504776}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: AIEnemy
   m_Icon: {fileID: 0}

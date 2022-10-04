@@ -75,6 +75,13 @@ public class PowerupBomb : MonoBehaviour
                 particles.transform.parent = null;
                 GameObject enemy = hitCollider.gameObject;
                 Destroy(enemy.transform.parent.gameObject);
+                
+                //Score 
+                GameManager.Instance.UpdateScore(5);
+            }
+            else
+            {
+                break; 
             }
         }
     }
