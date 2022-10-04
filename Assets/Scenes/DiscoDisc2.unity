@@ -3400,7 +3400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: forward
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7298215359996114490, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
       propertyPath: secsToNewMovement

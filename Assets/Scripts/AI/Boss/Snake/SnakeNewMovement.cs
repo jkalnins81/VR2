@@ -87,7 +87,7 @@ public class SnakeNewMovement : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3DownLeft, lerp) * speed;
 
-        yield return new WaitForSeconds(secsToNewMovement);
+        yield return new WaitForSeconds(secsToNewMovement * 2);
 
         // snake forward, left
 
@@ -107,7 +107,7 @@ public class SnakeNewMovement : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, Vector3Right, lerp) * speed;
 
-        yield return new WaitForSeconds(secsToNewMovement);
+        yield return new WaitForSeconds(secsToNewMovement * 2);
 
         // move forward & down & right
 
