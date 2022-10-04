@@ -2394,7 +2394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -43.548, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78116, y: -9213}
+  m_AnchoredPosition: {x: -78163.92, y: -9213}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302858575
@@ -4069,7 +4069,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546334073}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 27}
   m_LocalScale: {x: 106, y: 106, z: 106}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4078,7 +4078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1113, y: -182}
+  m_AnchoredPosition: {x: -1119.1, y: -201.7}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546334075
@@ -4131,8 +4131,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.27
-  m_fontSizeBase: 12.27
+  m_fontSize: 9.36
+  m_fontSizeBase: 9.36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4167,7 +4167,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 15.226571, w: 3.5819716}
+  m_margin: {x: 0, y: 0, z: 14.147874, w: 3.5819716}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -4255,7 +4255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -45.896, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78104.06, y: -9219}
+  m_AnchoredPosition: {x: -78104.06, y: -9207}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556437874
@@ -10400,8 +10400,8 @@ MonoBehaviour:
   waves:
   - name: PowerUpBomb
     powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
-    count: 1
-    rate: 4
+    count: 10
+    rate: 3
   - name: PowerUpHealth
     powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
     count: 2
