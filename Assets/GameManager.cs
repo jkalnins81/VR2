@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -180,11 +179,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Rikard2");
     }
 
-    public void Quit()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        // Replace with "Application.Quit();" if built
-    }
+    // public void Quit()
+    // {
+    //     UnityEditor.EditorApplication.isPlaying = false;
+    //     // Replace with "Application.Quit();" if built
+    // }
 
     public void PlaySound(AudioClip audioClip, float volume)
     {
