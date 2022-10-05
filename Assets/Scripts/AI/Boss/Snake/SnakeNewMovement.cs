@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SnakeNewMovement : MonoBehaviour
 {
-    public float speed = 1.5f;
+    public float speed = 1f;
     public float lerp = 0.5f;
 
     public float left = -1f;
     public float right = 1f;
     public float up = 1f;
     public float down = -1f;
-    public float forward = 1f;
+    public float forward = 0.75f;
 
     public float secsToNewMovement = 2f;
 

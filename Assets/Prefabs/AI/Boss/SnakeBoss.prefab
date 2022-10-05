@@ -734,13 +734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6cbb583345fa7d499ab7fcf4902d76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1
   lerp: 0.5
   left: -1
   right: 1
   up: 1
   down: -1
-  forward: 0.25
+  forward: 0.75
   secsToNewMovement: 2
 --- !u!54 &3952490498151475882
 Rigidbody:
