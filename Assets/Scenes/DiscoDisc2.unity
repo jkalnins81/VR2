@@ -12745,9 +12745,9 @@ MonoBehaviour:
   currentHealthDisplayGO: {fileID: 1295425777}
   healthImage: {fileID: 0}
   gameOverDisplayGO: {fileID: 883647777}
-  canvas: {fileID: 1283465472}
   audioSource: {fileID: 0}
   audioClips: []
+  cameraManager: {fileID: 0}
 --- !u!4 &2070102569
 Transform:
   m_ObjectHideFlags: 0
