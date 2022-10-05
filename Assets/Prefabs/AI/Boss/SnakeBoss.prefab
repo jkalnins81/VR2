@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4327498798153103392}
   m_Layer: 0
   m_Name: SnakeHead
-  m_TagString: Untagged
+  m_TagString: SnakeHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,8 +133,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.02321821
-  m_Center: {x: 0, y: 0.01284274, z: -0.0071177343}
+  m_Radius: 0.039972235
+  m_Center: {x: -2.4358118e-10, y: 0.009144171, z: -0.010376078}
 --- !u!114 &1554660906195370970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
   firingRateInSeconds: 1
+  firingSpeed: 50
+  shootHolder: {fileID: 0}
 --- !u!114 &4327498798153103392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,9 +220,10 @@ GameObject:
   - component: {fileID: 3266582417305836547}
   - component: {fileID: 5858548436357126636}
   - component: {fileID: 1502695720450268949}
+  - component: {fileID: 2758643789546933751}
   m_Layer: 0
   m_Name: Snake5
-  m_TagString: Untagged
+  m_TagString: Snake5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +322,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2758643789546933751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584677317985259488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &614184974970224210
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,9 +986,10 @@ GameObject:
   - component: {fileID: 4829128320541244326}
   - component: {fileID: 1439883662100402147}
   - component: {fileID: 4938072701487637319}
+  - component: {fileID: 6549044305244496335}
   m_Layer: 0
   m_Name: Snake2
-  m_TagString: Untagged
+  m_TagString: Snake2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,6 +1088,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6549044305244496335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2706781706541610183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &2736348960053018603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,9 +1561,10 @@ GameObject:
   - component: {fileID: 5579036101352957581}
   - component: {fileID: 3884373557238072610}
   - component: {fileID: 3312361255528205977}
+  - component: {fileID: 4872378861629496527}
   m_Layer: 0
   m_Name: Snake8
-  m_TagString: Untagged
+  m_TagString: Snake8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1604,6 +1663,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4872378861629496527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577648622985281532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &4347833521994372820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,9 +1703,10 @@ GameObject:
   - component: {fileID: 1044047745151378660}
   - component: {fileID: 1228560161615383924}
   - component: {fileID: 1274667198048354973}
+  - component: {fileID: 558017021807414261}
   m_Layer: 0
   m_Name: Snake4
-  m_TagString: Untagged
+  m_TagString: Snake4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,6 +1805,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &558017021807414261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4347833521994372820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &4370002011281503702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,9 +1845,10 @@ GameObject:
   - component: {fileID: 315286831918386362}
   - component: {fileID: 4546730418539553307}
   - component: {fileID: 4563966546357836038}
+  - component: {fileID: 6900278657780448829}
   m_Layer: 0
   m_Name: Snake1
-  m_TagString: Untagged
+  m_TagString: Snake1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1832,6 +1947,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6900278657780448829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370002011281503702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &4439433852367382327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,9 +1987,10 @@ GameObject:
   - component: {fileID: 1279426602367838288}
   - component: {fileID: 995917263587429358}
   - component: {fileID: 1166834495796647875}
+  - component: {fileID: 3239581886606731008}
   m_Layer: 0
   m_Name: Snake7
-  m_TagString: Untagged
+  m_TagString: Snake7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1946,6 +2089,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3239581886606731008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439433852367382327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &4505675571172944357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,9 +2279,10 @@ GameObject:
   - component: {fileID: 6930561610725760246}
   - component: {fileID: 4344508644588081851}
   - component: {fileID: 8265424038390644911}
+  - component: {fileID: 1668069377410526944}
   m_Layer: 0
   m_Name: Snake3
-  m_TagString: Untagged
+  m_TagString: Snake3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2210,6 +2381,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1668069377410526944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138555980456013673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &5473508534243403220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,9 +2454,10 @@ GameObject:
   - component: {fileID: 1765137125407215333}
   - component: {fileID: 2154003558207606226}
   - component: {fileID: 1613041206798853107}
+  - component: {fileID: 4224387654063885593}
   m_Layer: 0
   m_Name: Snake10
-  m_TagString: Untagged
+  m_TagString: Snake10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2357,6 +2556,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4224387654063885593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5476370889590690903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &5825597939697218372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,9 +2726,10 @@ GameObject:
   - component: {fileID: 3140667416583631884}
   - component: {fileID: 8174071019982366347}
   - component: {fileID: 7802779991854216263}
+  - component: {fileID: 7321081948910498519}
   m_Layer: 0
   m_Name: Snake9
-  m_TagString: Untagged
+  m_TagString: Snake9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,6 +2828,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7321081948910498519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912225717473052355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &7134335846617527447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,9 +3497,10 @@ GameObject:
   - component: {fileID: 4845993967545940744}
   - component: {fileID: 1440024309929308424}
   - component: {fileID: 8139306359906282671}
+  - component: {fileID: 5565400314232568666}
   m_Layer: 0
   m_Name: Snake6
-  m_TagString: Untagged
+  m_TagString: Snake6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3344,6 +3599,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5565400314232568666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634885291737529299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82da543d27c8f484b80f30919b1dfbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeHealthGO: {fileID: 2274124166646677770}
+  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snake1: {fileID: 4370002011281503702}
+  snake2: {fileID: 2706781706541610183}
+  snake3: {fileID: 5138555980456013673}
+  snake4: {fileID: 4347833521994372820}
+  snake5: {fileID: 584677317985259488}
+  snake6: {fileID: 8634885291737529299}
+  snake7: {fileID: 4439433852367382327}
+  snake8: {fileID: 3577648622985281532}
+  snake9: {fileID: 6912225717473052355}
+  snake10: {fileID: 5476370889590690903}
+  cube004: {fileID: 815960178295199974}
+  snakeMaterial: {fileID: 2100000, guid: c6efd12d81f66af4eb3efdc7eb7c8fe7, type: 2}
+  snakeFlashMaterial: {fileID: 2100000, guid: 444647917b2639c43808569c9f36bca0, type: 2}
 --- !u!1 &8682112702687741983
 GameObject:
   m_ObjectHideFlags: 0
