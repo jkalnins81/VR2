@@ -11374,12 +11374,12 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
+    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
     count: 3
     rate: 5
   - name: Claw Arms
-    enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
-    count: 10
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    count: 100
     rate: 0.5
   - name: Buzzer
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
