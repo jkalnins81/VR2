@@ -7099,6 +7099,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2606088651363563509, guid: 80ec504be99ea7f4f9e9d14a847f49ab, type: 3}
   m_PrefabInstance: {fileID: 988213974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1001059267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8564800887474251405, guid: ddc085a5b99a63f4b960f53693e6c42a, type: 3}
+  m_PrefabInstance: {fileID: 1472686096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1001059272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001059267}
+  m_Material: {fileID: 13400000, guid: 68421431e25e12b4780afce83a904584, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+  m_Center: {x: -0.00000023841858, y: 0, z: 0.000030517578}
 --- !u!1001 &1001125176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11353,7 +11371,7 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
+    enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
     count: 3
     rate: 5
   - name: Claw Arms

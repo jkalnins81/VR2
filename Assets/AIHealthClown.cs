@@ -17,11 +17,15 @@ public class AIHealthClown : MonoBehaviour
     public Renderer _renderer;
     private Color _renderColor;
 
+    [SerializeField] private Rigidbody _clownRB;
+    [SerializeField] private Collider _clownCollider;
+
     private void Start()
     {
         _renderColor = _renderer.material.color;
         _baloonChecker = GetComponent<BaloonChecker>();
         EnemyDieWall = GameObject.Find("EnemyDieWall");
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,9 +57,10 @@ public class AIHealthClown : MonoBehaviour
     {
         if (_baloonChecker.LefttBaloon && _baloonChecker.MiddleBaloon && _baloonChecker.RightBaloon)
         {
-            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
-            Destroy(particles,1);
-     
+            _clownCollider.enabled = true;
+            _clownRB.isKinematic = false;
+            _clownRB.useGravity = true;
+
             GameManager.Instance.UpdateScore(scoreWhenKill);
 
 
@@ -67,9 +72,12 @@ public class AIHealthClown : MonoBehaviour
 
     IEnumerator DestroyAiDelay()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
+        GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+        particles.transform.parent = null;
+        Destroy(particles,1);
         Destroy(transform.parent.gameObject);
     }
 
