@@ -9940,9 +9940,9 @@ MonoBehaviour:
     count: 15
     rate: 3
   - name: Snake Boss
-    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
-    count: 1
-    rate: 1
+    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    count: 15
+    rate: 0.5
   - name: Snake Boss
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
     count: 100
@@ -9950,7 +9950,7 @@ MonoBehaviour:
   - name: Dog
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 10000
-    rate: 3
+    rate: 1
   spawnPoints:
   - {fileID: 2109509450}
   - {fileID: 1414036096}

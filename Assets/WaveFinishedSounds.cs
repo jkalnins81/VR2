@@ -24,13 +24,13 @@ public class WaveFinishedSounds : MonoBehaviour
     {  
         audioSource.Stop();
        int randClip = UnityEngine.Random.Range(0, audioClips.Length);
-       audioSource.PlayOneShot(audioClips[randClip], 1.8f);
+       audioSource.PlayOneShot(audioClips[randClip], 2.3f);
     }
     
     public void PlayKillStreakSound(int streakNumber)
     {
         audioSource.Stop();
-        audioSource.PlayOneShot(audioClipsKillStreak[streakNumber], 1.8f);
+        audioSource.PlayOneShot(audioClipsKillStreak[streakNumber], 2.3f);
     }
 
     public void PlaygameOverSound()

@@ -23,7 +23,7 @@ public class BaloonKillerRight : MonoBehaviour
         if(other.CompareTag("Disc"))
         {
             
-            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[14], 0.8f);
+            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[14], 0.45f);
 
             BaloonChecker baloonChecker = GetComponentInParent<BaloonChecker>();
 

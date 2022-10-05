@@ -65,7 +65,7 @@ public class AIHealthClown : MonoBehaviour
 
             GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
             
-            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[13], 0.8f);
+            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[13], 0.6f);
             
             StartCoroutine(DestroyAiDelay());
   
@@ -80,7 +80,7 @@ public class AIHealthClown : MonoBehaviour
         particles.transform.parent = null;
         Destroy(particles, 1.2f);
         gameObject.SetActive(false);
-        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[15], 0.8f);
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[15], 0.65f);
         yield return new WaitForSeconds(2f);
         Destroy(transform.parent.gameObject);
     }
