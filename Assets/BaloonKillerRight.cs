@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BaloonKiller : MonoBehaviour
+public class BaloonKillerRight : MonoBehaviour
 {
     public GameObject baloon;
 
@@ -26,7 +26,7 @@ public class BaloonKiller : MonoBehaviour
 
             BaloonChecker baloonChecker = GetComponentInParent<BaloonChecker>();
 
-            baloonChecker.LefttBaloon = true;
+            baloonChecker.RightBaloon = true;
  
             
             GameObject ballonParticles = Instantiate(baloonExplosionParticles, transform.position, quaternion.identity);
@@ -62,8 +62,8 @@ public class BaloonKiller : MonoBehaviour
             part3.GetComponent<Collider>().enabled = true;
             
             StartCoroutine(EnableBoxColliders());
-
-
+            
+            
         }
     }
 

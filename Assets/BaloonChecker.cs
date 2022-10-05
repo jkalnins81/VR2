@@ -5,7 +5,10 @@ using UnityEngine;
 public class BaloonChecker : MonoBehaviour
 {
 
-    public int baloonsPopped = 0;
+    public bool RightBaloon = false;
+    public bool LefttBaloon = false;
+    public bool MiddleBaloon = false;
     
+
 
 }

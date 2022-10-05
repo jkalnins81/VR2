@@ -91,9 +91,8 @@ GameObject:
   - component: {fileID: 8390950676691777324}
   - component: {fileID: 8390950676691777325}
   - component: {fileID: 8390950676691777314}
-  - component: {fileID: 8390950676691777327}
   - component: {fileID: 8390950676691777321}
-  - component: {fileID: 6064724418442076110}
+  - component: {fileID: 1494791737370510741}
   - component: {fileID: 8576429934512729519}
   - component: {fileID: 2526470528511563557}
   - component: {fileID: 7525389816368504776}
@@ -101,6 +100,7 @@ GameObject:
   - component: {fileID: 2505311210802299236}
   - component: {fileID: 78821165582744102}
   - component: {fileID: 4398948117152933272}
+  - component: {fileID: 8021552659617452229}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: AIEnemy
@@ -175,20 +175,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8390950676691777327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390950676691777312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d9c36688911e944b52bf63a28a09d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  changeDirectionSpeed: 0
 --- !u!114 &8390950676691777321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +191,7 @@ MonoBehaviour:
   firingRateInSeconds: 2
   firingSpeed: 50
   shootHolder: {fileID: 3750523054606297542}
---- !u!114 &6064724418442076110
+--- !u!114 &1494791737370510741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,12 +200,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8390950676691777312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c283051b91db9b4db0ca09fc9f8f851, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c00aa0aa09e914daa246b267f71cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIHealthPoints: 100
-  AIExplosion: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
-  scoreWhenKill: 50
+  AIHealthPoints: 0
+  AIExplosion: {fileID: 5447266757407202328, guid: 3bb0e51ec28ef9847af7468aab91b9c6, type: 3}
+  scoreWhenKill: 5
+  _renderer: {fileID: 1568883407815336880}
 --- !u!114 &8576429934512729519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +298,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9638980822f94d547ab90cb6ffa7daf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baloonsPopped: 0
+  RightBaloon: 0
+  LefttBaloon: 0
+  MiddleBaloon: 0
+--- !u!114 &8021552659617452229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390950676691777312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9112eca562e82a9489b381d55a24c066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clownSpeed: 2
 --- !u!1001 &1264683587148564743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,6 +468,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0149578275, y: 0.013846735, z: 0.0034600927}
   m_Center: {x: 0.04337272, y: -0.0043825507, z: -0.027510857}
+--- !u!23 &1568883407815336880 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 308712217092008631, guid: 1cc10811669ecf640af5179e7ceba494, type: 3}
+  m_PrefabInstance: {fileID: 1264683587148564743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971211580467283187 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 780857183245061620, guid: 1cc10811669ecf640af5179e7ceba494, type: 3}
@@ -553,7 +560,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.02
   m_Center: {x: 0.0000074373197, y: 0.0000000039895087, z: -0.0002}
---- !u!114 &4815765194368495261
+--- !u!114 &1187370765306002660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,7 +569,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2470377129957292867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e8f2cb6b0b81a45a2cc64d37006c35, type: 3}
+  m_Script: {fileID: 11500000, guid: 11126826a42f0ad438c7da9cadff81f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baloon: {fileID: 2470377129957292867}
@@ -677,23 +684,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8536753502276213165, guid: 1cc10811669ecf640af5179e7ceba494, type: 3}
   m_PrefabInstance: {fileID: 1264683587148564743}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1836838467400690718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7491081645701664938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e8f2cb6b0b81a45a2cc64d37006c35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baloon: {fileID: 7491081645701664938}
-  part1: {fileID: 0}
-  part2: {fileID: 0}
-  part3: {fileID: 0}
-  baloonExplosionParticles: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
 --- !u!135 &2001633256571806688
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -707,3 +697,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.013
   m_Center: {x: -0.000029608074, y: -0.0000000039639567, z: 0.01}
+--- !u!114 &39695673731151798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491081645701664938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53787eaf93ea5e4a812560d2b6d968e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baloon: {fileID: 7491081645701664938}
+  baloonExplosionParticles: {fileID: 2876550434354681344, guid: 8b5e3a43b8976c543acecbc2ed9b8e0c, type: 3}
