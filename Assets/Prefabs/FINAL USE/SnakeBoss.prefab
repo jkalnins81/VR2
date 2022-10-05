@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}

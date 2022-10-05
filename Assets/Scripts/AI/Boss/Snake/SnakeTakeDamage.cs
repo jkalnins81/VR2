@@ -25,8 +25,13 @@ public class SnakeTakeDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
+        
            if (other.CompareTag("Disc"))
             {
+                
+                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[12], 1);
+                
                     if(this.gameObject.CompareTag("SnakeHead"))
                     {
                         snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth -= 10;

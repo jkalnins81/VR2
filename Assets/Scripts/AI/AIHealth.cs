@@ -37,7 +37,9 @@ public class AIHealth : MonoBehaviour
         if (other.CompareTag("FrontWall"))
         {
  
-            GameManager.Instance.UpdateScore(-500);
+            // GameManager.Instance.UpdateScore(-10);
+            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            Destroy(particles,1);
             AIDie();
         }
     }

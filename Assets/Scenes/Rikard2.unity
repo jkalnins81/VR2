@@ -8272,6 +8272,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 95e1cb88f02393a4f9913e82be8fc5c2, type: 3}
   - {fileID: 8300000, guid: d6939455368ee424bba9b1c8843241d4, type: 3}
   - {fileID: 8300000, guid: c769845e248548642901a83f912a4607, type: 3}
+  - {fileID: 8300000, guid: b94de89ec4ed52243854945ae92e3c3f, type: 3}
   cameraManager: {fileID: 1983284379}
 --- !u!4 &1268968301
 Transform:

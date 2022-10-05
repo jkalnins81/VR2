@@ -42,7 +42,9 @@ public class AIHealthClown : MonoBehaviour
         if (other.CompareTag("FrontWall"))
         {
  
-            GameManager.Instance.UpdateScore(-500);
+            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            Destroy(particles,1);
+            // GameManager.Instance.UpdateScore(-500);
             AIDie();
         }
     }
