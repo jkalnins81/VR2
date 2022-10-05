@@ -8291,6 +8291,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d6939455368ee424bba9b1c8843241d4, type: 3}
   - {fileID: 8300000, guid: c769845e248548642901a83f912a4607, type: 3}
   - {fileID: 8300000, guid: b94de89ec4ed52243854945ae92e3c3f, type: 3}
+  - {fileID: 8300000, guid: 62fea65fafe9c2741981683b99ffdaf7, type: 3}
+  - {fileID: 8300000, guid: 44a34a2dc6bc3d44ba6a355fb03c3e32, type: 3}
+  - {fileID: 8300000, guid: cd95f4ee3209fde47bfad641ca6ec370, type: 3}
   cameraManager: {fileID: 1983284379}
 --- !u!4 &1268968301
 Transform:
@@ -11385,6 +11388,10 @@ MonoBehaviour:
   - name: "pl\xE5tniklas"
     enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
     count: 10
+    rate: 1
+  - name: Snake Boss
+    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    count: 100
     rate: 1
   - name: Snake Boss
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}

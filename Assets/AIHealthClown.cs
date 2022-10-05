@@ -63,7 +63,10 @@ public class AIHealthClown : MonoBehaviour
 
             GameManager.Instance.UpdateScore(scoreWhenKill);
 
-
+            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            
+            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[13], 1.2f);
+            
             StartCoroutine(DestroyAiDelay());
   
         }
@@ -72,12 +75,13 @@ public class AIHealthClown : MonoBehaviour
 
     IEnumerator DestroyAiDelay()
     {
-        yield return new WaitForSeconds(2f);
-        gameObject.SetActive(false);
-        yield return new WaitForSeconds(4);
-        GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(3f);
+        GameObject particles = Instantiate(AIExplosion, _clownRB.transform.position, Quaternion.identity);
         particles.transform.parent = null;
-        Destroy(particles,1);
+        Destroy(particles, 1.2f);
+        gameObject.SetActive(false);
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[15], 1.2f);
+        yield return new WaitForSeconds(2f);
         Destroy(transform.parent.gameObject);
     }
 
