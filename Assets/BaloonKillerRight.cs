@@ -30,6 +30,7 @@ public class BaloonKillerRight : MonoBehaviour
  
             
             GameObject ballonParticles = Instantiate(baloonExplosionParticles, transform.position, quaternion.identity);
+            Destroy(ballonParticles,1.2f);
             
             if (baloonChecker.LefttBaloon && baloonChecker.MiddleBaloon && baloonChecker.RightBaloon)
             {
@@ -78,7 +79,7 @@ public class BaloonKillerRight : MonoBehaviour
     IEnumerator DestroyParts(GameObject particles)
     {
         yield return new WaitForSeconds(3f);
-        Destroy(particles);
+        // Destroy(particles);
         Destroy(part1);
         Destroy(part2);
         Destroy(part3);

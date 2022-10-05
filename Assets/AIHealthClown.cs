@@ -31,7 +31,7 @@ public class AIHealthClown : MonoBehaviour
             //Sound
             randomSound = UnityEngine.Random.Range(6, 9);
             GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomSound], 0.35f);
-            // Instantiate(AIExplosion, transform.position, Quaternion.identity);
+
             
             //Give Score
             // AIDie();
@@ -51,10 +51,24 @@ public class AIHealthClown : MonoBehaviour
     {
         if (_baloonChecker.LefttBaloon && _baloonChecker.MiddleBaloon && _baloonChecker.RightBaloon)
         {
+            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            Destroy(particles,1);
+     
             GameManager.Instance.UpdateScore(scoreWhenKill);
-            Destroy(transform.parent.gameObject);
+
+
+            StartCoroutine(DestroyAiDelay());
+  
         }
 
+    }
+
+    IEnumerator DestroyAiDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
+        yield return new WaitForSeconds(3);
+        Destroy(transform.parent.gameObject);
     }
 
     public void SendVisualStreakBomb()

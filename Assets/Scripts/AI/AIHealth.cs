@@ -25,7 +25,8 @@ public class AIHealth : MonoBehaviour
             randomSound = UnityEngine.Random.Range(6, 9);
             GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomSound], 0.35f);
             
-            Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            
             
             //Give Score
             GameManager.Instance.UpdateScore(scoreWhenKill);

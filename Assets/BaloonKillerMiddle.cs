@@ -25,6 +25,7 @@ public class BaloonKillerMiddle : MonoBehaviour
  
             
             GameObject ballonParticles = Instantiate(baloonExplosionParticles, transform.position, quaternion.identity);
+            Destroy(ballonParticles,1.2f);
             
             if (baloonChecker.LefttBaloon && baloonChecker.MiddleBaloon && baloonChecker.RightBaloon)
             {
@@ -33,7 +34,7 @@ public class BaloonKillerMiddle : MonoBehaviour
                 GetComponentInParent<AIHealthClown>().AIDie();
             }
             
-            StartCoroutine(DestroyParticles(ballonParticles));
+            // StartCoroutine(DestroyParticles(ballonParticles));
 
             GetComponent<MeshRenderer>().enabled = false;
 
