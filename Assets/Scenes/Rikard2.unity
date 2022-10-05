@@ -11352,7 +11352,7 @@ MonoBehaviour:
   ableToSpawn: 0
   waves:
   - name: Dog
-    enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
+    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
     count: 3
     rate: 5
   - name: Claw Arms

@@ -33,6 +33,8 @@ public class DiscBehaviourRelease : MonoBehaviour
     //Spawn Manager
 
     private DiscSpawnManager _discSpawnManager;
+
+    [SerializeField] private GameObject discTrailParticles;
     
 
     private void Start()
@@ -135,14 +137,20 @@ public class DiscBehaviourRelease : MonoBehaviour
     {
         yield return new WaitForSeconds(0.10f);
         GetComponent<XRGrabInteractable>().enabled = false;
+        
+        //Trails
+        discTrailParticles.SetActive(true);
+   
+        
         colliders[0].enabled = true;
         colliders[2].enabled = true;
         yield return new WaitForSeconds(0.20f);
         discRB.constraints = RigidbodyConstraints.None;
         yield return new WaitForSeconds(0.10f);
         colliders[1].enabled = true;
-        
     }
+        
+    
 
 
     IEnumerator AddForceAfterThrow()

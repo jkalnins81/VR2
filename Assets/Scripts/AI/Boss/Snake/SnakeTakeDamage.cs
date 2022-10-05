@@ -33,7 +33,8 @@ public class SnakeTakeDamage : MonoBehaviour
 
                         if (snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth <= 0)
                         {
-                            Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                           GameObject particles =  Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                           Destroy(particles, 1f);
                             SnakeDie();
                         }
 
@@ -46,7 +47,8 @@ public class SnakeTakeDamage : MonoBehaviour
 
                         if (snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth <= 0)
                         {
-                            Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                            GameObject particles2 =  Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                            Destroy(particles2, 1f);
                             SnakeDie();
                         }
 
@@ -166,6 +168,8 @@ public class SnakeTakeDamage : MonoBehaviour
 
             if (other.CompareTag("FrontWall"))
             {
+                GameObject particles3 =  Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                Destroy(particles3, 1f);
                 SnakeDie();
             }
     }
