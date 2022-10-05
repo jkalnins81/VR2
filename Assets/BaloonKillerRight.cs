@@ -36,9 +36,7 @@ public class BaloonKillerRight : MonoBehaviour
             if (baloonChecker.LefttBaloon && baloonChecker.MiddleBaloon && baloonChecker.RightBaloon)
             {
                 Destroy(ballonParticles);
-                Destroy(part1);
-                Destroy(part2);
-                Destroy(part3);
+    
                 Destroy(baloon);
                 GetComponentInParent<AIHealthClown>().AIDie();
             }
@@ -46,6 +44,10 @@ public class BaloonKillerRight : MonoBehaviour
             StartCoroutine(DestroyParts(ballonParticles));
 
             GetComponent<MeshRenderer>().enabled = false;
+            
+            part1.GetComponent<ClownDestroyParts>().DestroyMe();
+            part2.GetComponent<ClownDestroyParts>().DestroyMe();
+            part3.GetComponent<ClownDestroyParts>().DestroyMe();
             
             part1.transform.parent = null;
             part2.transform.parent = null;
