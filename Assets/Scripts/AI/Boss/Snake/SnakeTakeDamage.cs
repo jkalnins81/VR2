@@ -7,6 +7,7 @@ public class SnakeTakeDamage : MonoBehaviour
     public GameObject snakeHealthGO;
     public GameObject AIExplosion;
 
+    public GameObject snakeParent;
     public GameObject snake1;
     public GameObject snake2;
     public GameObject snake3;
@@ -182,6 +183,7 @@ public class SnakeTakeDamage : MonoBehaviour
 
     void SnakeDie()
     {
-        Destroy(transform.parent.gameObject);
+        Destroy(snakeParent);
+        //Destroy(transform.parent.gameObject);
     }
 }

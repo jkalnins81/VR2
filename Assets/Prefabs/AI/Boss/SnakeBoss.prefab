@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -202,7 +203,7 @@ GameObject:
   - component: {fileID: 4579760616243128876}
   - component: {fileID: 3266582417305836547}
   - component: {fileID: 5858548436357126636}
-  - component: {fileID: 2758643789546933751}
+  - component: {fileID: 284217081279703688}
   m_Layer: 0
   m_Name: Snake5
   m_TagString: Snake5
@@ -288,7 +289,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.017838562
   m_Center: {x: 0.00000024124222, y: -0.01, z: -0.0289476}
---- !u!114 &2758643789546933751
+--- !u!114 &284217081279703688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -951,7 +953,7 @@ GameObject:
   - component: {fileID: 6182729993459667093}
   - component: {fileID: 4829128320541244326}
   - component: {fileID: 1439883662100402147}
-  - component: {fileID: 6549044305244496335}
+  - component: {fileID: 4475916093550647893}
   m_Layer: 0
   m_Name: Snake2
   m_TagString: Snake2
@@ -1037,7 +1039,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.018586943
   m_Center: {x: -0.000000012156393, y: -0.01, z: -0.0386349}
---- !u!114 &6549044305244496335
+--- !u!114 &4475916093550647893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1051,6 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -1509,7 +1512,7 @@ GameObject:
   - component: {fileID: 5155930262166540359}
   - component: {fileID: 5579036101352957581}
   - component: {fileID: 3884373557238072610}
-  - component: {fileID: 4872378861629496527}
+  - component: {fileID: 5762715989809141552}
   m_Layer: 0
   m_Name: Snake8
   m_TagString: Snake8
@@ -1595,7 +1598,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.013545536
   m_Center: {x: 0.00000030772992, y: -0.008975612, z: -0.012591659}
---- !u!114 &4872378861629496527
+--- !u!114 &5762715989809141552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1609,6 +1612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -1634,7 +1638,7 @@ GameObject:
   - component: {fileID: 4305801935622559209}
   - component: {fileID: 1044047745151378660}
   - component: {fileID: 1228560161615383924}
-  - component: {fileID: 558017021807414261}
+  - component: {fileID: 593636977671451054}
   m_Layer: 0
   m_Name: Snake4
   m_TagString: Snake4
@@ -1720,7 +1724,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.017681409
   m_Center: {x: 0.00000005996452, y: -0.009999995, z: -0.031419117}
---- !u!114 &558017021807414261
+--- !u!114 &593636977671451054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1734,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -1759,7 +1764,7 @@ GameObject:
   - component: {fileID: 587834139788936609}
   - component: {fileID: 315286831918386362}
   - component: {fileID: 4546730418539553307}
-  - component: {fileID: 6900278657780448829}
+  - component: {fileID: 3911192516296531730}
   m_Layer: 0
   m_Name: Snake1
   m_TagString: Snake1
@@ -1845,7 +1850,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.019538905
   m_Center: {x: -0.00000004270329, y: -0.010000014, z: -0.024301007}
---- !u!114 &6900278657780448829
+--- !u!114 &3911192516296531730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1859,6 +1864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -1884,7 +1890,7 @@ GameObject:
   - component: {fileID: 8361791423015956337}
   - component: {fileID: 1279426602367838288}
   - component: {fileID: 995917263587429358}
-  - component: {fileID: 3239581886606731008}
+  - component: {fileID: 8637766441712753408}
   m_Layer: 0
   m_Name: Snake7
   m_TagString: Snake7
@@ -1970,7 +1976,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.013323923
   m_Center: {x: 0.00000010483486, y: -0.008589944, z: -0.02530191}
---- !u!114 &3239581886606731008
+--- !u!114 &8637766441712753408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1984,6 +1990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -2159,7 +2166,7 @@ GameObject:
   - component: {fileID: 3878748359155361982}
   - component: {fileID: 6930561610725760246}
   - component: {fileID: 4344508644588081851}
-  - component: {fileID: 1668069377410526944}
+  - component: {fileID: 1527962596700705766}
   m_Layer: 0
   m_Name: Snake3
   m_TagString: Snake3
@@ -2245,7 +2252,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.017379044
   m_Center: {x: -0.000000038375923, y: -0.009999967, z: -0.028414233}
---- !u!114 &1668069377410526944
+--- !u!114 &1527962596700705766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2259,6 +2266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -2317,7 +2325,7 @@ GameObject:
   - component: {fileID: 8851295661610709668}
   - component: {fileID: 1765137125407215333}
   - component: {fileID: 2154003558207606226}
-  - component: {fileID: 4224387654063885593}
+  - component: {fileID: 8346239985898596443}
   m_Layer: 0
   m_Name: Snake10
   m_TagString: Snake10
@@ -2403,7 +2411,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.024262818
   m_Center: {x: 0.00000022050014, y: 0.010439924, z: -0.028646987}
---- !u!114 &4224387654063885593
+--- !u!114 &8346239985898596443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2417,6 +2425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -2572,7 +2581,7 @@ GameObject:
   - component: {fileID: 9173965484076997429}
   - component: {fileID: 3140667416583631884}
   - component: {fileID: 8174071019982366347}
-  - component: {fileID: 7321081948910498519}
+  - component: {fileID: 1673972623857789978}
   m_Layer: 0
   m_Name: Snake9
   m_TagString: Snake9
@@ -2658,7 +2667,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.010345912
   m_Center: {x: -0.0018754437, y: -0.007000002, z: -0.014513925}
---- !u!114 &7321081948910498519
+--- !u!114 &1673972623857789978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2672,6 +2681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
@@ -3326,7 +3336,7 @@ GameObject:
   - component: {fileID: 3190393457295201441}
   - component: {fileID: 4845993967545940744}
   - component: {fileID: 1440024309929308424}
-  - component: {fileID: 5565400314232568666}
+  - component: {fileID: 6797580849739163433}
   m_Layer: 0
   m_Name: Snake6
   m_TagString: Snake6
@@ -3412,7 +3422,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.01530925
   m_Center: {x: 0.00000012889046, y: -0.009466751, z: -0.022770261}
---- !u!114 &5565400314232568666
+--- !u!114 &6797580849739163433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3426,6 +3436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
   AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
   snake3: {fileID: 5138555980456013673}
