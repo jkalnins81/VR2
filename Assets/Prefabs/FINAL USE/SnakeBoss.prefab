@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -169,15 +169,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337199781733339368}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b2a9b21760038e4cab3f7c5c4709920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1311551791239387471, guid: b2a44c86f859132459658650d2184e84, type: 3}
-  firingRateInSeconds: 1
-  firingSpeed: 50
-  shootHolder: {fileID: 0}
+  firingRateInSeconds: 0.5
+  firingSpeed: 60
+  shootHolder: {fileID: 337199781733339368}
 --- !u!114 &4327498798153103392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -2424,7 +2424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -2680,7 +2680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}
@@ -3435,7 +3435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHealthGO: {fileID: 2274124166646677770}
-  AIExplosion: {fileID: 3566891116074360724, guid: 1520acb643bc78b45b6c4cc894418588, type: 3}
+  AIExplosion: {fileID: 1729578255774386584, guid: d89b3b03946774140b70b129dd4d18c1, type: 3}
   snakeParent: {fileID: 2274124166646677770}
   snake1: {fileID: 4370002011281503702}
   snake2: {fileID: 2706781706541610183}

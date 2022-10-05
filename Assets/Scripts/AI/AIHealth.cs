@@ -26,6 +26,7 @@ public class AIHealth : MonoBehaviour
             GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomSound], 0.35f);
             
             GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
+            Destroy(particles,1);
             
             
             //Give Score
