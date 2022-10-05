@@ -16,7 +16,7 @@ public class AIMovement : MonoBehaviour
     private void Start()
     {
 
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponentInParent<Rigidbody>();
         _rb.velocity = Vector3.forward * speed;
 
         StartRandomAIPattern();
