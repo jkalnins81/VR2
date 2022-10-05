@@ -29,21 +29,28 @@ public class SnakeTakeDamage : MonoBehaviour
                     if(this.gameObject.CompareTag("SnakeHead"))
                     {
                         snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth -= 10;
-                        StartCoroutine(SnakeFlash());
 
-                        if(snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth <= 0)
+                        if (snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth <= 0)
                         {
                             Instantiate(AIExplosion, transform.position, Quaternion.identity);
                             SnakeDie();
                         }
+
+                        StartCoroutine(SnakeFlash());
                     }
 
                     if(!this.gameObject.CompareTag("SnakeHead"))
                     {
                         snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth -= 2.5f;
+
+                        if (snakeHealthGO.GetComponent<SnakeHealth>().snakeHealth <= 0)
+                        {
+                            Instantiate(AIExplosion, transform.position, Quaternion.identity);
+                            SnakeDie();
+                        }
+
                         StartCoroutine(SnakeFlash());
                     }
-                    
 
                     //if (SnakeHealthPoints <= 0 && this.gameObject.CompareTag("SnakeHead"))
                     //{
@@ -154,7 +161,6 @@ public class SnakeTakeDamage : MonoBehaviour
                     //    Instantiate(AIExplosion, transform.position, Quaternion.identity);
                     //    Destroy(snake10);
                     //}
-            
            }
 
             if (other.CompareTag("FrontWall"))
