@@ -37,7 +37,7 @@ public class SnakeTakeDamage : MonoBehaviour
            if (other.CompareTag("Disc"))
             {
                 
-                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[12], 1);
+                GameManager.Instance.PlaySound(GameManager.Instance.audioClips[12], 0.5f);
                 
                     if(this.gameObject.CompareTag("SnakeHead"))
                     {

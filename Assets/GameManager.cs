@@ -9,15 +9,12 @@ using Image = UnityEngine.UI.Image;
 
 public class GameManager : MonoBehaviour
 {
-
-
-
     [SerializeField] private TextMeshPro enemyStreakCounter;
     public int enemyStreak = 0;
     public float enemyStreakTime = 3;
     private float enemyStreakTimereset;
 
-    public int playerHealth = 100;
+    public int playerHealth = 360;
     private int playerRestartHealth;
     [SerializeField] private TextMeshPro currentHealthDisplay;
 

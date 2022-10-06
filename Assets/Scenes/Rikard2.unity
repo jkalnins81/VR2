@@ -3665,6 +3665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: standing_plate_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4002293830128110173, guid: 45744942d77757342847c60873533b7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4377729340464845031, guid: 45744942d77757342847c60873533b7f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4922,7 +4926,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 1
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -7221,7 +7225,7 @@ MonoBehaviour:
   enemyStreakCounter: {fileID: 1343289432}
   enemyStreak: 0
   enemyStreakTime: 3
-  playerHealth: 1000
+  playerHealth: 360
   currentHealthDisplay: {fileID: 36868995}
   replacingDiscs: 0
   scoreText: {fileID: 546334075}
@@ -7954,7 +7958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369472950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.49, y: -0.7519736, z: 9.0549965}
+  m_LocalPosition: {x: -0.49, y: -0.7519736, z: 10.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8848,7 +8852,7 @@ RectTransform:
   m_GameObject: {fileID: 1497598422}
   m_LocalRotation: {x: 0.13937502, y: -0.0000029504292, z: -0.0000011175869, w: 0.99023974}
   m_LocalPosition: {x: 0, y: 0, z: -175.9}
-  m_LocalScale: {x: 0.08710197, y: 0.11623512, z: 0.08710197}
+  m_LocalScale: {x: 0.1025016, y: 0.13678549, z: 0.1025016}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 261081229}
@@ -8856,7 +8860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 16.023, y: 360, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77914.49, y: -8940.9}
+  m_AnchoredPosition: {x: -77914.49, y: -8946}
   m_SizeDelta: {x: 1000, y: 629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1505472130
@@ -9750,7 +9754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.163
+      value: 4.456
       objectReference: {fileID: 0}
     - target: {fileID: 8920054470736671908, guid: 61a477ee4daa69540887dd302f8ef3c3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10089,20 +10093,20 @@ MonoBehaviour:
   waves:
   - name: Dog
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
-    count: 25
-    rate: 2
+    count: 20
+    rate: 1.5
   - name: Claw Arms
     enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
     count: 15
-    rate: 1
+    rate: 0.75
   - name: Buzzer
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
     count: 25
-    rate: 3
+    rate: 0.75
   - name: "Pl\xE5tniklas"
     enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
     count: 10
-    rate: 1
+    rate: 0.75
   - name: Clown
     enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
     count: 4
@@ -10118,23 +10122,23 @@ MonoBehaviour:
   - name: DOG
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 30
-    rate: 1
+    rate: 0.5
   - name: DOG
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
     count: 30
-    rate: 1
+    rate: 0.5
   - name: Claw Arms
     enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
     count: 15
-    rate: 1
+    rate: 0.5
   - name: BUZZER
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
     count: 30
-    rate: 1
+    rate: 0.5
   - name: "PL\xC5TNIKLAS"
     enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
     count: 20
-    rate: 1
+    rate: 0.5
   - name: CLOWNS
     enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
     count: 10
@@ -12537,7 +12541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132671882}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000004768371}
-  m_LocalPosition: {x: 6.799493, y: -1.072, z: 6.9955006}
+  m_LocalPosition: {x: 6.712, y: -1.683, z: 7.298}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:

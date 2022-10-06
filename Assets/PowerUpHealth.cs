@@ -58,7 +58,7 @@ public class PowerUpHealth : MonoBehaviour
         {
             if (other.tag == "Disc")
             {
-                GameManager.Instance.GiveHealth(150);
+                GameManager.Instance.GiveHealth(40);
 
                 GameManager.Instance.PlaySound(GameManager.Instance.audioClips[0], 1f);
 

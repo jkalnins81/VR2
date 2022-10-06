@@ -116,6 +116,8 @@ public class DiscBehaviourRelease : MonoBehaviour
         }
 
     }
+    
+
 
     public void DisableDiscCollider()
     {
@@ -156,7 +158,7 @@ public class DiscBehaviourRelease : MonoBehaviour
     IEnumerator AddForceAfterThrow()
     {
         //Ads force to the disc once it is released and has got the velocity from the controller 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.12f);
         thisXRGrabInteractable.throwVelocityScale = 2000f;
         thisXRGrabInteractable.throwAngularVelocityScale = 2f;
         discRB.AddForce(discRB.velocity.normalized * forceMultiplier, ForceMode.Impulse);

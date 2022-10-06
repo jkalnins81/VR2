@@ -183,6 +183,16 @@ public class EnemyWaveSpawner : MonoBehaviour
         _waveFinishedSounds.PlayWaveSound();
         _fireworks.FireWorks();
         StartCoroutine(WaveTextFinished());
+        
+        
+        // Health 
+        
+        GameManager.Instance.GiveHealth(15);
+
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[0], 1f);
+
+        GameManager.Instance.UpdateCurrentHealth();
+
     }
 
     IEnumerator WaveTextFinished()
