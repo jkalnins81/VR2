@@ -2879,8 +2879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412803727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7358637, y: 0, z: -12.343102}
-  m_LocalScale: {x: 1, y: 9.459704, z: 10.500294}
+  m_LocalPosition: {x: -5.7358637, y: 0, z: -15.13}
+  m_LocalScale: {x: 1, y: 9.459704, z: 16.028698}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1785566033}
@@ -3870,8 +3870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518722833}
   m_LocalRotation: {x: -0, y: -0, z: -0.70726204, w: 0.7069515}
-  m_LocalPosition: {x: -0.42586374, y: -4.960947, z: -12.343102}
-  m_LocalScale: {x: 1, y: 12.061121, z: 10.500294}
+  m_LocalPosition: {x: -0.42586374, y: -4.21, z: -16.03}
+  m_LocalScale: {x: 1, y: 12.061121, z: 17.635242}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1785566033}
@@ -4697,7 +4697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690648875}
   m_LocalRotation: {x: -0.4998895, y: -0.50010914, z: -0.5001107, w: 0.4998908}
-  m_LocalPosition: {x: -0.42586374, y: -1.0409474, z: -16.853104}
+  m_LocalPosition: {x: -0.42586374, y: -1.0409474, z: -22.22}
   m_LocalScale: {x: 1.1856, y: 14.299668, z: 12.44915}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6950,7 +6950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195300058}
   m_LocalRotation: {x: -0, y: -0, z: -0.70726204, w: 0.7069515}
-  m_LocalPosition: {x: -0.42586374, y: 4.6790524, z: -12.343102}
+  m_LocalPosition: {x: -0.42586374, y: 4.06, z: -12.343102}
   m_LocalScale: {x: 1, y: 12.061121, z: 10.500294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7925,7 +7925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369472950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9607887, y: -0.7519736, z: 9.0549965}
+  m_LocalPosition: {x: -0.49, y: -0.7519736, z: 9.0549965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9067,8 +9067,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660116376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1441364, y: 0, z: -12.343102}
-  m_LocalScale: {x: 1, y: 9.459704, z: 10.500294}
+  m_LocalPosition: {x: 5.1441364, y: 0, z: -16.53}
+  m_LocalScale: {x: 1, y: 9.459704, z: 19.346188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1785566033}
@@ -9796,7 +9796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785566032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1058636, y: 2.0909474, z: -9.656898}
+  m_LocalPosition: {x: 7.1058636, y: 2.0909474, z: -10.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9917,15 +9917,15 @@ MonoBehaviour:
   waves:
   - name: Dog
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
-    count: 15
-    rate: 3
+    count: 25
+    rate: 2
   - name: Claw Arms
     enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
-    count: 10
-    rate: 3
+    count: 15
+    rate: 1
   - name: Buzzer
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
-    count: 15
+    count: 25
     rate: 3
   - name: "Pl\xE5tniklas"
     enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
@@ -9934,22 +9934,70 @@ MonoBehaviour:
   - name: Clown
     enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
     count: 4
-    rate: 4
+    rate: 5
   - name: Buzzer
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
     count: 15
-    rate: 3
+    rate: 1
   - name: Snake Boss
-    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
+    count: 3
+    rate: 4
+  - name: DOG
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    count: 30
+    rate: 1
+  - name: DOG
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    count: 30
+    rate: 1
+  - name: Claw Arms
+    enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
     count: 15
-    rate: 0.5
-  - name: Snake Boss
+    rate: 1
+  - name: BUZZER
+    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    count: 30
+    rate: 1
+  - name: "PL\xC5TNIKLAS"
+    enemyObj: {fileID: 8390950676163898144, guid: aa2cf50ca32194c43942174fde4106a6, type: 3}
+    count: 20
+    rate: 1
+  - name: CLOWNS
+    enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
+    count: 10
+    rate: 4
+  - name: SNAKE BOSS
+    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
+    count: 6
+    rate: 4
+  - name: BUZZER
     enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
     count: 100
-    rate: 1
-  - name: Dog
+    rate: 0.5
+  - name: "PL\xC5TNIKLAS"
+    enemyObj: {fileID: 8390950676163898144, guid: a93c6581b0da8e246a97866c8bc183bf, type: 3}
+    count: 100
+    rate: 0.5
+  - name: DOG
     enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
-    count: 10000
+    count: 100
+    rate: 0.5
+  - name: CLAWARMS
+    enemyObj: {fileID: 6252486283671881560, guid: ebba444f6ea4e8a4086be995ddb7e987, type: 3}
+    count: 50
+    rate: 0.5
+  - name: CLOWNS
+    enemyObj: {fileID: 8390950676163898144, guid: 68440b6efd33053449f8d1b0b9894aac, type: 3}
+    count: 50
+    rate: 0.5
+  - name: SNAKE
+    enemyObj: {fileID: 1496496133058010032, guid: 944393a2933c7f143872abf0dce6a95f, type: 3}
+    count: 25
+    rate: 1
+  - name: DOG
+    enemyObj: {fileID: 8390950676163898144, guid: 7a26b18b0e8f56c4bb93511365fe03e1, type: 3}
+    count: 1
     rate: 1
   spawnPoints:
   - {fileID: 2109509450}
@@ -9979,7 +10027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819713503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2307887, y: 2.9769742, z: -22.41}
+  m_LocalPosition: {x: 7.2307887, y: 2.9769742, z: -24.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10266,18 +10314,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ableToSpawn: 0
   waves:
-  - name: PowerUpBomb
+  - name: DISC
     powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
-    count: 4
+    count: 3
     rate: 2
-  - name: PowerUpHealth
+  - name: BOMB
     powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
     count: 2
+    rate: 3
+  - name: DISC
+    powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
+    count: 1
+    rate: 1
+  - name: BOMB
+    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    count: 1
+    rate: 0.5
+  - name: DISC
+    powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
+    count: 3
     rate: 1
   - name: PowerUpHealth
     powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
     count: 1
     rate: 1
+  - name: BOMB
+    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    count: 2
+    rate: 1
+  - name: DISC
+    powerupObj: {fileID: 2053007138303277101, guid: 7c1c16db83608b1409bfd2c3e11ff898, type: 3}
+    count: 4
+    rate: 2
+  - name: PowerUpHealth
+    powerupObj: {fileID: 2053007138303277101, guid: c5d7bb265c8766542ba47250226a9271, type: 3}
+    count: 1
+    rate: 1
+  - name: BOMB
+    powerupObj: {fileID: 2053007138303277101, guid: decebd0d13ff04f4893cbf98c6f947a1, type: 3}
+    count: 4
+    rate: 0.5
   spawnPoints:
   - {fileID: 1709751373}
   - {fileID: 141450533}
