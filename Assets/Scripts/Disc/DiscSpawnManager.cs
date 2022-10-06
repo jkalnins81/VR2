@@ -36,10 +36,10 @@ public class DiscSpawnManager : MonoBehaviour
    {
       yield return new WaitForSeconds(1f);
       
-      GameObject particles = Instantiate(particleEffect, discPillarLeftPos + yOffsetParticles, Quaternion.identity);
-      particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-      particles.transform.Rotate(90, 0, 0);
-      Destroy(particles, 0.2f);
+      // GameObject particles = Instantiate(particleEffect, discPillarLeftPos + yOffsetParticles, Quaternion.identity);
+      // particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+      // particles.transform.Rotate(90, 0, 0);
+      // Destroy(particles, 0.2f);
       
       GameObject instantiatedDisc = Instantiate(discLeft, discPillarLeftPos + yOffset, Quaternion.identity);
       StartCoroutine(ScaleOverTime(0.25f, instantiatedDisc));
@@ -55,10 +55,10 @@ public class DiscSpawnManager : MonoBehaviour
    {
       yield return new WaitForSeconds(1f);
       
-      GameObject particles = Instantiate(particleEffect, discPillarRightPos + yOffsetParticles, Quaternion.identity);
-      particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-      particles.transform.Rotate(90, 0, 0);
-      Destroy(particles, 0.2f);
+      // GameObject particles = Instantiate(particleEffect, discPillarRightPos + yOffsetParticles, Quaternion.identity);
+      // particles.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+      // particles.transform.Rotate(90, 0, 0);
+      // Destroy(particles, 0.2f);
 
       GameObject instantiatedDisc = Instantiate(discRight, discPillarRightPos + yOffset, Quaternion.identity);
       StartCoroutine(ScaleOverTime(0.25f, instantiatedDisc));

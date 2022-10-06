@@ -65,7 +65,7 @@ public class AIHealthClown : MonoBehaviour
 
             GameObject particles = Instantiate(AIExplosion, transform.position, Quaternion.identity);
             
-            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[13], 0.6f);
+            GameManager.Instance.PlaySound(GameManager.Instance.audioClips[13], 0.3f);
             
             StartCoroutine(DestroyAiDelay());
   

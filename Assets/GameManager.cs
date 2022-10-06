@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     private WaveFinishedSounds _waveFinishedSounds;
 
     public CameraManager cameraManager;
+
+    public bool restartScene = true;
     
     private void Start()
     {
@@ -138,7 +140,8 @@ public class GameManager : MonoBehaviour
     {
         currentHealthDisplay.text = playerHealth.ToString();
         
-        if(playerHealth <= 0)
+        
+        if(restartScene && playerHealth <= 0)
         {
             _waveFinishedSounds.PlaygameOverSound();
             streakDisplayGO.SetActive(false);
@@ -146,6 +149,7 @@ public class GameManager : MonoBehaviour
             gameOverDisplayGO.SetActive(true);
             StartCoroutine(RestartSceneDelay());
             Time.timeScale = 0;
+            restartScene = false;
         }
     }
 
@@ -173,6 +177,7 @@ public class GameManager : MonoBehaviour
         streakDisplayGO.SetActive(true);
         playerHealth = playerRestartHealth;
         score = 0;
+        restartScene = true;
         SceneManager.LoadScene("Rikard2");
     }
 
