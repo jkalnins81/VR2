@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     {
         currentHealthDisplay.text = playerHealth.ToString();
         
-        if(playerHealth == 0)
+        if(playerHealth <= 0)
         {
             _waveFinishedSounds.PlaygameOverSound();
             streakDisplayGO.SetActive(false);

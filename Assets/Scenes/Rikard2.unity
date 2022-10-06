@@ -7224,7 +7224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStreakCounter: {fileID: 1343289432}
   enemyStreak: 0
-  enemyStreakTime: 3
+  enemyStreakTime: 4.5
   playerHealth: 360
   currentHealthDisplay: {fileID: 36868995}
   replacingDiscs: 0
