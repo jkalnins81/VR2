@@ -8,6 +8,12 @@ public class Music : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(StartMusic());
+    }
+
+    IEnumerator StartMusic()
+    {
+        yield return new WaitForSeconds(8f);
         discoDiscMusic.Play();
     }
 }
