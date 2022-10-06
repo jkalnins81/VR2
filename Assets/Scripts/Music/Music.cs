@@ -13,7 +13,7 @@ public class Music : MonoBehaviour
 
     IEnumerator StartMusic()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(6f);
         discoDiscMusic.Play();
     }
 }
