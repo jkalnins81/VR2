@@ -19,9 +19,16 @@ public class SnakeTakeDamage : MonoBehaviour
     public GameObject snake9;
     public GameObject snake10;
 
+    private int randomNumber;
+
     [SerializeField] public GameObject cube004;
     [SerializeField] public Material snakeMaterial;
     [SerializeField] public Material snakeFlashMaterial;
+
+    private void Start()
+    {
+        randomNumber = Random.Range(6, 9);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -192,6 +199,7 @@ public class SnakeTakeDamage : MonoBehaviour
 
     void SnakeDie()
     {
+        GameManager.Instance.PlaySound(GameManager.Instance.audioClips[randomNumber], 1f);
         Destroy(snakeParent);
         //Destroy(transform.parent.gameObject);
     }
