@@ -6,6 +6,8 @@ public class Music : MonoBehaviour
 {
     public AudioSource discoDiscMusic;
 
+    public GameObject fireworksStart;
+
     void Start()
     {
         StartCoroutine(StartMusic());
@@ -13,7 +15,9 @@ public class Music : MonoBehaviour
 
     IEnumerator StartMusic()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(6.4f);
         discoDiscMusic.Play();
+        fireworksStart.SetActive(true);
+        Destroy(fireworksStart.transform.parent, 3f);
     }
 }
