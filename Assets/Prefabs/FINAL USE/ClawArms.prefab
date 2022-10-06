@@ -135,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6252486283671881560}
   - component: {fileID: 3565025942908620194}
+  - component: {fileID: 9060424147445255274}
   m_Layer: 0
   m_Name: ClawArms
   m_TagString: AIEnemy
@@ -174,6 +175,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &9060424147445255274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741496706140184034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9638b3cd7f9eb4c8526bebcd6fad73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9218726479982089517
 GameObject:
   m_ObjectHideFlags: 0
