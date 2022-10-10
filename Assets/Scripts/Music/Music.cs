@@ -24,21 +24,21 @@ public class Music : MonoBehaviour
         discoDiscMusic.Play();
         yield return new WaitForSeconds(0.2f);
         fireworksStart1.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart1, 3f);
         yield return new WaitForSeconds(0.2f);
         fireworksStart2.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart2, 3f);
         yield return new WaitForSeconds(0.2f);
         fireworksStart3.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart3, 3f);
         yield return new WaitForSeconds(0.2f);
         fireworksStart4.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart4, 3f);
         yield return new WaitForSeconds(0.2f);
         fireworksStart5.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart5, 3f);
         fireworksStart6.SetActive(true);
-        Destroy(fireworksStart1.transform.parent, 3f);
+        Destroy(fireworksStart6, 3f);
 
     }
 }
